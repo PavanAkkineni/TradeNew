@@ -30,6 +30,8 @@
                 <button class="nav-tab" data-tab="expert">Expert Analysis</button>
                 <button class="nav-tab" data-tab="credibility">Credibility</button>
             </nav>
+            <!-- User Menu / Logout -->
+            <div id="user-menu-container" class="user-menu-container"></div>
         </div>
     </header>
 
@@ -1193,6 +1195,31 @@
         </div>
     </div>
 
+    <script src="static/js/auth.js"></script>
     <script src="static/js/app_new.js?v=2.8"></script>
+    <script>
+        // Add user menu to header
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('user-menu-container');
+            if (container && isLoggedIn()) {
+                const user = getCurrentUser();
+                container.innerHTML = `
+                    <div class="user-menu-inline">
+                        <span class="user-email-text">👤 ${user.email}</span>
+                        <button onclick="logout()" class="btn-logout-inline">
+                            <span>🚪</span> Logout
+                        </button>
+                    </div>
+                `;
+            } else if (container) {
+                container.innerHTML = `
+                    <div class="auth-buttons-inline">
+                        <a href="/login.html" class="btn-signin-inline">Sign In</a>
+                        <a href="/signup.html" class="btn-signup-inline">Get Started</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,12 +1,14 @@
 """
 Trading Analytics Platform - Main FastAPI Application
 """
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
-from pydantic import BaseModel
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from pydantic import BaseModel, EmailStr
 from typing import Optional, List, Dict, Any
+from sqlalchemy.orm import Session
 import json
 import os
 from datetime import datetime
@@ -19,7 +21,17 @@ from app.fundamental_analysis import FundamentalAnalyzer
 from app.sentiment_analysis import SentimentAnalyzer
 from app.gemini_analyzer import GeminiAnalyzer
 
+# Import auth and database modules
+from app.database import get_db, init_db, User, UserProfile
+from app import auth
+
 app = FastAPI(title="Trading Analytics Platform", version="1.0.0")
+
+# Initialize database on startup
+@app.on_event("startup")
+async def startup_event():
+    init_db()
+    print("Database initialized!")
 
 # Enable CORS for frontend
 app.add_middleware(
@@ -40,6 +52,9 @@ signal_generator = SignalGenerator()
 fundamental_analyzer = FundamentalAnalyzer()
 sentiment_analyzer = SentimentAnalyzer()
 gemini_analyzer = GeminiAnalyzer()
+
+# Security
+security = HTTPBearer()
 
 # Request/Response Models
 class StockRequest(BaseModel):
@@ -76,8 +91,28 @@ class TradeSignal(BaseModel):
 
 @app.get("/")
 async def root():
+    """Serve the landing page"""
+    return FileResponse("frontend/landing.html")
+
+@app.get("/dashboard")
+async def dashboard():
     """Serve the main dashboard"""
     return FileResponse("frontend/index.html")
+
+@app.get("/landing")
+async def landing():
+    """Serve the landing page"""
+    return FileResponse("frontend/landing.html")
+
+@app.get("/login.html")
+async def login_page():
+    """Serve the login page"""
+    return FileResponse("frontend/login.html")
+
+@app.get("/signup.html")
+async def signup_page():
+    """Serve the signup page"""
+    return FileResponse("frontend/signup.html")
 
 @app.get("/api/health")
 async def health_check():
@@ -522,6 +557,183 @@ async def get_educational_content(topic: str):
         return educational_content[actual_topic]
     else:
         raise HTTPException(status_code=404, detail="Educational content not found")
+
+
+# ============================================================================
+# AUTHENTICATION ENDPOINTS
+# ============================================================================
+
+class SignupRequest(BaseModel):
+    email: EmailStr
+    password: str
+    account_type: str
+    profile_data: Dict[str, Any]
+
+class LoginRequest(BaseModel):
+    email: EmailStr
+    password: str
+
+class TokenResponse(BaseModel):
+    access_token: str
+    token_type: str
+    user_id: int
+    email: str
+
+@app.post("/api/auth/signup", response_model=TokenResponse)
+async def signup(request: SignupRequest, req: Request, db: Session = Depends(get_db)):
+    """Register a new user"""
+    try:
+        # Validate email
+        if not auth.validate_email(request.email):
+            raise HTTPException(status_code=400, detail="Invalid email format")
+        
+        # Check if user already exists
+        existing_user = auth.get_user_by_email(db, request.email)
+        if existing_user:
+            raise HTTPException(status_code=400, detail="Email already registered")
+        
+        # Validate password
+        is_valid, message = auth.validate_password(request.password)
+        if not is_valid:
+            raise HTTPException(status_code=400, detail=message)
+        
+        # Validate account type (only stocks supported)
+        if request.account_type != "stocks":
+            raise HTTPException(status_code=400, detail="Invalid account type. Only 'stocks' accounts are supported.")
+        
+        # Check for public company insider
+        if request.profile_data.get("is_public_company_insider"):
+            raise HTTPException(
+                status_code=403, 
+                detail="Public company insiders cannot open an account at this time"
+            )
+        
+        # Create user
+        user = auth.create_user(db, request.email, request.password, request.account_type)
+        
+        # Create user profile
+        auth.create_user_profile(db, user.id, request.profile_data)
+        
+        # Create session
+        ip_address = req.client.host if req.client else None
+        user_agent = req.headers.get("user-agent")
+        session = auth.create_session(db, user.id, ip_address, user_agent)
+        
+        # Create access token
+        access_token = auth.create_access_token(data={"sub": str(user.id), "email": user.email})
+        
+        return TokenResponse(
+            access_token=access_token,
+            token_type="bearer",
+            user_id=user.id,
+            email=user.email
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Signup error: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred during registration")
+
+
+@app.post("/api/auth/login", response_model=TokenResponse)
+async def login(request: LoginRequest, req: Request, db: Session = Depends(get_db)):
+    """Login user"""
+    try:
+        # Authenticate user
+        user = auth.authenticate_user(db, request.email, request.password)
+        if not user:
+            raise HTTPException(status_code=401, detail="Invalid email or password")
+        
+        if not user.is_active:
+            raise HTTPException(status_code=403, detail="Account is inactive")
+        
+        # Create session
+        ip_address = req.client.host if req.client else None
+        user_agent = req.headers.get("user-agent")
+        session = auth.create_session(db, user.id, ip_address, user_agent)
+        
+        # Create access token
+        access_token = auth.create_access_token(data={"sub": str(user.id), "email": user.email})
+        
+        return TokenResponse(
+            access_token=access_token,
+            token_type="bearer",
+            user_id=user.id,
+            email=user.email
+        )
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Login error: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred during login")
+
+
+@app.post("/api/auth/logout")
+async def logout(credentials: HTTPAuthorizationCredentials = Depends(security), db: Session = Depends(get_db)):
+    """Logout user"""
+    try:
+        token = credentials.credentials
+        payload = auth.verify_token(token)
+        if not payload:
+            raise HTTPException(status_code=401, detail="Invalid token")
+        
+        # Invalidate session
+        # Note: We're using JWT tokens, so we can't truly invalidate them
+        # In production, you'd want to use a token blacklist
+        
+        return {"message": "Logged out successfully"}
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Logout error: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred during logout")
+
+
+@app.get("/api/auth/me")
+async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security), db: Session = Depends(get_db)):
+    """Get current user information"""
+    try:
+        token = credentials.credentials
+        payload = auth.verify_token(token)
+        if not payload:
+            raise HTTPException(status_code=401, detail="Invalid token")
+        
+        user_id = int(payload.get("sub"))
+        user = auth.get_user_by_id(db, user_id)
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+        
+        profile = auth.get_user_profile(db, user_id)
+        
+        return {
+            "user_id": user.id,
+            "email": user.email,
+            "account_type": user.account_type,
+            "is_verified": user.is_verified,
+            "created_at": user.created_at.isoformat(),
+            "profile": {
+                "first_name": profile.first_name if profile else None,
+                "last_name": profile.last_name if profile else None,
+                "preferred_name": profile.preferred_name if profile else None
+            } if profile else None
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Get user error: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred")
+
+
+@app.get("/api/auth/check-email/{email}")
+async def check_email(email: str, db: Session = Depends(get_db)):
+    """Check if email is already registered"""
+    user = auth.get_user_by_email(db, email)
+    return {"available": user is None}
+
 
 if __name__ == "__main__":
     import uvicorn

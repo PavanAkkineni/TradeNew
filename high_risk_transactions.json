@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2025-09-03",
+    "action": "BUY",
+    "signal": "WEAK_BUY",
+    "shares": 38,
+    "price": 244.1,
+    "cost": 9275.8,
+    "commission": 0.0,
+    "total_cost": 9275.8,
+    "cash_after": 724.2000000000007,
+    "shares_after": 38,
+    "reason": "Weak bullish - HIGH RISK entry. \u2796 RSI Neutral (56.6)"
+  },
+  {
+    "date": "2025-09-08",
+    "action": "SELL",
+    "signal": "WEAK_SELL",
+    "shares": 38,
+    "price": 256.09,
+    "proceeds": 9731.419999999998,
+    "commission": 0.0,
+    "net_proceeds": 9731.419999999998,
+    "cash_after": 10455.619999999999,
+    "shares_after": 0,
+    "reason": "Weak bearish - HIGH RISK exit. \u26a0\ufe0f RSI Overbought (72.7) - Strong sell signal"
+  },
+  {
+    "date": "2025-09-24",
+    "action": "BUY",
+    "signal": "WEAK_BUY",
+    "shares": 37,
+    "price": 267.53,
+    "cost": 9898.609999999999,
+    "commission": 0.0,
+    "total_cost": 9898.609999999999,
+    "cash_after": 557.0100000000002,
+    "shares_after": 37,
+    "reason": "Weak bullish - HIGH RISK entry. \u26a0\ufe0f RSI Overbought (74.6) - Strong sell signal"
+  }
+]

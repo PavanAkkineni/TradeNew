@@ -1,0 +1,632 @@
+[
+  {
+    "date": "2025-09-03",
+    "price": 244.1,
+    "signal": "WEAK_BUY",
+    "confidence": 54.5,
+    "risk_level": "MEDIUM",
+    "total_score": 14.5,
+    "technical_score": 5,
+    "technical_signal": "WEAK_BUY",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u2796 RSI Neutral (56.6)",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-04",
+    "price": 247.18,
+    "signal": "HOLD",
+    "confidence": 44.5,
+    "risk_level": "MEDIUM",
+    "total_score": 4.5,
+    "technical_score": -5,
+    "technical_signal": "WEAK_SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI High (66.4) - Bearish",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-05",
+    "price": 248.53,
+    "signal": "HOLD",
+    "confidence": 44.5,
+    "risk_level": "MEDIUM",
+    "total_score": 4.5,
+    "technical_score": -5,
+    "technical_signal": "WEAK_SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI High (65.0) - Bearish",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-08",
+    "price": 256.09,
+    "signal": "WEAK_SELL",
+    "confidence": 55.5,
+    "risk_level": "MEDIUM",
+    "total_score": -15.5,
+    "technical_score": -25,
+    "technical_signal": "STRONG_SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (72.7) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend",
+        "\u26a0\ufe0f Price above upper Bollinger Band - Overbought",
+        "\u26a0\ufe0f High volume confirms bearish momentum"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-09",
+    "price": 259.11,
+    "signal": "WEAK_SELL",
+    "confidence": 50.5,
+    "risk_level": "MEDIUM",
+    "total_score": -10.5,
+    "technical_score": -20,
+    "technical_signal": "SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (73.5) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend",
+        "\u26a0\ufe0f Price above upper Bollinger Band - Overbought"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-10",
+    "price": 256.88,
+    "signal": "HOLD",
+    "confidence": 44.5,
+    "risk_level": "MEDIUM",
+    "total_score": 4.5,
+    "technical_score": -5,
+    "technical_signal": "WEAK_SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI High (68.4) - Bearish",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-11",
+    "price": 257.01,
+    "signal": "HOLD",
+    "confidence": 40.5,
+    "risk_level": "MEDIUM",
+    "total_score": -0.5,
+    "technical_score": -10,
+    "technical_signal": "SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (74.6) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-12",
+    "price": 253.44,
+    "signal": "HOLD",
+    "confidence": 44.5,
+    "risk_level": "MEDIUM",
+    "total_score": 4.5,
+    "technical_score": -5,
+    "technical_signal": "WEAK_SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI High (65.5) - Bearish",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-15",
+    "price": 256.24,
+    "signal": "HOLD",
+    "confidence": 40.5,
+    "risk_level": "MEDIUM",
+    "total_score": -0.5,
+    "technical_score": -10,
+    "technical_signal": "SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (72.8) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-16",
+    "price": 257.52,
+    "signal": "HOLD",
+    "confidence": 40.5,
+    "risk_level": "MEDIUM",
+    "total_score": -0.5,
+    "technical_score": -10,
+    "technical_signal": "SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (71.3) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-17",
+    "price": 259.08,
+    "signal": "HOLD",
+    "confidence": 40.5,
+    "risk_level": "MEDIUM",
+    "total_score": -0.5,
+    "technical_score": -10,
+    "technical_signal": "SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (70.8) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-18",
+    "price": 265.0,
+    "signal": "HOLD",
+    "confidence": 40.5,
+    "risk_level": "MEDIUM",
+    "total_score": -0.5,
+    "technical_score": -10,
+    "technical_signal": "SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (74.5) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-19",
+    "price": 266.4,
+    "signal": "HOLD",
+    "confidence": 45.5,
+    "risk_level": "MEDIUM",
+    "total_score": -5.5,
+    "technical_score": -15,
+    "technical_signal": "SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (79.8) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend",
+        "\u26a0\ufe0f High volume confirms bearish momentum"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-22",
+    "price": 271.37,
+    "signal": "WEAK_SELL",
+    "confidence": 50.5,
+    "risk_level": "MEDIUM",
+    "total_score": -10.5,
+    "technical_score": -20,
+    "technical_signal": "SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (86.0) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend",
+        "\u26a0\ufe0f Price above upper Bollinger Band - Overbought"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-23",
+    "price": 272.24,
+    "signal": "HOLD",
+    "confidence": 40.5,
+    "risk_level": "MEDIUM",
+    "total_score": -0.5,
+    "technical_score": -10,
+    "technical_signal": "SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (85.4) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u26a0\ufe0f 20 SMA below 50 SMA - Bearish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-24",
+    "price": 267.53,
+    "signal": "WEAK_BUY",
+    "confidence": 59.5,
+    "risk_level": "MEDIUM",
+    "total_score": 19.5,
+    "technical_score": 10,
+    "technical_signal": "BUY",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (74.6) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u2705 20 SMA above 50 SMA - Bullish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-25",
+    "price": 281.44,
+    "signal": "HOLD",
+    "confidence": 44.5,
+    "risk_level": "MEDIUM",
+    "total_score": 4.5,
+    "technical_score": -5,
+    "technical_signal": "WEAK_SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (80.5) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u2705 20 SMA above 50 SMA - Bullish trend",
+        "\u26a0\ufe0f Price above upper Bollinger Band - Overbought",
+        "\u26a0\ufe0f High volume confirms bearish momentum"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-26",
+    "price": 284.31,
+    "signal": "HOLD",
+    "confidence": 44.5,
+    "risk_level": "MEDIUM",
+    "total_score": 4.5,
+    "technical_score": -5,
+    "technical_signal": "WEAK_SELL",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (78.7) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u2705 20 SMA above 50 SMA - Bullish trend",
+        "\u26a0\ufe0f Price above upper Bollinger Band - Overbought",
+        "\u26a0\ufe0f High volume confirms bearish momentum"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-29",
+    "price": 279.8,
+    "signal": "WEAK_BUY",
+    "confidence": 59.5,
+    "risk_level": "MEDIUM",
+    "total_score": 19.5,
+    "technical_score": 10,
+    "technical_signal": "BUY",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (70.4) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u2705 20 SMA above 50 SMA - Bullish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-09-30",
+    "price": 282.16,
+    "signal": "WEAK_BUY",
+    "confidence": 59.5,
+    "risk_level": "MEDIUM",
+    "total_score": 19.5,
+    "technical_score": 10,
+    "technical_signal": "BUY",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (74.9) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u2705 20 SMA above 50 SMA - Bullish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-10-01",
+    "price": 286.49,
+    "signal": "WEAK_BUY",
+    "confidence": 59.5,
+    "risk_level": "MEDIUM",
+    "total_score": 19.5,
+    "technical_score": 10,
+    "technical_signal": "BUY",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (76.8) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u2705 20 SMA above 50 SMA - Bullish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-10-02",
+    "price": 286.72,
+    "signal": "WEAK_BUY",
+    "confidence": 59.5,
+    "risk_level": "MEDIUM",
+    "total_score": 19.5,
+    "technical_score": 10,
+    "technical_signal": "BUY",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (82.2) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u2705 20 SMA above 50 SMA - Bullish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  },
+  {
+    "date": "2025-10-03",
+    "price": 288.42,
+    "signal": "WEAK_BUY",
+    "confidence": 59.5,
+    "risk_level": "MEDIUM",
+    "total_score": 19.5,
+    "technical_score": 10,
+    "technical_signal": "BUY",
+    "fundamental_score": 5,
+    "sentiment_score": 10,
+    "reasons": {
+      "technical": [
+        "\u26a0\ufe0f RSI Overbought (81.8) - Strong sell signal",
+        "\u2705 MACD Bullish Crossover - Strong momentum",
+        "\u2705 20 SMA above 50 SMA - Bullish trend"
+      ],
+      "fundamental": [
+        "\u26a0\ufe0f P/E Ratio (46.3) - Overvalued",
+        "\u2705 ROE (22.7%) - Excellent returns",
+        "\u2796 Net Margin (9.1%) - Low margins"
+      ],
+      "sentiment": [
+        "\u2705 Very positive market sentiment (0.87)"
+      ]
+    }
+  }
+]

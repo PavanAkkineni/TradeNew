@@ -1,0 +1,163 @@
+[
+  {
+    "date": "2025-09-03",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 244.1,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-04",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 247.18,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-05",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 248.53,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-08",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 256.09,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-09",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 259.11,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-10",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 256.88,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-11",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 257.01,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-12",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 253.44,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-15",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 256.24,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-16",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 257.52,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-17",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 259.08,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-18",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 265.0,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-19",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 266.4,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-22",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 271.37,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-23",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 272.24,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-24",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 267.53,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-25",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 281.44,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-26",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 284.31,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-29",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 279.8,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-09-30",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 282.16,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-10-01",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 286.49,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-10-02",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 286.72,
+    "total_value": 10000.0
+  },
+  {
+    "date": "2025-10-03",
+    "cash": 10000.0,
+    "shares": 0,
+    "price": 288.42,
+    "total_value": 10000.0
+  }
+]

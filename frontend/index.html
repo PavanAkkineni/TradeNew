@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Analytics Platform</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1 class="logo">📈 Trading Analytics</h1>
+                <select id="symbolSelect" class="symbol-select">
+                    <option value="IBM">IBM</option>
+                    <option value="AAPL">AAPL</option>
+                    <option value="MSFT">MSFT</option>
+                    <option value="GOOGL">GOOGL</option>
+                </select>
+            </div>
+            <nav class="nav-tabs">
+                <button class="nav-tab active" data-tab="technical">Technical</button>
+                <button class="nav-tab" data-tab="fundamental">Fundamental</button>
+                <button class="nav-tab" data-tab="sentiment">Sentiment</button>
+                <button class="nav-tab" data-tab="signals">Trade Signals</button>
+                <button class="nav-tab" data-tab="expert">Expert Analysis</button>
+                <button class="nav-tab" data-tab="credibility">Credibility</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Stock Overview Card -->
+        <div class="stock-overview-card">
+            <div class="stock-header">
+                <div class="stock-logo">
+                    <div class="logo-circle">IBM</div>
+                </div>
+                <div class="stock-info">
+                    <h2 class="company-name">International Business Machines</h2>
+                    <span class="stock-symbol">IBM • NYSE</span>
+                </div>
+            </div>
+            
+            <div class="price-section">
+                <div class="current-price">
+                    <span class="price-value" id="currentPrice">$0.00</span>
+                    <span class="price-currency">USD</span>
+                    <span class="price-change" id="priceChange">+0.00</span>
+                    <span class="price-change-percent" id="priceChangePercent">+0.00%</span>
+                </div>
+                <div class="price-meta">
+                    <span>Last update: <span id="lastUpdate">--</span></span>
+                </div>
+            </div>
+
+            <div class="key-stats">
+                <div class="stat-item">
+                    <span class="stat-label">
+                        Market Cap
+                        <button class="info-btn stat-info-btn" data-topic="marketcap">ℹ️</button>
+                    </span>
+                    <span class="stat-value" id="marketCap">--</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">
+                        P/E Ratio
+                        <button class="info-btn stat-info-btn" data-topic="pe">ℹ️</button>
+                    </span>
+                    <span class="stat-value" id="peRatio">--</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">
+                        Dividend Yield
+                        <button class="info-btn stat-info-btn" data-topic="dividend">ℹ️</button>
+                    </span>
+                    <span class="stat-value" id="divYield">--</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">
+                        52W Range
+                        <button class="info-btn stat-info-btn" data-topic="range52w">ℹ️</button>
+                    </span>
+                    <span class="stat-value" id="range52w">--</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-panel active" id="technical-panel">
+            <!-- Price Chart -->
+            <div class="chart-card">
+                <div class="card-header">
+                    <h3>Price Chart</h3>
+                </div>
+                <canvas id="priceChart"></canvas>
+            </div>
+
+            <!-- Technical Indicators Grid -->
+            <div class="indicators-grid">
+                <!-- RSI Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>RSI (14)</h4>
+                        <button class="info-btn" data-topic="rsi">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="rsiValue">50.00</div>
+                    <div class="indicator-status" id="rsiStatus">Neutral</div>
+                    <div class="indicator-bar">
+                        <div class="indicator-fill" id="rsiFill"></div>
+                    </div>
+                </div>
+
+                <!-- MACD Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>MACD</h4>
+                        <button class="info-btn" data-topic="macd">ℹ️</button>
+                    </div>
+                    <div class="indicator-values">
+                        <div class="macd-line">
+                            <span class="label">MACD:</span>
+                            <span class="value" id="macdValue">0.00</span>
+                        </div>
+                        <div class="signal-line">
+                            <span class="label">Signal:</span>
+                            <span class="value" id="signalValue">0.00</span>
+                        </div>
+                        <div class="histogram">
+                            <span class="label">Histogram:</span>
+                            <span class="value" id="histogramValue">0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moving Averages Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Moving Averages</h4>
+                        <button class="info-btn" data-topic="sma">ℹ️</button>
+                    </div>
+                    <div class="ma-values">
+                        <div class="ma-item">
+                            <span class="ma-label">SMA 20:</span>
+                            <span class="ma-value" id="sma20">--</span>
+                        </div>
+                        <div class="ma-item">
+                            <span class="ma-label">SMA 50:</span>
+                            <span class="ma-value" id="sma50">--</span>
+                        </div>
+                        <div class="ma-item">
+                            <span class="ma-label">SMA 200:</span>
+                            <span class="ma-value" id="sma200">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volume Analysis Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Volume Analysis</h4>
+                        <button class="info-btn" data-topic="volume">ℹ️</button>
+                    </div>
+                    <div class="volume-data">
+                        <div class="volume-current">
+                            <span class="label">Current:</span>
+                            <span class="value" id="currentVolume">--</span>
+                        </div>
+                        <div class="volume-avg">
+                            <span class="label">Avg (20):</span>
+                            <span class="value" id="avgVolume">--</span>
+                        </div>
+                        <div class="volume-ratio">
+                            <span class="label">Ratio:</span>
+                            <span class="value" id="volumeRatio">--</span>
+                        </div>
+                    </div>
+                    <div class="volume-signal" id="volumeSignal">--</div>
+                </div>
+
+                <!-- Bollinger Bands Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Bollinger Bands</h4>
+                        <button class="info-btn" data-topic="bollinger">ℹ️</button>
+                    </div>
+                    <div class="bb-values">
+                        <div class="bb-item">
+                            <span class="bb-label">Upper:</span>
+                            <span class="bb-value" id="bbUpper">--</span>
+                        </div>
+                        <div class="bb-item">
+                            <span class="bb-label">Middle:</span>
+                            <span class="bb-value" id="bbMiddle">--</span>
+                        </div>
+                        <div class="bb-item">
+                            <span class="bb-label">Lower:</span>
+                            <span class="bb-value" id="bbLower">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support & Resistance Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Support & Resistance</h4>
+                        <button class="info-btn" data-topic="support">ℹ️</button>
+                    </div>
+                    <div class="sr-levels">
+                        <div class="resistance-levels">
+                            <h5>Resistance</h5>
+                            <div id="resistanceLevels">--</div>
+                        </div>
+                        <div class="support-levels">
+                            <h5>Support</h5>
+                            <div id="supportLevels">--</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trade Signal Card -->
+            <div class="signal-card">
+                <div class="signal-header">
+                    <h3>Technical Analysis Signal</h3>
+                    <div class="signal-strength" id="signalStrength">
+                        <span class="strength-label">Signal Strength:</span>
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="strengthFill"></div>
+                        </div>
+                        <span class="strength-value" id="strengthValue">0</span>
+                    </div>
+                </div>
+                <div class="signal-content">
+                    <div class="signal-action" id="signalAction">HOLD</div>
+                    <div class="signal-confidence">
+                        Confidence: <span id="signalConfidence">0%</span>
+                    </div>
+                    <div class="signal-reasons">
+                        <h4>Key Signals:</h4>
+                        <ul id="signalReasons"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-panel" id="fundamental-panel">
+            <!-- Fundamental Indicators Grid -->
+            <div class="indicators-grid">
+                <!-- P/E Ratio Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>P/E Ratio</h4>
+                        <button class="info-btn" data-topic="pe">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="peRatioValue">--</div>
+                    <div class="indicator-status" id="peRatioStatus">--</div>
+                    <div class="indicator-meta">
+                        <span class="meta-label">Industry Avg:</span>
+                        <span class="meta-value" id="peIndustryAvg">25.0</span>
+                    </div>
+                </div>
+
+                <!-- EPS Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>EPS (TTM)</h4>
+                        <button class="info-btn" data-topic="eps">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="epsValue">--</div>
+                    <div class="indicator-status" id="epsStatus">--</div>
+                    <div class="indicator-meta">
+                        <span class="meta-label">Growth:</span>
+                        <span class="meta-value" id="epsGrowth">--</span>
+                    </div>
+                </div>
+
+                <!-- ROE Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Return on Equity</h4>
+                        <button class="info-btn" data-topic="roe">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="roeValue">--</div>
+                    <div class="indicator-status" id="roeStatus">--</div>
+                    <div class="indicator-bar">
+                        <div class="indicator-fill" id="roeFill"></div>
+                    </div>
+                </div>
+
+                <!-- Profit Margin Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Profit Margin</h4>
+                        <button class="info-btn" data-topic="margin">ℹ️</button>
+                    </div>
+                    <div class="indicator-values">
+                        <div class="macd-line">
+                            <span class="label">Net Margin:</span>
+                            <span class="value" id="profitMarginValue">--</span>
+                        </div>
+                        <div class="signal-line">
+                            <span class="label">Operating:</span>
+                            <span class="value" id="operatingMarginValue">--</span>
+                        </div>
+                        <div class="histogram">
+                            <span class="label">Gross:</span>
+                            <span class="value" id="grossMarginValue">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Growth Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Revenue Growth</h4>
+                        <button class="info-btn" data-topic="growth">ℹ️</button>
+                    </div>
+                    <div class="ma-values">
+                        <div class="ma-item">
+                            <span class="ma-label">Annual:</span>
+                            <span class="ma-value" id="revenueGrowth">--</span>
+                        </div>
+                        <div class="ma-item">
+                            <span class="ma-label">Quarterly:</span>
+                            <span class="ma-value" id="quarterlyRevGrowth">--</span>
+                        </div>
+                        <div class="ma-item">
+                            <span class="ma-label">Earnings:</span>
+                            <span class="ma-value" id="earningsGrowth">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Health Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Financial Health</h4>
+                        <button class="info-btn" data-topic="health">ℹ️</button>
+                    </div>
+                    <div class="bb-values">
+                        <div class="bb-item">
+                            <span class="bb-label">Debt/Equity:</span>
+                            <span class="bb-value" id="debtToEquity">--</span>
+                        </div>
+                        <div class="bb-item">
+                            <span class="bb-label">Current Ratio:</span>
+                            <span class="bb-value" id="currentRatio">--</span>
+                        </div>
+                        <div class="bb-item">
+                            <span class="bb-label">Quick Ratio:</span>
+                            <span class="bb-value" id="quickRatio">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PEG Ratio Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>PEG Ratio</h4>
+                        <button class="info-btn" data-topic="peg">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="pegValue">--</div>
+                    <div class="indicator-status" id="pegStatus">--</div>
+                    <div class="indicator-meta">
+                        <span class="meta-label">< 1.0 = Good Value</span>
+                    </div>
+                </div>
+
+                <!-- Price to Book Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Price to Book</h4>
+                        <button class="info-btn" data-topic="pb">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="pbValue">--</div>
+                    <div class="indicator-status" id="pbStatus">--</div>
+                    <div class="indicator-meta">
+                        <span class="meta-label">< 3.0 = Good Value</span>
+                    </div>
+                </div>
+
+                <!-- Dividend Yield Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Dividend</h4>
+                        <button class="info-btn" data-topic="dividend">ℹ️</button>
+                    </div>
+                    <div class="volume-data">
+                        <div class="volume-current">
+                            <span class="label">Yield:</span>
+                            <span class="value" id="divYieldValue">--</span>
+                        </div>
+                        <div class="volume-avg">
+                            <span class="label">Payout Ratio:</span>
+                            <span class="value" id="payoutRatio">--</span>
+                        </div>
+                    </div>
+                    <div class="volume-signal" id="divSignal">--</div>
+                </div>
+            </div>
+
+            <!-- Fundamental Score Card -->
+            <div class="signal-card">
+                <div class="signal-header">
+                    <h3>Fundamental Analysis Score</h3>
+                    <div class="signal-strength" id="fundSignalStrength">
+                        <span class="strength-label">Overall Score:</span>
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="fundStrengthFill"></div>
+                        </div>
+                        <span class="strength-value" id="fundStrengthValue">0</span>
+                    </div>
+                </div>
+                <div class="signal-content">
+                    <div class="signal-action" id="fundSignalAction">HOLD</div>
+                    <div class="signal-reasons">
+                        <h4>Score Breakdown:</h4>
+                        <div class="score-breakdown">
+                            <div class="score-item">
+                                <span class="score-label">💰 Valuation:</span>
+                                <div class="score-bar"><div class="score-fill" id="valuationBar"></div></div>
+                                <span class="score-value" id="valuationScore">--</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-label">📈 Profitability:</span>
+                                <div class="score-bar"><div class="score-fill" id="profitabilityBar"></div></div>
+                                <span class="score-value" id="profitabilityScore">--</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-label">🚀 Growth:</span>
+                                <div class="score-bar"><div class="score-fill" id="growthBar"></div></div>
+                                <span class="score-value" id="growthScore">--</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-label">🏥 Financial Health:</span>
+                                <div class="score-bar"><div class="score-fill" id="healthBar"></div></div>
+                                <span class="score-value" id="healthScore">--</span>
+                            </div>
+                        </div>
+                        <p class="interpretation-text" id="fundInterpretation">Loading fundamental analysis...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-panel" id="sentiment-panel">
+            <!-- Sentiment Indicators Grid -->
+            <div class="indicators-grid">
+                <!-- Overall Sentiment Score Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Overall Sentiment</h4>
+                        <button class="info-btn" data-topic="sentiment_score">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="sentimentScore">--</div>
+                    <div class="indicator-status" id="sentimentStatus">Neutral</div>
+                    <div class="indicator-bar">
+                        <div class="indicator-fill" id="sentimentFill"></div>
+                    </div>
+                </div>
+
+                <!-- News Sentiment Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>News Sentiment</h4>
+                        <button class="info-btn" data-topic="news_sentiment">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="newsScore">--</div>
+                    <div class="indicator-meta">
+                        <span class="meta-label">Articles:</span>
+                        <span class="meta-value" id="newsVolume">0</span>
+                    </div>
+                </div>
+
+                <!-- Earnings Sentiment Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Earnings Calls</h4>
+                        <button class="info-btn" data-topic="earnings_sentiment">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="earningsScore">--</div>
+                    <div class="indicator-status" id="earningsStatus">Neutral</div>
+                </div>
+
+                <!-- Sentiment Trend Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Sentiment Trend</h4>
+                        <button class="info-btn" data-topic="sentiment_trend">ℹ️</button>
+                    </div>
+                    <div class="ma-values">
+                        <div class="ma-item">
+                            <span class="ma-label">Direction:</span>
+                            <span class="ma-value" id="trendDirection">--</span>
+                        </div>
+                        <div class="ma-item">
+                            <span class="ma-label">Momentum:</span>
+                            <span class="ma-value" id="trendStrength">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Distribution Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>News Distribution</h4>
+                        <button class="info-btn" data-topic="news_distribution">ℹ️</button>
+                    </div>
+                    <div class="bb-values">
+                        <div class="bb-item">
+                            <span class="bb-label">Positive:</span>
+                            <span class="bb-value" id="positiveArticles">--</span>
+                        </div>
+                        <div class="bb-item">
+                            <span class="bb-label">Neutral:</span>
+                            <span class="bb-value" id="neutralArticles">--</span>
+                        </div>
+                        <div class="bb-item">
+                            <span class="bb-label">Negative:</span>
+                            <span class="bb-value" id="negativeArticles">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Buzz Card -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>Media Buzz</h4>
+                        <button class="info-btn" data-topic="media_buzz">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="socialBuzz">--</div>
+                    <div class="indicator-status" id="buzzStatus">--</div>
+                    <div class="volume-signal" id="buzzSignal">--</div>
+                </div>
+            </div>
+
+            <!-- Sentiment Signal Card -->
+            <div class="signal-card">
+                <div class="signal-header">
+                    <h3>Sentiment Analysis Signal</h3>
+                    <div class="signal-strength" id="sentimentSignalStrength">
+                        <span class="strength-label">Sentiment Score:</span>
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="sentimentStrengthFill"></div>
+                        </div>
+                        <span class="strength-value" id="sentimentStrengthValue">0.0</span>
+                    </div>
+                </div>
+                <div class="signal-content">
+                    <div class="signal-action" id="sentimentSignalAction">NEUTRAL</div>
+                    <div class="signal-reasons">
+                        <h4>Key Signals:</h4>
+                        <ul id="sentimentSignalReasons">
+                            <li>Loading sentiment analysis...</li>
+                        </ul>
+                        <p class="interpretation-text" id="sentimentInterpretation">Loading sentiment data...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-panel" id="signals-panel">
+            <!-- Main Trade Signal Card -->
+            <div class="signal-card" style="margin-bottom: 2rem;">
+                <div class="signal-header">
+                    <h3>Comprehensive Trade Signal</h3>
+                    <div class="signal-strength" id="tradeSignalStrength">
+                        <span class="strength-label">Signal Strength:</span>
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="tradeStrengthFill"></div>
+                        </div>
+                        <span class="strength-value" id="tradeStrengthValue">0</span>
+                    </div>
+                </div>
+                <div class="signal-content">
+                    <div class="signal-action" id="tradeSignalAction">HOLD</div>
+                    <div class="signal-meta" style="display: flex; gap: 2rem; margin: 1rem 0; justify-content: center;">
+                        <div style="text-align: center;">
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">Confidence</div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);" id="tradeConfidence">0%</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">Risk Level</div>
+                            <div style="font-size: 1.5rem; font-weight: 700;" id="tradeRiskLevel">MEDIUM</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">Timeframe</div>
+                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);" id="tradeTimeframe">--</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Component Signals Grid -->
+            <div class="indicators-grid">
+                <!-- Technical Signal Component -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>📊 Technical Signal</h4>
+                        <button class="info-btn" data-topic="tech_signal">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="techSignalScore">0</div>
+                    <div class="indicator-status" id="techSignalStatus">Neutral</div>
+                    <div class="indicator-meta">
+                        <span class="meta-label">Weight:</span>
+                        <span class="meta-value">40%</span>
+                    </div>
+                </div>
+
+                <!-- Fundamental Signal Component -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>💰 Fundamental Signal</h4>
+                        <button class="info-btn" data-topic="fund_signal">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="fundSignalScore">0</div>
+                    <div class="indicator-status" id="fundSignalStatus">Neutral</div>
+                    <div class="indicator-meta">
+                        <span class="meta-label">Weight:</span>
+                        <span class="meta-value">30%</span>
+                    </div>
+                </div>
+
+                <!-- Sentiment Signal Component -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>📰 Sentiment Signal</h4>
+                        <button class="info-btn" data-topic="sent_signal">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="sentSignalScore">0</div>
+                    <div class="indicator-status" id="sentSignalStatus">Neutral</div>
+                    <div class="indicator-meta">
+                        <span class="meta-label">Weight:</span>
+                        <span class="meta-value">20%</span>
+                    </div>
+                </div>
+
+                <!-- Insider Signal Component -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <h4>👤 Insider Signal</h4>
+                        <button class="info-btn" data-topic="insider_signal">ℹ️</button>
+                    </div>
+                    <div class="indicator-value" id="insiderSignalScore">0</div>
+                    <div class="indicator-status" id="insiderSignalStatus">Neutral</div>
+                    <div class="indicator-meta">
+                        <span class="meta-label">Weight:</span>
+                        <span class="meta-value">10%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry/Exit Strategy Card -->
+            <div class="signal-card">
+                <div class="signal-header">
+                    <h3>📍 Entry & Exit Strategy</h3>
+                </div>
+                <div class="signal-content">
+                    <div class="indicators-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                        <div style="text-align: center; padding: 1rem;">
+                            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Entry Price</div>
+                            <div style="font-size: 1.8rem; font-weight: 700; color: var(--secondary-color);" id="entryPrice">$0.00</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem;">
+                            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Stop Loss</div>
+                            <div style="font-size: 1.8rem; font-weight: 700; color: var(--danger-color);" id="stopLoss">$0.00</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem;">
+                            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Take Profit</div>
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #10B981;" id="takeProfit">$0.00</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem;">
+                            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Risk/Reward</div>
+                            <div style="font-size: 1.8rem; font-weight: 700; color: var(--primary-color);" id="riskReward">--</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Reasoning Card -->
+            <div class="signal-card">
+                <div class="signal-header">
+                    <h3>🎯 Key Trading Insights</h3>
+                </div>
+                <div class="signal-content">
+                    <div class="signal-reasons">
+                        <ul id="tradeReasons">
+                            <li>Loading trade signal analysis...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-panel" id="expert-panel">
+            <!-- Expert Analysis Content -->
+            <div class="expert-analysis-container">
+                <!-- Computed Signal Section -->
+                <div class="signal-section">
+                    <div class="signal-card computed-signal">
+                        <div class="signal-header">
+                            <h3>📊 Mathematical Model Signal</h3>
+                            <div class="signal-confidence">
+                                <span class="confidence-label">Confidence:</span>
+                                <span id="computedConfidence" class="confidence-value">--</span>
+                            </div>
+                        </div>
+                        <div class="signal-content">
+                            <div class="signal-action">
+                                <span id="computedAction" class="action-badge">--</span>
+                            </div>
+                            <div class="signal-strength">
+                                <span class="strength-label">Signal Strength:</span>
+                                <div class="strength-bar">
+                                    <div id="computedStrengthBar" class="strength-fill"></div>
+                                </div>
+                                <span id="computedStrength" class="strength-value">--</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Individual Indicators Breakdown -->
+                        <div class="indicators-breakdown">
+                            <h4>📈 Individual Indicators & Weights</h4>
+                            <div id="indicatorsList" class="indicators-list">
+                                <!-- Will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expert Analysis Section -->
+                <div class="signal-section">
+                    <div class="signal-card expert-signal">
+                        <div class="signal-header">
+                            <h3>🤖 Gemini Trading Expert</h3>
+                            <button id="getGeminiAnalysis" class="gemini-button">
+                                🤖 Get Gemini Expert Analysis
+                            </button>
+                        </div>
+                        <div class="signal-content">
+                            <div class="signal-confidence" style="justify-content: center; margin-bottom: 1rem;">
+                                <span class="confidence-label">Expert Confidence:</span>
+                                <span id="expertConfidence" class="confidence-value">--</span>
+                            </div>
+                            <div class="signal-action">
+                                <span id="expertAction" class="action-badge">--</span>
+                            </div>
+                            <div class="agreement-status">
+                                <span id="agreementStatus" class="agreement-badge">--</span>
+                            </div>
+                        </div>
+
+                        <!-- Expert Analysis Details -->
+                        <div class="expert-details">
+                            <div class="analysis-section">
+                                <h4>🎯 Expert Analysis</h4>
+                                <p id="expertAnalysis" class="analysis-text">Loading expert analysis...</p>
+                            </div>
+
+                            <div class="signal-breakdown-section">
+                                <h4>📊 Signal Breakdown</h4>
+                                <div id="expertBreakdown" class="breakdown-grid">
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <div class="strategy-section">
+                                <h4>📋 Trading Strategy</h4>
+                                <div id="tradingStrategy" class="strategy-content">
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <div class="risk-section">
+                                <h4>⚠️ Risk Assessment</h4>
+                                <div id="riskAssessment" class="risk-content">
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+
+                            <div class="levels-section">
+                                <h4>🎯 Key Price Levels</h4>
+                                <div id="keyLevels" class="levels-grid">
+                                    <!-- Will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Credibility Panel -->
+        <div class="tab-panel" id="credibility-panel">
+            <!-- Backtest Results Header -->
+            <div class="credibility-header">
+                <h2>📊 Strategy Credibility & Backtest Results</h2>
+                <p class="subtitle">Comprehensive backtesting performance over September 3 - October 3, 2025</p>
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <div class="card-icon">💰</div>
+                    <div class="card-content">
+                        <h3>Initial Capital</h3>
+                        <div class="card-value">$10,000</div>
+                        <p class="card-desc">Starting investment (Low & High Risk)</p>
+                    </div>
+                </div>
+                <div class="summary-card success">
+                    <div class="card-icon">📈</div>
+                    <div class="card-content">
+                        <h3>Total Return</h3>
+                        <div class="card-value" id="totalReturn">+17.73%</div>
+                        <p class="card-desc" id="returnAmount">+$1,772.80</p>
+                    </div>
+                </div>
+                <div class="summary-card info">
+                    <div class="card-icon">🎯</div>
+                    <div class="card-content">
+                        <h3>Win Rate</h3>
+                        <div class="card-value" id="winRate">N/A</div>
+                        <p class="card-desc">Holding position</p>
+                    </div>
+                </div>
+                <div class="summary-card success">
+                    <div class="card-icon">🏆</div>
+                    <div class="card-content">
+                        <h3>vs Buy & Hold</h3>
+                        <div class="card-value" id="outperformance">+2.36%</div>
+                        <p class="card-desc">Strategy outperformance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk Strategy Tabs -->
+            <div class="risk-tabs">
+                <button class="risk-tab active" data-risk="low">Low Risk Strategy</button>
+                <button class="risk-tab" data-risk="high">High Risk Strategy</button>
+            </div>
+
+            <!-- Low Risk Strategy Content -->
+            <div class="risk-content active" id="low-risk-content">
+                <div class="strategy-info">
+                    <h3>📊 Low Risk Strategy (Conservative Approach)</h3>
+                    <p>Uses WEAK_BUY signals with moderate position sizing. Focuses on capital preservation while capturing upside.</p>
+                </div>
+
+                <!-- Transaction Timeline -->
+                <div class="transaction-section">
+                    <h3>🔄 Transaction History</h3>
+                    <div class="timeline">
+                        <!-- Buy Transaction -->
+                        <div class="transaction-item buy">
+                            <div class="transaction-marker">
+                                <span class="marker-icon">📥</span>
+                                <span class="marker-line"></span>
+                            </div>
+                            <div class="transaction-content">
+                                <div class="transaction-header">
+                                    <h4>BUY - September 3, 2025</h4>
+                                    <span class="transaction-badge buy-badge">WEAK_BUY Signal</span>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="detail-row">
+                                        <span class="label">Entry Price:</span>
+                                        <span class="value">$244.10</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="label">Shares Purchased:</span>
+                                        <span class="value">40 shares</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="label">Total Cost:</span>
+                                        <span class="value">$9,764.00</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="label">Cash Remaining:</span>
+                                        <span class="value">$236.00</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Indicators Used -->
+                                <div class="indicators-used">
+                                    <h5>📊 Indicators & Scores at Entry:</h5>
+                                    <div class="indicator-grid">
+                                        <div class="indicator-item">
+                                            <div class="indicator-name">Technical Score</div>
+                                            <div class="indicator-score positive">+5</div>
+                                            <div class="indicator-details">
+                                                <span class="detail">• RSI: 56.6 (Neutral)</span>
+                                                <span class="detail">• MACD: +15 (Bullish Crossover)</span>
+                                                <span class="detail">• Moving Avg: -10 (Bearish trend)</span>
+                                            </div>
+                                        </div>
+                                        <div class="indicator-item">
+                                            <div class="indicator-name">Fundamental Score</div>
+                                            <div class="indicator-score positive">+5</div>
+                                            <div class="indicator-details">
+                                                <span class="detail">• P/E Ratio: 46.32 (-3 Overvalued)</span>
+                                                <span class="detail">• ROE: 22.7% (+8 Excellent)</span>
+                                                <span class="detail">• Net Margin: 9.1% (0 Low)</span>
+                                            </div>
+                                        </div>
+                                        <div class="indicator-item">
+                                            <div class="indicator-name">Sentiment Score</div>
+                                            <div class="indicator-score positive">+10</div>
+                                            <div class="indicator-details">
+                                                <span class="detail">• Market Sentiment: 0.87 (Very Positive)</span>
+                                                <span class="detail">• Strong bullish sentiment</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="score-calculation">
+                                        <h6>Final Score Calculation:</h6>
+                                        <p class="formula">(Technical × 1.0) + (Fundamental × 0.7) + (Sentiment × 0.6)</p>
+                                        <p class="result">(5 × 1.0) + (5 × 0.7) + (10 × 0.6) = <strong>14.5 points</strong></p>
+                                        <p class="signal-result">Signal: <strong>WEAK_BUY</strong> (Range: 10-19) | Confidence: <strong>54.5%</strong></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="transaction-outcome success">
+                                    <strong>✅ Decision Executed:</strong> Bought 40 shares based on weak bullish signal driven by positive sentiment and strong fundamentals.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Holding Period -->
+                        <div class="transaction-item hold">
+                            <div class="transaction-marker">
+                                <span class="marker-icon">⏳</span>
+                                <span class="marker-line"></span>
+                            </div>
+                            <div class="transaction-content">
+                                <div class="transaction-header">
+                                    <h4>HOLDING PERIOD - September 4 to October 3</h4>
+                                    <span class="transaction-badge hold-badge">Position Maintained</span>
+                                </div>
+                                <div class="holding-summary">
+                                    <p>Throughout the month, various signals were generated but position was maintained due to strategy rules:</p>
+                                    <ul>
+                                        <li><strong>Sept 4-5:</strong> HOLD signals (Score: 4.5) - Continued holding</li>
+                                        <li><strong>Sept 8-9:</strong> WEAK_SELL signals (Score: -11.5) - Held because position was profitable (+4.9%)</li>
+                                        <li><strong>Sept 24 - Oct 3:</strong> WEAK_BUY signals (Score: 19.5) - Already holding position</li>
+                                    </ul>
+                                    <div class="profit-tracker">
+                                        <h6>Profit Progression:</h6>
+                                        <div class="profit-row">
+                                            <span>Sept 8:</span> <span class="profit">+$479 (+4.9%)</span>
+                                        </div>
+                                        <div class="profit-row">
+                                            <span>Sept 24:</span> <span class="profit">+$937 (+9.6%)</span>
+                                        </div>
+                                        <div class="profit-row">
+                                            <span>Oct 3:</span> <span class="profit">+$1,772.80 (+18.15%)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Final Position -->
+                        <div class="transaction-item final">
+                            <div class="transaction-marker">
+                                <span class="marker-icon">🏁</span>
+                            </div>
+                            <div class="transaction-content">
+                                <div class="transaction-header">
+                                    <h4>FINAL POSITION - October 3, 2025</h4>
+                                    <span class="transaction-badge success-badge">PROFITABLE</span>
+                                </div>
+                                <div class="transaction-details">
+                                    <div class="detail-row">
+                                        <span class="label">Current Price:</span>
+                                        <span class="value">$288.42</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="label">Shares Held:</span>
+                                        <span class="value">40 shares</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="label">Position Value:</span>
+                                        <span class="value">$11,536.80</span>
+                                    </div>
+                                    <div class="detail-row">
+                                        <span class="label">Cash:</span>
+                                        <span class="value">$236.00</span>
+                                    </div>
+                                    <div class="detail-row total">
+                                        <span class="label"><strong>Total Portfolio Value:</strong></span>
+                                        <span class="value"><strong>$11,772.80</strong></span>
+                                    </div>
+                                    <div class="detail-row profit">
+                                        <span class="label"><strong>Total Profit:</strong></span>
+                                        <span class="value"><strong>+$1,772.80 (+17.73%)</strong></span>
+                                    </div>
+                                </div>
+                                <div class="transaction-outcome success">
+                                    <strong>🎉 Strategy Success:</strong> Achieved 17.73% return, outperforming buy-and-hold by 2.36%. Strategy successfully identified entry point and held through volatility.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div class="metrics-section">
+                    <h3>📈 Performance Metrics</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">Total Return</div>
+                            <div class="metric-value success">+17.73%</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Dollar Gain</div>
+                            <div class="metric-value success">+$1,772.80</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Max Drawdown</div>
+                            <div class="metric-value warning">-2.14%</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Holding Period</div>
+                            <div class="metric-value">30 days</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Trades Executed</div>
+                            <div class="metric-value">1 Buy</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Buy & Hold Return</div>
+                            <div class="metric-value">+15.37%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- High Risk Strategy Content -->
+            <div class="risk-content" id="high-risk-content">
+                <div class="strategy-info">
+                    <h3>🚀 High Risk Strategy (Aggressive Approach)</h3>
+                    <p>Uses BUY/STRONG_BUY signals with larger position sizes. Aims for maximum returns with higher risk tolerance.</p>
+                </div>
+
+                <div class="no-trades-message">
+                    <div class="message-icon">⚠️</div>
+                    <h4>No High Risk Trades Executed</h4>
+                    <p>During the backtest period (Sept 3 - Oct 3, 2025), no BUY or STRONG_BUY signals were generated.</p>
+                    <div class="signal-requirements">
+                        <h5>High Risk Signal Requirements:</h5>
+                        <ul>
+                            <li><strong>BUY Signal:</strong> Requires score 20-34 points</li>
+                            <li><strong>STRONG_BUY Signal:</strong> Requires score ≥ 35 points</li>
+                        </ul>
+                        <p><strong>Highest Score Achieved:</strong> 19.5 points (Sept 24 - Oct 3)</p>
+                        <p>This was just below the BUY threshold (20 points), indicating market conditions didn't meet high-confidence criteria.</p>
+                    </div>
+                    <div class="hypothetical-scenario">
+                        <h5>💭 Hypothetical High Risk Scenario:</h5>
+                        <p>If we had used the WEAK_BUY signal with full capital deployment:</p>
+                        <div class="scenario-details">
+                            <div class="detail-row">
+                                <span class="label">Full Position:</span>
+                                <span class="value">40 shares @ $244.10</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Final Value:</span>
+                                <span class="value">$11,772.80</span>
+                            </div>
+                            <div class="detail-row profit">
+                                <span class="label">Return:</span>
+                                <span class="value">+17.73%</span>
+                            </div>
+                        </div>
+                        <p class="note"><em>Note: Same as Low Risk since only one signal level triggered during backtest period.</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indicator Methodology -->
+            <div class="methodology-section">
+                <h3>🧮 Scoring Methodology</h3>
+                <div class="methodology-grid">
+                    <div class="method-card">
+                        <h4>Technical Analysis (Weight: 1.0x)</h4>
+                        <ul>
+                            <li><strong>RSI:</strong> ±15 points (Overbought/Oversold detection)</li>
+                            <li><strong>MACD:</strong> ±15 points (Momentum & Trend)</li>
+                            <li><strong>Moving Averages:</strong> ±20 points (Golden/Death Cross)</li>
+                            <li><strong>Bollinger Bands:</strong> ±10 points (Volatility)</li>
+                            <li><strong>Volume:</strong> ±5 points (Confirmation)</li>
+                        </ul>
+                    </div>
+                    <div class="method-card">
+                        <h4>Fundamental Analysis (Weight: 0.7x)</h4>
+                        <ul>
+                            <li><strong>P/E Ratio:</strong> ±8 points (Valuation)</li>
+                            <li><strong>ROE:</strong> +8 points max (Profitability)</li>
+                            <li><strong>Profit Margin:</strong> +5 points max (Efficiency)</li>
+                        </ul>
+                    </div>
+                    <div class="method-card">
+                        <h4>Sentiment Analysis (Weight: 0.6x)</h4>
+                        <ul>
+                            <li><strong>Market Sentiment:</strong> ±10 points (0-1 scale)</li>
+                            <li><strong>Based on:</strong> 5-day average sentiment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="signal-thresholds">
+                    <h4>📊 Signal Thresholds</h4>
+                    <table class="threshold-table">
+                        <tr>
+                            <th>Score Range</th>
+                            <th>Signal</th>
+                            <th>Action</th>
+                            <th>Risk Level</th>
+                        </tr>
+                        <tr>
+                            <td>≥ 35</td>
+                            <td class="strong-buy">STRONG_BUY</td>
+                            <td>Buy aggressively</td>
+                            <td>LOW</td>
+                        </tr>
+                        <tr>
+                            <td>20-34</td>
+                            <td class="buy">BUY</td>
+                            <td>Buy with conviction</td>
+                            <td>LOW</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>10-19</td>
+                            <td class="weak-buy">WEAK_BUY</td>
+                            <td>Buy cautiously</td>
+                            <td>MEDIUM</td>
+                        </tr>
+                        <tr>
+                            <td>-10 to 9</td>
+                            <td class="hold">HOLD</td>
+                            <td>No action</td>
+                            <td>MEDIUM</td>
+                        </tr>
+                        <tr>
+                            <td>-19 to -11</td>
+                            <td class="weak-sell">WEAK_SELL</td>
+                            <td>Sell if losing</td>
+                            <td>MEDIUM</td>
+                        </tr>
+                        <tr>
+                            <td>-34 to -20</td>
+                            <td class="sell">SELL</td>
+                            <td>Sell position</td>
+                            <td>HIGH</td>
+                        </tr>
+                        <tr>
+                            <td>≤ -35</td>
+                            <td class="strong-sell">STRONG_SELL</td>
+                            <td>Sell immediately</td>
+                            <td>HIGH</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="disclaimer-section">
+                <h4>⚠️ Important Disclaimer</h4>
+                <p>This backtest represents historical performance and does not guarantee future results. Past performance is not indicative of future returns. This analysis is for educational purposes only and should not be considered financial advice. Always conduct your own research and consult with a qualified financial advisor before making investment decisions.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Educational Modal -->
+    <div id="educationModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 id="modalTitle">Educational Content</h2>
+            <p id="modalDescription"></p>
+{{ ... }}
+            <div id="modalUsage"></div>
+        </div>
+    </div>
+
+    <script src="static/js/app_new.js?v=2.8"></script>
+</body>
+</html>

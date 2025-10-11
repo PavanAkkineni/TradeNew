@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+    <script>
+        async function testAPI() {
+            const results = document.getElementById('results');
+            results.innerHTML = 'Loading...';
+            
+            try {
+                // Test Technical API
+                const techResponse = await fetch('http://localhost:8000/api/technical/IBM');
+                const techData = await techResponse.json();
+                
+                results.innerHTML = `
+                    <h2>✅ Technical API Working!</h2>
+                    <pre>${JSON.stringify(techData.indicators, null, 2)}</pre>
+                `;
+            } catch (error) {
+                results.innerHTML = `<h2>❌ Error: ${error.message}</h2>`;
+            }
+        }
+        
+        window.onload = testAPI;
+    </script>
+</head>
+<body>
+    <h1>API Connection Test</h1>
+    <div id="results"></div>
+</body>
+</html>

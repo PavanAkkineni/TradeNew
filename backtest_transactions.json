@@ -1,0 +1,15 @@
+[
+  {
+    "date": "2025-09-03",
+    "action": "BUY",
+    "signal": "WEAK_BUY",
+    "shares": 4,
+    "price": 244.1,
+    "cost": 976.4,
+    "commission": 0.0,
+    "total_cost": 976.4,
+    "cash_after": 23.600000000000023,
+    "shares_after": 4,
+    "reason": "Weak bullish signal. \u2796 RSI Neutral (56.6)"
+  }
+]

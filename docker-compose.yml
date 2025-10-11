@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  trading-app:
+    build: .
+    container_name: trading-analytics-platform
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+    env_file:
+      - .env
+    volumes:
+      # Mount data directories for persistence
+      - ./IBM:/app/IBM:ro
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - trading-network
+
+  # Optional: Add a reverse proxy for production
+  nginx:
+    image: nginx:alpine
+    container_name: trading-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - trading-app
+    restart: unless-stopped
+    networks:
+      - trading-network
+    profiles:
+      - production
+
+networks:
+  trading-network:
+    driver: bridge
+
+volumes:
+  trading-data:
+    driver: local

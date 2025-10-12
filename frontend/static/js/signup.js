@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    
+    // Add scroll listener for progress tracking
+    window.addEventListener('scroll', updateProgressOnScroll);
+    
+    // Add smooth scrolling CSS
+    document.documentElement.style.scrollBehavior = 'smooth';
 });
 
 function selectAccountType(type) {
@@ -54,27 +60,47 @@ function selectAccountType(type) {
     }
 }
 
-function nextSection() {
-    // Validate current section
-    if (!validateSection(currentStep)) {
-        return;
-    }
-    
-    // Save data from current section
-    saveSectionData(currentStep);
-    
-    // Move to next section
-    if (currentStep < totalSteps) {
-        currentStep++;
-        updateUI();
+// Smooth scroll to section function
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        const offset = 100; // Account for sticky header
+        const elementPosition = section.offsetTop;
+        const offsetPosition = elementPosition - offset;
+        
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
     }
 }
 
-function previousSection() {
-    if (currentStep > 1) {
-        currentStep--;
-        updateUI();
-    }
+// Update progress indicators based on scroll position
+function updateProgressOnScroll() {
+    const sections = document.querySelectorAll('.form-section');
+    const scrollPosition = window.scrollY + 200; // Add offset for better UX
+    
+    let activeSection = 1;
+    
+    sections.forEach((section, index) => {
+        if (section.offsetTop <= scrollPosition) {
+            activeSection = index + 1;
+        }
+    });
+    
+    // Update progress steps
+    document.querySelectorAll('.progress-step').forEach((step, index) => {
+        const stepNumber = index + 1;
+        step.classList.remove('active', 'completed');
+        
+        if (stepNumber === activeSection) {
+            step.classList.add('active');
+        } else if (stepNumber < activeSection) {
+            step.classList.add('completed');
+        }
+    });
+    
+    currentStep = activeSection;
 }
 
 function skipTrustedContact() {
@@ -83,51 +109,18 @@ function skipTrustedContact() {
     document.getElementById('trustedEmail').value = '';
     document.getElementById('trustedPhone').value = '';
     document.getElementById('trustedRelationship').value = '';
-    nextSection();
+    scrollToSection('section-7');
 }
 
+// Legacy function for compatibility
 function updateUI() {
-    // Hide all sections
-    document.querySelectorAll('.form-section').forEach(section => {
-        section.classList.remove('active');
-    });
-    
-    // Show current section
-    const currentSection = document.getElementById(`section-${currentStep}`);
-    if (currentSection) {
-        currentSection.classList.add('active');
-    }
-    
-    // Update progress bar
-    document.querySelectorAll('.progress-step').forEach((step, index) => {
-        const stepNumber = index + 1;
-        if (stepNumber < currentStep) {
-            step.classList.add('completed');
-            step.classList.remove('active');
-        } else if (stepNumber === currentStep) {
-            step.classList.add('active');
-            step.classList.remove('completed');
-        } else {
-            step.classList.remove('active', 'completed');
-        }
-    });
-    
-    // Update progress lines
-    document.querySelectorAll('.progress-line').forEach((line, index) => {
-        if (index < currentStep - 1) {
-            line.classList.add('active');
-        } else {
-            line.classList.remove('active');
-        }
-    });
+    // This function is now handled by scroll-based updates
+    updateProgressOnScroll();
     
     // If on review section, populate review content
     if (currentStep === 7) {
         populateReview();
     }
-    
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function validateSection(step) {

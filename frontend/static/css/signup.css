@@ -125,6 +125,9 @@ body {
     margin-bottom: 2rem;
     overflow-x: auto;
     overflow-y: hidden;
+    position: sticky;
+    top: 80px;
+    z-index: 50;
 }
 
 .progress-steps {
@@ -143,6 +146,13 @@ body {
     align-items: center;
     min-width: 80px;
     position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.progress-step:hover .step-circle {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .step-circle {
@@ -201,11 +211,18 @@ body {
 }
 
 .form-section {
-    display: none;
+    display: block;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
 .form-section.active {
-    display: block;
     animation: fadeIn 0.3s ease;
 }
 
@@ -592,4 +609,14 @@ body {
     .btn {
         width: 100%;
     }
+}
+
+/* Smooth Scrolling Enhancements */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px; /* Account for sticky header */
+}
+
+.form-section {
+    scroll-margin-top: 120px; /* Better scroll targeting */
 }

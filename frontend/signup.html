@@ -31,31 +31,31 @@
         <!-- Progress Bar -->
         <div class="progress-bar-container">
             <div class="progress-steps">
-                <div class="progress-step active" data-step="1">
+                <div class="progress-step active" data-step="1" onclick="scrollToSection('section-1')">
                     <div class="step-circle">1</div>
                     <span class="step-label">Welcome</span>
                 </div>
-                <div class="progress-step" data-step="2">
+                <div class="progress-step" data-step="2" onclick="scrollToSection('section-2')">
                     <div class="step-circle">2</div>
                     <span class="step-label">Basic Info</span>
                 </div>
-                <div class="progress-step" data-step="3">
+                <div class="progress-step" data-step="3" onclick="scrollToSection('section-3')">
                     <div class="step-circle">3</div>
                     <span class="step-label">Security</span>
                 </div>
-                <div class="progress-step" data-step="4">
+                <div class="progress-step" data-step="4" onclick="scrollToSection('section-4')">
                     <div class="step-circle">4</div>
                     <span class="step-label">Address</span>
                 </div>
-                <div class="progress-step" data-step="5">
+                <div class="progress-step" data-step="5" onclick="scrollToSection('section-5')">
                     <div class="step-circle">5</div>
                     <span class="step-label">Employment</span>
                 </div>
-                <div class="progress-step" data-step="6">
+                <div class="progress-step" data-step="6" onclick="scrollToSection('section-6')">
                     <div class="step-circle">6</div>
                     <span class="step-label">Trusted Contact</span>
                 </div>
-                <div class="progress-step" data-step="7">
+                <div class="progress-step" data-step="7" onclick="scrollToSection('section-7')">
                     <div class="step-circle">7</div>
                     <span class="step-label">Review</span>
                 </div>
@@ -66,7 +66,7 @@
         <div class="form-container">
             <form id="signupForm">
                 <!-- Step 1: Welcome -->
-                <div class="form-section active" id="section-1">
+                <div class="form-section" id="section-1">
                     <h2 class="section-title">Welcome to TradeCompass</h2>
                     <p class="section-subtitle">Let's get your account set up in just a few minutes</p>
                     
@@ -89,7 +89,7 @@
                     
                     <div class="button-group">
                         <div></div>
-                        <button type="button" class="btn btn-primary" onclick="nextSection()" id="btn-1">Continue</button>
+                        <button type="button" class="btn btn-primary" onclick="scrollToSection('section-2')" id="btn-1">Continue</button>
                     </div>
                 </div>
                 
@@ -190,8 +190,8 @@
                     <div class="error-message" id="error-2"></div>
                     
                     <div class="button-group">
-                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
-                        <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                        <button type="button" class="btn btn-secondary" onclick="scrollToSection('section-1')">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="scrollToSection('section-3')">Continue</button>
                     </div>
                 </div>
                 
@@ -229,8 +229,8 @@
                     <div class="error-message" id="error-3"></div>
                     
                     <div class="button-group">
-                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
-                        <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                        <button type="button" class="btn btn-secondary" onclick="scrollToSection('section-2')">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="scrollToSection('section-4')">Continue</button>
                     </div>
                 </div>
                 
@@ -320,8 +320,8 @@
                     <div class="error-message" id="error-4"></div>
                     
                     <div class="button-group">
-                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
-                        <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                        <button type="button" class="btn btn-secondary" onclick="scrollToSection('section-3')">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="scrollToSection('section-5')">Continue</button>
                     </div>
                 </div>
                 
@@ -408,8 +408,8 @@
                     <div class="error-message" id="error-5"></div>
                     
                     <div class="button-group">
-                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
-                        <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                        <button type="button" class="btn btn-secondary" onclick="scrollToSection('section-4')">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="scrollToSection('section-6')">Continue</button>
                     </div>
                 </div>
                 
@@ -443,10 +443,10 @@
                     <div class="error-message" id="error-6"></div>
                     
                     <div class="button-group">
-                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+                        <button type="button" class="btn btn-secondary" onclick="scrollToSection('section-5')">Back</button>
                         <div style="display: flex; gap: 1rem;">
-                            <button type="button" class="btn btn-skip" onclick="skipTrustedContact()">Skip</button>
-                            <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                            <button type="button" class="btn btn-skip" onclick="scrollToSection('section-7')">Skip</button>
+                            <button type="button" class="btn btn-primary" onclick="scrollToSection('section-7')">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -481,7 +481,7 @@
                     <div class="error-message" id="error-7"></div>
                     
                     <div class="button-group">
-                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+                        <button type="button" class="btn btn-secondary" onclick="scrollToSection('section-6')">Back</button>
                         <button type="button" class="btn btn-primary" onclick="submitForm()" id="submit-btn">
                             <span id="submit-text">Open My Account</span>
                             <span id="submit-loading" style="display: none;" class="loading"></span>

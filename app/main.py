@@ -447,7 +447,7 @@ async def get_market_data():
     This is a pure data aggregation endpoint - no interpretation, just facts.
     """
     try:
-        market_data = market_data_aggregator.aggregate_all_data()
+        market_data = market_data_aggregator.aggregate_all_data(use_cache=False)
         return market_data
     except Exception as e:
         raise HTTPException(
@@ -535,8 +535,8 @@ async def generate_portfolio_recommendation(profile: PortfolioProfile):
     }
     """
     try:
-        # Get current market data (uses cache if available)
-        market_data = market_data_aggregator.aggregate_all_data(use_cache=True)
+        # Get current market data (fresh data, no cache)
+        market_data = market_data_aggregator.aggregate_all_data(use_cache=False)
         
         # Convert profile to dict
         user_profile = {

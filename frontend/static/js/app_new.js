@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('📊 Loading initial stock data for:', currentSymbol);
         loadStockData(currentSymbol);
         
+        // Load market data for portfolio tab (default tab)
+        console.log('📊 Loading market data for portfolio tab...');
+        loadMarketData();
+        
         // Auto-update disabled for static data
         console.log('⏰ Auto-update disabled (using static data)...');
         // updateInterval = setInterval(() => {
@@ -253,6 +257,34 @@ function setupEventListeners() {
         geminiButton.addEventListener('click', () => {
             console.log('🤖 Gemini Expert Analysis button clicked');
             loadGeminiExpertAnalysis();
+        });
+    }
+    
+    // Portfolio Form Submission
+    const portfolioForm = document.getElementById('portfolioForm');
+    if (portfolioForm) {
+        portfolioForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            console.log('📊 Portfolio form submitted');
+            await handlePortfolioSubmission();
+        });
+    }
+    
+    // Edit Profile Button
+    const editProfileBtn = document.getElementById('editProfile');
+    if (editProfileBtn) {
+        editProfileBtn.addEventListener('click', () => {
+            console.log('✏️ Edit profile clicked');
+            showPortfolioForm();
+        });
+    }
+    
+    // Market Data Refresh Button
+    const refreshMarketBtn = document.getElementById('refreshMarketData');
+    if (refreshMarketBtn) {
+        refreshMarketBtn.addEventListener('click', () => {
+            console.log('🔄 Refresh market data clicked');
+            loadMarketData();
         });
     }
 }
@@ -792,6 +824,11 @@ function switchTab(tabName) {
             panel.classList.remove('active');
         }
     });
+    
+    // Load market data when switching to portfolio tab
+    if (tabName === 'portfolio') {
+        loadMarketData();
+    }
 }
 
 // Show educational content in modal
@@ -2141,6 +2178,446 @@ window.testFundamental = async () => {
         console.error('❌ Test failed:', error);
     }
 };
+
+// ====================================
+// PORTFOLIO FORM FUNCTIONS
+// ====================================
+
+async function handlePortfolioSubmission() {
+    console.log('📊 Handling portfolio form submission...');
+    
+    // Get form values
+    const investmentCapital = parseFloat(document.getElementById('investmentCapital').value);
+    const targetAmount = parseFloat(document.getElementById('targetAmount').value);
+    const timeHorizon = parseInt(document.getElementById('timeHorizon').value);
+    const riskAppetite = document.querySelector('input[name="riskAppetite"]:checked').value;
+    
+    // Validate
+    if (!investmentCapital || !targetAmount || !timeHorizon || !riskAppetite) {
+        showError('Please fill in all fields');
+        return;
+    }
+    
+    if (targetAmount <= investmentCapital) {
+        showError('Target amount must be greater than investment capital');
+        return;
+    }
+    
+    // Create portfolio profile object
+    const portfolioProfile = {
+        investment_capital: investmentCapital,
+        target_amount: targetAmount,
+        time_horizon: timeHorizon,
+        risk_appetite: riskAppetite
+    };
+    
+    console.log('📤 Sending portfolio profile:', portfolioProfile);
+    
+    // Show loading state
+    const submitBtn = document.getElementById('portfolioSubmitBtn');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="btn-icon">⏳</span><span class="btn-text">Processing...</span>';
+    
+    try {
+        // Send to recommendation engine (Component 3)
+        const response = await fetch(`${API_BASE}/portfolio-recommendation`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(portfolioProfile)
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const result = await response.json();
+        console.log('✅ Portfolio recommendation received:', result);
+        
+        // Store profile for later use
+        sessionStorage.setItem('portfolioProfile', JSON.stringify(portfolioProfile));
+        
+        // Display results with AI recommendations
+        displayPortfolioResults(result);
+        
+        // Show success message
+        submitBtn.innerHTML = '<span class="btn-icon">✅</span><span class="btn-text">Success!</span>';
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+        
+    } catch (error) {
+        console.error('❌ Portfolio submission error:', error);
+        showError('Failed to get portfolio recommendations. Please try again.');
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }
+}
+
+function displayPortfolioResults(data) {
+    console.log('📊 Displaying portfolio results...', data);
+    
+    // Hide form, show results
+    const form = document.querySelector('.profile-form-card');
+    const results = document.getElementById('portfolioResults');
+    const recommendations = document.getElementById('portfolioRecommendations');
+    
+    if (form) form.style.display = 'none';
+    if (results) results.style.display = 'block';
+    
+    if (!recommendations) return;
+    
+    // Check if we have AI recommendation
+    if (!data.success || !data.recommendation) {
+        recommendations.innerHTML = `
+            <div class="error-message">
+                <h4>⚠️ Unable to generate recommendations</h4>
+                <p>${data.error || 'Unknown error occurred'}</p>
+            </div>
+        `;
+        return;
+    }
+    
+    const rec = data.recommendation;
+    const allocation = rec.portfolio_allocation || {};
+    const justification = rec.justification || {};
+    const returns = rec.expected_returns || {};
+    const profile = data.user_profile || {};
+    
+    let html = '<div class="ai-recommendation-container">';
+    
+    // Header with AI branding
+    html += `
+        <div class="ai-header">
+            <h3>🤖 Aura's AI-Powered Portfolio Recommendation</h3>
+            <p class="ai-subtitle">Personalized allocation based on your profile and current market conditions</p>
+        </div>
+    `;
+    
+    // Portfolio Allocation Chart
+    html += `
+        <div class="allocation-section">
+            <h4>📊 Recommended Allocation</h4>
+            <div class="allocation-grid">
+    `;
+    
+    const allocationItems = [
+        { key: 'stocks_etfs', label: 'Stocks & ETFs', icon: '📈', color: '#10B981' },
+        { key: 'bonds_fixed_income', label: 'Bonds & Fixed Income', icon: '💵', color: '#3B82F6' },
+        { key: 'real_estate', label: 'Real Estate', icon: '🏘️', color: '#8B5CF6' },
+        { key: 'commodities_gold', label: 'Commodities & Gold', icon: '🥇', color: '#F59E0B' },
+        { key: 'cash_equivalents', label: 'Cash & Equivalents', icon: '💰', color: '#6B7280' }
+    ];
+    
+    allocationItems.forEach(item => {
+        const data = allocation[item.key] || {};
+        const percentage = data.percentage || 0;
+        const amount = data.amount || 0;
+        
+        html += `
+            <div class="allocation-item">
+                <div class="allocation-header">
+                    <span class="allocation-icon">${item.icon}</span>
+                    <span class="allocation-label">${item.label}</span>
+                </div>
+                <div class="allocation-percentage" style="color: ${item.color}">${percentage.toFixed(1)}%</div>
+                <div class="allocation-amount">$${amount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+                <div class="allocation-bar">
+                    <div class="allocation-fill" style="width: ${percentage}%; background: ${item.color}"></div>
+                </div>
+            </div>
+        `;
+    });
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    // Justification Section
+    html += `
+        <div class="justification-section">
+            <h4>📋 Strategy & Justification</h4>
+            
+            <div class="justification-card">
+                <h5>🎯 Overall Strategy</h5>
+                <p>${justification.overall_strategy || 'N/A'}</p>
+            </div>
+            
+            <div class="justification-card">
+                <h5>⚖️ Risk Assessment</h5>
+                <p>${justification.risk_assessment || 'N/A'}</p>
+            </div>
+            
+            <div class="justification-card">
+                <h5>📊 Market Conditions Impact</h5>
+                <p>${justification.market_conditions_impact || 'N/A'}</p>
+            </div>
+            
+            <div class="justification-card">
+                <h5>⏰ Time Horizon Considerations</h5>
+                <p>${justification.time_horizon_considerations || 'N/A'}</p>
+            </div>
+        </div>
+    `;
+    
+    // Key Recommendations
+    if (justification.key_recommendations && justification.key_recommendations.length > 0) {
+        html += `
+            <div class="recommendations-list">
+                <h4>✨ Key Recommendations</h4>
+                <ul>
+        `;
+        justification.key_recommendations.forEach(rec => {
+            html += `<li>${rec}</li>`;
+        });
+        html += `
+                </ul>
+            </div>
+        `;
+    }
+    
+    // Expected Returns
+    html += `
+        <div class="returns-section">
+            <h4>📈 Expected Returns</h4>
+            <div class="returns-grid">
+                <div class="return-item conservative">
+                    <div class="return-label">Conservative</div>
+                    <div class="return-value">${returns.conservative_estimate || 'N/A'}</div>
+                </div>
+                <div class="return-item moderate">
+                    <div class="return-label">Moderate</div>
+                    <div class="return-value">${returns.moderate_estimate || 'N/A'}</div>
+                </div>
+                <div class="return-item optimistic">
+                    <div class="return-label">Optimistic</div>
+                    <div class="return-value">${returns.optimistic_estimate || 'N/A'}</div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Disclaimer
+    html += `
+        <div class="ai-disclaimer">
+            <p><strong>⚠️ Disclaimer:</strong> This recommendation is generated by AI based on your profile and current market data. It is for informational purposes only and should not be considered financial advice. Always consult with a qualified financial advisor before making investment decisions.</p>
+        </div>
+    `;
+    
+    html += '</div>';
+    
+    recommendations.innerHTML = html;
+}
+
+function showPortfolioForm() {
+    console.log('✏️ Showing portfolio form...');
+    
+    // Hide results, show form
+    const form = document.querySelector('.profile-form-card');
+    const results = document.getElementById('portfolioResults');
+    
+    if (form) form.style.display = 'block';
+    if (results) results.style.display = 'none';
+    
+    // Reload saved profile if available
+    const savedProfile = sessionStorage.getItem('portfolioProfile');
+    if (savedProfile) {
+        try {
+            const profile = JSON.parse(savedProfile);
+            document.getElementById('investmentCapital').value = profile.investment_capital;
+            document.getElementById('targetAmount').value = profile.target_amount;
+            document.getElementById('timeHorizon').value = profile.time_horizon;
+            document.querySelector(`input[name="riskAppetite"][value="${profile.risk_appetite}"]`).checked = true;
+        } catch (error) {
+            console.error('Error loading saved profile:', error);
+        }
+    }
+}
+
+// ====================================
+// MARKET DATA DISPLAY FUNCTIONS
+// ====================================
+
+async function loadMarketData() {
+    console.log('📊 Loading market data...');
+    
+    const container = document.getElementById('marketDataDisplay');
+    const refreshBtn = document.getElementById('refreshMarketData');
+    
+    if (!container) return;
+    
+    // Show loading state
+    container.innerHTML = `
+        <div class="loading-market-data">
+            <div class="spinner"></div>
+            <p>Fetching latest market data...</p>
+        </div>
+    `;
+    
+    if (refreshBtn) refreshBtn.disabled = true;
+    
+    try {
+        const response = await fetch(`${API_BASE}/market-data`);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const marketData = await response.json();
+        console.log('✅ Market data received:', marketData);
+        
+        displayMarketData(marketData);
+        
+    } catch (error) {
+        console.error('❌ Error loading market data:', error);
+        container.innerHTML = `
+            <div class="error-message">
+                <h4>⚠️ Unable to load market data</h4>
+                <p>${error.message}</p>
+                <p>Please check your API keys and try again.</p>
+            </div>
+        `;
+    } finally {
+        if (refreshBtn) refreshBtn.disabled = false;
+    }
+}
+
+function displayMarketData(data) {
+    const container = document.getElementById('marketDataDisplay');
+    if (!container) return;
+    
+    const { economic_indicators, market_performance, market_sentiment, metadata } = data;
+    
+    let html = '<div class="market-data-grid">';
+    
+    // Economic Indicators
+    html += `
+        <div class="market-category">
+            <h4>💰 Economic Indicators</h4>
+            <div class="market-metrics">
+                ${createMetric('Inflation (CPI)', economic_indicators.inflation_rate, 'index')}
+                ${createMetric('Fed Funds Rate', economic_indicators.federal_funds_rate, 'percent')}
+                ${createMetric('GDP Growth', economic_indicators.gdp_growth_rate, 'percent')}
+                ${createMetric('Unemployment', economic_indicators.unemployment_rate, 'percent')}
+            </div>
+        </div>
+    `;
+    
+    // Market Performance
+    html += `
+        <div class="market-category">
+            <h4>📈 Market Performance</h4>
+            <div class="market-metrics">
+                ${createMetric('S&P 500 (SPY)', market_performance.sp500, 'price')}
+                ${createMetric('Volatility (VXX)', market_performance.vix, 'price')}
+                ${createMetric('Treasury (TLT)', market_performance.treasury_10y, 'price')}
+                ${createMetric('Gold (GLD)', market_performance.gold, 'price')}
+                ${createMetric('Real Estate (VNQ)', market_performance.vnq, 'price')}
+            </div>
+        </div>
+    `;
+    
+    // Market Sentiment
+    const headlines = market_sentiment.headlines || [];
+    html += `
+        <div class="market-category" style="grid-column: 1 / -1;">
+            <h4>📰 Market Sentiment</h4>
+            <div class="headlines-section">
+    `;
+    
+    if (headlines.length > 0) {
+        headlines.slice(0, 5).forEach(headline => {
+            html += `
+                <div class="headline-item">
+                    <div class="headline-title">${headline.title || 'No title'}</div>
+                    <div class="headline-source">${headline.source || 'Unknown'} • ${formatDate(headline.published_at)}</div>
+                </div>
+            `;
+        });
+    } else {
+        html += `<p style="color: var(--text-secondary); text-align: center;">No recent headlines available</p>`;
+    }
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    html += '</div>';
+    
+    // Add timestamp
+    const timestamp = new Date(data.timestamp).toLocaleString();
+    html += `
+        <div class="market-timestamp">
+            Last updated: ${timestamp}
+            ${metadata.aggregation_duration_seconds ? 
+                `• Loaded in ${metadata.aggregation_duration_seconds.toFixed(2)}s` : ''}
+        </div>
+    `;
+    
+    container.innerHTML = html;
+}
+
+function createMetric(label, data, type) {
+    if (!data || data.error) {
+        return `
+            <div class="market-metric">
+                <span class="metric-label">${label}</span>
+                <span class="metric-value neutral">N/A</span>
+            </div>
+        `;
+    }
+    
+    let value = data.value !== undefined ? data.value : data.current_price;
+    if (value === null || value === undefined) {
+        return `
+            <div class="market-metric">
+                <span class="metric-label">${label}</span>
+                <span class="metric-value neutral">N/A</span>
+            </div>
+        `;
+    }
+    
+    let displayValue = '';
+    switch(type) {
+        case 'price':
+            displayValue = `$${value.toFixed(2)}`;
+            break;
+        case 'percent':
+            displayValue = `${value.toFixed(2)}%`;
+            break;
+        case 'index':
+            displayValue = value.toFixed(1);
+            break;
+        default:
+            displayValue = value.toFixed(2);
+    }
+    
+    return `
+        <div class="market-metric">
+            <span class="metric-label">${label}</span>
+            <span class="metric-value">${displayValue}</span>
+        </div>
+    `;
+}
+
+function formatDate(dateString) {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffHours = Math.floor((now - date) / (1000 * 60 * 60));
+    
+    if (diffHours < 1) return 'Just now';
+    if (diffHours < 24) return `${diffHours}h ago`;
+    const diffDays = Math.floor(diffHours / 24);
+    if (diffDays === 1) return 'Yesterday';
+    if (diffDays < 7) return `${diffDays}d ago`;
+    return date.toLocaleDateString();
+}
 
 // Cleanup on page unload
 window.addEventListener('beforeunload', () => {

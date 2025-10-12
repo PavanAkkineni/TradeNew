@@ -1,6 +1,10 @@
 """
 Trading Analytics Platform - Main FastAPI Application
 """
+# Load environment variables first, before any other imports
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -18,6 +22,8 @@ from app.data_loader import DataLoader
 from app.fundamental_analysis import FundamentalAnalyzer
 from app.sentiment_analysis import SentimentAnalyzer
 from app.gemini_analyzer import GeminiAnalyzer
+from app.market_data_aggregator import MarketDataAggregator
+from app.portfolio_recommender import PortfolioRecommender
 
 app = FastAPI(title="Trading Analytics Platform", version="1.0.0")
 
@@ -40,6 +46,8 @@ signal_generator = SignalGenerator()
 fundamental_analyzer = FundamentalAnalyzer()
 sentiment_analyzer = SentimentAnalyzer()
 gemini_analyzer = GeminiAnalyzer()
+market_data_aggregator = MarketDataAggregator()  # Component 2: Market Data Aggregation Engine
+portfolio_recommender = PortfolioRecommender()   # Component 3: Portfolio Recommendation Engine
 
 # Request/Response Models
 class StockRequest(BaseModel):
@@ -380,6 +388,192 @@ async def get_trading_expert_analysis(symbol: str = "IBM"):
         
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+# Portfolio Profile Model
+class PortfolioProfile(BaseModel):
+    investment_capital: float
+    target_amount: float
+    time_horizon: int
+    risk_appetite: str
+
+@app.post("/api/portfolio-profile")
+async def submit_portfolio_profile(profile: PortfolioProfile):
+    """
+    Receive and validate user's investment profile
+    Returns the profile data for confirmation
+    """
+    try:
+        # Validate inputs
+        if profile.investment_capital <= 0:
+            raise HTTPException(status_code=400, detail="Investment capital must be positive")
+        
+        if profile.target_amount <= profile.investment_capital:
+            raise HTTPException(status_code=400, detail="Target amount must be greater than investment capital")
+        
+        if profile.time_horizon <= 0:
+            raise HTTPException(status_code=400, detail="Time horizon must be positive")
+        
+        if profile.risk_appetite not in ['conservative', 'moderate', 'aggressive']:
+            raise HTTPException(status_code=400, detail="Invalid risk appetite")
+        
+        # Calculate some basic metrics
+        required_return = ((profile.target_amount / profile.investment_capital) ** (1 / profile.time_horizon) - 1) * 100
+        
+        # Return profile with calculations
+        return {
+            "investment_capital": profile.investment_capital,
+            "target_amount": profile.target_amount,
+            "time_horizon": profile.time_horizon,
+            "risk_appetite": profile.risk_appetite,
+            "required_annual_return": round(required_return, 2),
+            "status": "success",
+            "message": "Portfolio profile received successfully"
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error processing portfolio profile: {str(e)}")
+
+@app.get("/api/market-data")
+async def get_market_data():
+    """
+    Component 2: Market Data Aggregation Engine
+    
+    Fetches comprehensive market data from multiple sources:
+    - Economic Indicators (FRED API): CPI, Fed Funds Rate, GDP, Unemployment
+    - Market Performance (Alpha Vantage/Finnhub): S&P 500, VIX, Treasury, Gold, VNQ
+    - Market Sentiment (NewsAPI): Recent headlines about stock market and economy
+    
+    This is a pure data aggregation endpoint - no interpretation, just facts.
+    """
+    try:
+        market_data = market_data_aggregator.aggregate_all_data()
+        return market_data
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error aggregating market data: {str(e)}"
+        )
+
+@app.get("/api/market-data/economic")
+async def get_economic_indicators():
+    """
+    Get only economic indicators (FRED API data)
+    """
+    try:
+        indicators = market_data_aggregator.fetch_economic_indicators()
+        return {
+            'timestamp': datetime.now().isoformat(),
+            'economic_indicators': indicators
+        }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error fetching economic indicators: {str(e)}"
+        )
+
+@app.get("/api/market-data/performance")
+async def get_market_performance():
+    """
+    Get only market performance metrics (Alpha Vantage/Finnhub data)
+    """
+    try:
+        performance = market_data_aggregator.fetch_market_performance()
+        return {
+            'timestamp': datetime.now().isoformat(),
+            'market_performance': performance
+        }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error fetching market performance: {str(e)}"
+        )
+
+@app.get("/api/market-data/sentiment")
+async def get_market_sentiment(query: str = "stock market economy"):
+    """
+    Get only market sentiment (NewsAPI headlines)
+    """
+    try:
+        sentiment = market_data_aggregator.fetch_market_sentiment(query=query)
+        return {
+            'timestamp': datetime.now().isoformat(),
+            'market_sentiment': sentiment
+        }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error fetching market sentiment: {str(e)}"
+        )
+
+@app.post("/api/portfolio-recommendation")
+async def generate_portfolio_recommendation(profile: PortfolioProfile):
+    """
+    Component 3: Generate AI-powered portfolio recommendation
+    
+    Combines user profile with current market data and uses Gemini AI
+    to generate personalized portfolio allocation and justification.
+    
+    Request body:
+    {
+        "investment_capital": 50000,
+        "target_amount": 100000,
+        "time_horizon": 7,
+        "risk_appetite": "moderate"
+    }
+    
+    Returns:
+    {
+        "success": true,
+        "recommendation": {
+            "portfolio_allocation": {...},
+            "justification": {...},
+            "expected_returns": {...}
+        },
+        "market_data_used": {...},
+        "timestamp": "..."
+    }
+    """
+    try:
+        # Get current market data (uses cache if available)
+        market_data = market_data_aggregator.aggregate_all_data(use_cache=True)
+        
+        # Convert profile to dict
+        user_profile = {
+            'investment_capital': profile.investment_capital,
+            'target_amount': profile.target_amount,
+            'time_horizon': profile.time_horizon,
+            'risk_appetite': profile.risk_appetite
+        }
+        
+        # Generate recommendation using Gemini
+        result = portfolio_recommender.generate_portfolio_recommendation(
+            user_profile=user_profile,
+            market_data=market_data
+        )
+        
+        # Add metadata
+        result['timestamp'] = datetime.now().isoformat()
+        result['market_data_timestamp'] = market_data.get('timestamp')
+        result['market_data_used'] = {
+            'economic_summary': {
+                'inflation': market_data.get('economic_indicators', {}).get('inflation_rate', {}).get('value'),
+                'fed_rate': market_data.get('economic_indicators', {}).get('federal_funds_rate', {}).get('value'),
+                'gdp': market_data.get('economic_indicators', {}).get('gdp_growth_rate', {}).get('value')
+            },
+            'market_summary': {
+                'sp500': market_data.get('market_performance', {}).get('sp500', {}).get('current_price'),
+                'vix': market_data.get('market_performance', {}).get('vix', {}).get('current_price')
+            }
+        }
+        
+        return result
+        
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error generating portfolio recommendation: {str(e)}"
+        )
 
 @app.get("/api/education/{topic}")
 async def get_educational_content(topic: str):

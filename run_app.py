@@ -9,6 +9,10 @@ import sys
 import subprocess
 import webbrowser
 import time
+
+
+from dotenv import load_dotenv
+load_dotenv()
 from pathlib import Path
 
 def check_requirements():

@@ -21,7 +21,8 @@
                 </select>
             </div>
             <nav class="nav-tabs">
-                <button class="nav-tab active" data-tab="technical">Technical</button>
+                <button class="nav-tab active" data-tab="portfolio">Portfolio</button>
+                <button class="nav-tab" data-tab="technical">Technical</button>
                 <button class="nav-tab" data-tab="fundamental">Fundamental</button>
                 <button class="nav-tab" data-tab="sentiment">Sentiment</button>
                 <button class="nav-tab" data-tab="signals">Trade Signals</button>
@@ -90,7 +91,174 @@
         </div>
 
         <!-- Tab Content -->
-        <div class="tab-panel active" id="technical-panel">
+        <!-- Portfolio Panel -->
+        <div class="tab-panel active" id="portfolio-panel">
+            <!-- Portfolio Profile Form -->
+            <div class="portfolio-container">
+                <div class="portfolio-header">
+                    <h2>📊 Build Your Investment Portfolio</h2>
+                    <p class="subtitle">Answer a few questions to get personalized portfolio recommendations</p>
+                </div>
+
+                <!-- Investment Profile Form -->
+                <div class="profile-form-card">
+                    <form id="portfolioForm">
+                        <!-- Investment Capital -->
+                        <div class="form-section">
+                            <div class="form-header">
+                                <h3>💰 Investment Capital</h3>
+                                <p class="form-description">How much are you planning to invest?</p>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-prefix">$</span>
+                                <input 
+                                    type="number" 
+                                    id="investmentCapital" 
+                                    name="investmentCapital" 
+                                    placeholder="10000" 
+                                    min="100"
+                                    step="100"
+                                    required
+                                    class="form-input capital-input"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Investment Goal -->
+                        <div class="form-section">
+                            <div class="form-header">
+                                <h3>🎯 Investment Goal</h3>
+                                <p class="form-description">What's your target and timeframe?</p>
+                            </div>
+                            <div class="goal-inputs">
+                                <div class="input-group">
+                                    <label for="targetAmount">Target Amount</label>
+                                    <span class="input-prefix">$</span>
+                                    <input 
+                                        type="number" 
+                                        id="targetAmount" 
+                                        name="targetAmount" 
+                                        placeholder="50000" 
+                                        min="100"
+                                        step="100"
+                                        required
+                                        class="form-input"
+                                    />
+                                </div>
+                                <div class="input-group">
+                                    <label for="timeHorizon">Time Horizon (Years)</label>
+                                    <select 
+                                        id="timeHorizon" 
+                                        name="timeHorizon" 
+                                        required
+                                        class="form-select"
+                                    >
+                                        <option value="">Select timeframe</option>
+                                        <option value="1">1 Year</option>
+                                        <option value="2">2 Years</option>
+                                        <option value="3">3 Years</option>
+                                        <option value="5">5 Years</option>
+                                        <option value="10">10 Years</option>
+                                        <option value="15">15+ Years</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Risk Appetite -->
+                        <div class="form-section">
+                            <div class="form-header">
+                                <h3>⚖️ Investment Style</h3>
+                                <p class="form-description">What is your investment style?</p>
+                            </div>
+                            <div class="risk-options">
+                                <label class="risk-option">
+                                    <input 
+                                        type="radio" 
+                                        name="riskAppetite" 
+                                        value="conservative" 
+                                        required
+                                    />
+                                    <div class="risk-card">
+                                        <div class="risk-icon conservative-icon">🛡️</div>
+                                        <h4>Conservative</h4>
+                                        <p>Prioritizes capital preservation over growth. Lower risk, steady returns.</p>
+                                        <div class="risk-badge conservative-badge">Low Risk</div>
+                                    </div>
+                                </label>
+
+                                <label class="risk-option">
+                                    <input 
+                                        type="radio" 
+                                        name="riskAppetite" 
+                                        value="moderate" 
+                                        required
+                                    />
+                                    <div class="risk-card">
+                                        <div class="risk-icon moderate-icon">⚖️</div>
+                                        <h4>Moderate</h4>
+                                        <p>Seeks a balance between growth and capital preservation. Moderate risk.</p>
+                                        <div class="risk-badge moderate-badge">Medium Risk</div>
+                                    </div>
+                                </label>
+
+                                <label class="risk-option">
+                                    <input 
+                                        type="radio" 
+                                        name="riskAppetite" 
+                                        value="aggressive" 
+                                        required
+                                    />
+                                    <div class="risk-card">
+                                        <div class="risk-icon aggressive-icon">🚀</div>
+                                        <h4>Aggressive</h4>
+                                        <p>Prioritizes high growth potential. Comfortable with significant risk.</p>
+                                        <div class="risk-badge aggressive-badge">High Risk</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="submit-button" id="portfolioSubmitBtn">
+                                <span class="btn-icon">📊</span>
+                                <span class="btn-text">Get Portfolio Recommendations</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Market Overview Section -->
+                <div class="market-overview-section">
+                    <div class="section-header-with-action">
+                        <h3>📊 Current Market Overview</h3>
+                        <button class="refresh-button" id="refreshMarketData">🔄 Refresh Data</button>
+                    </div>
+                    
+                    <!-- Market Data Display -->
+                    <div id="marketDataDisplay" class="market-data-container">
+                        <div class="loading-market-data">
+                            <div class="spinner"></div>
+                            <p>Loading market data...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Results (Hidden Initially) -->
+                <div class="portfolio-results" id="portfolioResults" style="display: none;">
+                    <div class="results-header">
+                        <h3>Your Personalized Portfolio</h3>
+                        <button class="edit-button" id="editProfile">✏️ Edit Profile</button>
+                    </div>
+                    
+                    <!-- Results will be populated by JavaScript -->
+                    <div id="portfolioRecommendations"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-panel" id="technical-panel">
             <!-- Price Chart -->
             <div class="chart-card">
                 <div class="card-header">

@@ -19,7 +19,7 @@ def get_ibm_weekly_adjusted():
     """
     
     # Get API key from environment variable
-    api_key = os.getenv('ALPHA_VANTAGE_API_KEY')
+    api_key = "0WZ5V8YI9UKKHPU2"
     
     if not api_key:
         raise ValueError("API key not found. Please set ALPHA_VANTAGE_API_KEY in your .env file")

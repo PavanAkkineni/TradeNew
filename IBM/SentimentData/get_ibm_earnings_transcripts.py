@@ -9,7 +9,7 @@ import time
 root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(root_dir, '.env'))
 
-API_KEY = os.getenv('ALPHA_VANTAGE_API_KEY')
+API_KEY = "0WZ5V8YI9UKKHPU2"
 
 if not API_KEY:
     raise ValueError("API key not found. Please set ALPHA_VANTAGE_API_KEY in your .env file")

@@ -22,7 +22,7 @@ class PortfolioRecommender:
     
     def __init__(self):
         """Initialize with Gemini API key"""
-        self.api_key = os.getenv('GOOGLE_API_KEY', '')
+        self.api_key = "AIzaSyA4dxyFk6yViXiuzzTvPdaIaSzNNJz6tB4"
         if self.api_key:
             genai.configure(api_key=self.api_key)
             logger.info("✅ Gemini API configured")
@@ -31,7 +31,7 @@ class PortfolioRecommender:
         
         # Model configuration
         # Using gemini-2.5-flash for fast, cost-effective generation
-        self.model_name = "gemini-2.5-flash"
+        self.model_name = "gemini-2.5-pro"
         
     def generate_portfolio_recommendation(
         self, 

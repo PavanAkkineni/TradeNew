@@ -16,7 +16,7 @@ class GeminiAnalyzer:
     """
     
     def __init__(self):
-        api_key = os.getenv('GEMINI_API_KEY')
+        api_key = "AIzaSyA4dxyFk6yViXiuzzTvPdaIaSzNNJz6tB4"
         if api_key:
             genai.configure(api_key=api_key)
             # Use Gemini 2.5 Pro for enhanced analysis

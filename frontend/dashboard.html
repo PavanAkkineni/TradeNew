@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TradeCompass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/landing.css">
+    <style>
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .dashboard-header {
+            margin-bottom: 3rem;
+        }
+        
+        .dashboard-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .dashboard-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .dashboard-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: var(--primary-color);
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .card-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .welcome-banner {
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .welcome-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .welcome-banner p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span>📈</span>
+                TradeCompass
+            </a>
+            <div class="nav-links">
+                <!-- Will be populated by auth.js -->
+            </div>
+        </div>
+    </header>
+    
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <div class="welcome-banner">
+            <h2>🎉 Welcome to TradeCompass!</h2>
+            <p>Your account is ready. Start exploring our powerful trading tools.</p>
+        </div>
+        
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Dashboard</h1>
+            <p class="dashboard-subtitle">Access your trading tools and analytics</p>
+        </div>
+        
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <div class="card-icon">📊</div>
+                <h3 class="card-title">Market Analysis</h3>
+                <p class="card-description">
+                    View real-time market data, technical indicators, and AI-powered insights for your favorite stocks.
+                </p>
+                <a href="/analysis" class="card-link">
+                    View Analysis →
+                </a>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-icon">💼</div>
+                <h3 class="card-title">Portfolio</h3>
+                <p class="card-description">
+                    Track your investments, view performance metrics, and manage your holdings all in one place.
+                </p>
+                <a href="/portfolio" class="card-link">
+                    View Portfolio →
+                </a>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-icon">🔔</div>
+                <h3 class="card-title">Trade Signals</h3>
+                <p class="card-description">
+                    Get intelligent buy/sell signals based on technical analysis and market sentiment.
+                </p>
+                <a href="/signals" class="card-link">
+                    View Signals →
+                </a>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-icon">📈</div>
+                <h3 class="card-title">Watchlist</h3>
+                <p class="card-description">
+                    Monitor your favorite stocks and get real-time updates on price movements and news.
+                </p>
+                <a href="/watchlist" class="card-link">
+                    View Watchlist →
+                </a>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-icon">📚</div>
+                <h3 class="card-title">Learning Center</h3>
+                <p class="card-description">
+                    Access educational content, trading strategies, and market insights to improve your skills.
+                </p>
+                <a href="/learn" class="card-link">
+                    Start Learning →
+                </a>
+            </div>
+            
+            <div class="dashboard-card">
+                <div class="card-icon">⚙️</div>
+                <h3 class="card-title">Account Settings</h3>
+                <p class="card-description">
+                    Manage your profile, security settings, and notification preferences.
+                </p>
+                <a href="/profile" class="card-link">
+                    Manage Settings →
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="static/js/auth.js"></script>
+    <script src="static/js/header.js"></script>
+    <script>
+        // Require authentication for dashboard
+        if (!requireAuth()) {
+            // Will redirect to login if not authenticated
+        }
+    </script>
+</body>
+</html>

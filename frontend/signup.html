@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Account - TradeCompass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/signup.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="signup-bg"></div>
+    
+    <!-- Header -->
+    <header class="signup-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <span>📈</span>
+                TradeCompass
+            </a>
+            <div class="header-right">
+                <a href="#" class="help-link">Need help?</a>
+                <span style="color: var(--text-muted);">Already have an account?</span>
+                <a href="/login.html" style="color: var(--primary-color); text-decoration: none;">Sign In</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="signup-container">
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-steps">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <span class="step-label">Welcome</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <span class="step-label">Basic Info</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <span class="step-label">Security</span>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <span class="step-label">Address</span>
+                </div>
+                <div class="progress-step" data-step="5">
+                    <div class="step-circle">5</div>
+                    <span class="step-label">Employment</span>
+                </div>
+                <div class="progress-step" data-step="6">
+                    <div class="step-circle">6</div>
+                    <span class="step-label">Trusted Contact</span>
+                </div>
+                <div class="progress-step" data-step="7">
+                    <div class="step-circle">7</div>
+                    <span class="step-label">Review</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Form Container -->
+        <div class="form-container">
+            <form id="signupForm">
+                <!-- Step 1: Welcome -->
+                <div class="form-section active" id="section-1">
+                    <h2 class="section-title">Welcome to TradeCompass</h2>
+                    <p class="section-subtitle">Let's get your account set up in just a few minutes</p>
+                    
+                    <div class="account-type-cards">
+                        <div class="account-type-card selected" data-type="stocks" style="max-width: 500px; margin: 0 auto;">
+                            <div class="account-type-icon">📈</div>
+                            <div class="account-type-name">Stocks & Funds Account</div>
+                            <ul class="account-type-features">
+                                <li>✓ Commission-free stock trades</li>
+                                <li>✓ Access to ETFs & mutual funds</li>
+                                <li>✓ Fundamental analysis tools</li>
+                                <li>✓ AI-powered recommendations</li>
+                                <li>✓ Real-time market data</li>
+                                <li>✓ Advanced charting tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="error-1"></div>
+                    
+                    <div class="button-group">
+                        <div></div>
+                        <button type="button" class="btn btn-primary" onclick="nextSection()" id="btn-1">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Basic Information -->
+                <div class="form-section" id="section-2">
+                    <h2 class="section-title">Let's Start With the Basics</h2>
+                    <p class="section-subtitle">Tell us about yourself</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">First Name<span class="required">*</span></label>
+                            <input type="text" class="form-input" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Middle Name</label>
+                            <input type="text" class="form-input" id="middleName" name="middleName">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Last Name<span class="required">*</span></label>
+                            <input type="text" class="form-input" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Preferred Name</label>
+                            <input type="text" class="form-input" id="preferredName" name="preferredName">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Email Address<span class="required">*</span></label>
+                            <input type="email" class="form-input" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Mobile Number<span class="required">*</span></label>
+                            <input type="tel" class="form-input" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Password<span class="required">*</span></label>
+                            <input type="password" class="form-input" id="password" name="password" required>
+                            <p class="form-hint">At least 8 characters with uppercase, lowercase, and number</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Confirm Password<span class="required">*</span></label>
+                            <input type="password" class="form-input" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+                    </div>
+                    
+                    <div class="military-section">
+                        <label class="form-label">Military Experience</label>
+                        <div class="radio-group">
+                            <div class="radio-option" onclick="toggleMilitary(false)">
+                                <input type="radio" name="military" value="no" id="military-no" checked>
+                                <label for="military-no">No</label>
+                            </div>
+                            <div class="radio-option" onclick="toggleMilitary(true)">
+                                <input type="radio" name="military" value="yes" id="military-yes">
+                                <label for="military-yes">Yes</label>
+                            </div>
+                        </div>
+                        
+                        <div id="military-details" style="display: none; margin-top: 1rem;">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Status</label>
+                                    <select class="form-select" id="militaryStatus" name="militaryStatus">
+                                        <option value="">Select Status</option>
+                                        <option value="serving">Currently Serving</option>
+                                        <option value="transitioning">Transitioning Out</option>
+                                        <option value="post">Post-Military Service</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Service Branch</label>
+                                    <select class="form-select" id="militaryBranch" name="militaryBranch">
+                                        <option value="">Select Branch</option>
+                                        <option value="army">Army</option>
+                                        <option value="marines">Marine Corps</option>
+                                        <option value="navy">Navy</option>
+                                        <option value="airforce">Air Force</option>
+                                        <option value="spaceforce">Space Force</option>
+                                        <option value="coastguard">Coast Guard</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Rank</label>
+                                <input type="text" class="form-input" id="militaryRank" name="militaryRank" placeholder="Enter your rank">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="error-2"></div>
+                    
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Security -->
+                <div class="form-section" id="section-3">
+                    <h2 class="section-title">Security Information</h2>
+                    <p class="section-subtitle">This information is required for regulatory compliance</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Date of Birth<span class="required">*</span></label>
+                            <input type="date" class="form-input" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">U.S. Citizen?<span class="required">*</span></label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" name="citizen" value="yes" id="citizen-yes" checked>
+                                    <label for="citizen-yes">Yes</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" name="citizen" value="no" id="citizen-no">
+                                    <label for="citizen-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Social Security Number<span class="required">*</span></label>
+                        <input type="password" class="form-input" id="ssn" name="ssn" placeholder="XXX-XX-XXXX" required maxlength="11">
+                        <p class="form-hint">🔒 Your SSN is encrypted and protected with bank-level security</p>
+                    </div>
+                    
+                    <div class="error-message" id="error-3"></div>
+                    
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Address -->
+                <div class="form-section" id="section-4">
+                    <h2 class="section-title">Address Information</h2>
+                    <p class="section-subtitle">Enter your residential address</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Street Address<span class="required">*</span></label>
+                        <input type="text" class="form-input" id="address1" name="address1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Apartment, Suite, etc.</label>
+                        <input type="text" class="form-input" id="address2" name="address2">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">City<span class="required">*</span></label>
+                            <input type="text" class="form-input" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">State<span class="required">*</span></label>
+                            <select class="form-select" id="state" name="state" required>
+                                <option value="">Select State</option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">ZIP Code<span class="required">*</span></label>
+                        <input type="text" class="form-input" id="zipCode" name="zipCode" placeholder="12345" required maxlength="10">
+                    </div>
+                    
+                    <div class="error-message" id="error-4"></div>
+                    
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 5: Employment -->
+                <div class="form-section" id="section-5">
+                    <h2 class="section-title">Employment Information</h2>
+                    <p class="section-subtitle">Tell us about your employment status</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Employment Status<span class="required">*</span></label>
+                            <select class="form-select" id="employmentStatus" name="employmentStatus" required onchange="toggleEmploymentFields()">
+                                <option value="">Select Status</option>
+                                <option value="employed">Employed</option>
+                                <option value="self-employed">Self-Employed</option>
+                                <option value="unemployed">Unemployed</option>
+                                <option value="retired">Retired</option>
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="employment-details" style="display: none;">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Job Title</label>
+                                <input type="text" class="form-input" id="jobTitle" name="jobTitle">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Employer Name</label>
+                                <input type="text" class="form-input" id="employerName" name="employerName">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 2rem;">
+                        <label class="form-label">Do you or your family work at a financial institution?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" name="financialInstitution" value="no" id="fin-no" checked onchange="toggleFinancialInstitution()">
+                                <label for="fin-no">No</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" name="financialInstitution" value="yes" id="fin-yes" onchange="toggleFinancialInstitution()">
+                                <label for="fin-yes">Yes</label>
+                            </div>
+                        </div>
+                        <div id="financial-institution-name" style="display: none; margin-top: 1rem;">
+                            <input type="text" class="form-input" id="financialInstitutionName" name="financialInstitutionName" placeholder="Enter institution name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Are you a public company insider (10% shareholder, board member, or policy-making officer)?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" name="publicCompanyInsider" value="no" id="insider-no" checked onchange="togglePublicCompany()">
+                                <label for="insider-no">No</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" name="publicCompanyInsider" value="yes" id="insider-yes" onchange="togglePublicCompany()">
+                                <label for="insider-yes">Yes</label>
+                            </div>
+                        </div>
+                        <div id="public-company-warning" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(237, 66, 69, 0.1); border: 1px solid var(--danger-color); border-radius: 8px; color: var(--danger-color);">
+                            ⚠️ Unfortunately, public company insiders cannot open an account at this time.
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Have you been notified by the IRS that you are subject to backup withholding?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" name="backupWithholding" value="no" id="backup-no" checked>
+                                <label for="backup-no">No</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" name="backupWithholding" value="yes" id="backup-yes">
+                                <label for="backup-yes">Yes</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="error-5"></div>
+                    
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 6: Trusted Contact -->
+                <div class="form-section" id="section-6">
+                    <h2 class="section-title">Trusted Contact Person (Optional)</h2>
+                    <p class="section-subtitle">Designate someone we can contact if we're unable to reach you</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-input" id="trustedName" name="trustedName">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Relationship</label>
+                            <input type="text" class="form-input" id="trustedRelationship" name="trustedRelationship" placeholder="e.g., Spouse, Parent, Friend">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" id="trustedEmail" name="trustedEmail">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-input" id="trustedPhone" name="trustedPhone">
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="error-6"></div>
+                    
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+                        <div style="display: flex; gap: 1rem;">
+                            <button type="button" class="btn btn-skip" onclick="skipTrustedContact()">Skip</button>
+                            <button type="button" class="btn btn-primary" onclick="nextSection()">Continue</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 7: Review & Confirm -->
+                <div class="form-section" id="section-7">
+                    <h2 class="section-title">Review and Confirm</h2>
+                    <p class="section-subtitle">Please review your information before submitting</p>
+                    
+                    <div id="review-content"></div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree1" required>
+                        <label class="checkbox-label" for="agree1">I certify that the information provided is accurate and complete</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree2" required>
+                        <label class="checkbox-label" for="agree2">I agree to the Terms of Service and Privacy Policy</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree3" required>
+                        <label class="checkbox-label" for="agree3">I understand that my account is subject to approval</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree4" required>
+                        <label class="checkbox-label" for="agree4">I acknowledge that I have read and understand the risks of trading</label>
+                    </div>
+                    
+                    <div class="error-message" id="error-7"></div>
+                    
+                    <div class="button-group">
+                        <button type="button" class="btn btn-secondary" onclick="previousSection()">Back</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm()" id="submit-btn">
+                            <span id="submit-text">Open My Account</span>
+                            <span id="submit-loading" style="display: none;" class="loading"></span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Success Message -->
+                <div class="form-section" id="section-success" style="display: none;">
+                    <div class="success-container">
+                        <div class="success-icon">🎉</div>
+                        <h2 class="success-title">Account Created Successfully!</h2>
+                        <p class="success-message">
+                            Welcome to TradeCompass! Your account has been created and you can now start trading.
+                        </p>
+                        <button type="button" class="btn btn-primary btn-large" onclick="window.location.href='/dashboard'">
+                            Go to Dashboard
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <script src="static/js/auth.js"></script>
+    <script src="static/js/signup.js"></script>
+    <script>
+        // Redirect if already logged in
+        redirectIfLoggedIn();
+    </script>
+</body>
+</html>

@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/voice", tags=["voice"])
 
 # Gemini API Configuration
-GEMINI_API_KEY = "AIzaSyA4dxyFk6yViXiuzzTvPdaIaSzNNJz6tB4"
+GEMINI_API_KEY = "AIzaSyBE4zf9LG-5HF4ExWJ2K0c7gLMH96xcJI0"
 
 class VoiceFormData(BaseModel):
     """Structured form data extracted from voice"""

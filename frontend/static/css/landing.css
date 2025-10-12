@@ -326,6 +326,7 @@ body {
     color: var(--secondary-color);
     font-size: 0.9rem;
     font-weight: 600;
+    margin-top: 3rem;
     margin-bottom: 2rem;
     animation: pulse 2s infinite;
 }

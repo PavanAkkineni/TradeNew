@@ -22,7 +22,7 @@ class PortfolioRecommender:
     
     def __init__(self):
         """Initialize with Gemini API key"""
-        self.api_key = "AIzaSyA4dxyFk6yViXiuzzTvPdaIaSzNNJz6tB4"
+        self.api_key = "AIzaSyBE4zf9LG-5HF4ExWJ2K0c7gLMH96xcJI0"
         if self.api_key:
             genai.configure(api_key=self.api_key)
             logger.info("✅ Gemini API configured")

@@ -20,7 +20,7 @@ class GeminiAnalyzer:
         if api_key:
             genai.configure(api_key=api_key)
             # Use Gemini 2.5 Pro for enhanced analysis
-            self.model = genai.GenerativeModel('gemini-2.0-flash-exp')
+            self.model = genai.GenerativeModel('gemini-2.0-pro')
             self.enabled = True
             print("✅ Gemini 2.5 Pro initialized for trading expert analysis")
         else:

@@ -17,6 +17,11 @@ Daily/*.json
 Weekly/*.json
 *.csv
 
+# Large data files (prevent commits of files > 50MB)
+**/financial_news_*.json
+**/earnings_transcript_*.json
+**/*_data_*.json
+
 # IDE
 .vscode/
 .idea/

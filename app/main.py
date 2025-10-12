@@ -30,8 +30,14 @@ from app.portfolio_recommender import PortfolioRecommender
 # Import auth and database modules
 from app.database import get_db, init_db, User, UserProfile
 from app import auth
+from app.voice_form_filler import router as voice_router
+from app.voice_assistant_tts import router as voice_assistant_router
 
 app = FastAPI(title="Trading Analytics Platform", version="1.0.0")
+
+# Include routers
+app.include_router(voice_router)
+app.include_router(voice_assistant_router)
 
 # Initialize database on startup
 @app.on_event("startup")

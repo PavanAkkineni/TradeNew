@@ -95,8 +95,21 @@
                 
                 <!-- Step 2: Basic Information -->
                 <div class="form-section" id="section-2">
-                    <h2 class="section-title">Let's Start With the Basics</h2>
-                    <p class="section-subtitle">Tell us about yourself</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <div>
+                            <h2 class="section-title" style="margin-bottom: 0.25rem;">Let's Start With the Basics</h2>
+                            <p class="section-subtitle" style="margin-bottom: 0;">Tell us about yourself</p>
+                        </div>
+                        <button type="button" class="btn-voice-filler" id="voiceFillerBtn" onclick="startVoiceFilling()">
+                            <span class="voice-icon">🎤</span>
+                            <span class="voice-text">Filler Buddy</span>
+                        </button>
+                    </div>
+                    
+                    <div id="voiceStatus" class="voice-status" style="display: none;">
+                        <span class="status-text">Recording...</span>
+                        <button type="button" class="btn-stop-recording" onclick="stopVoiceRecording()">Stop</button>
+                    </div>
                     
                     <div class="form-row">
                         <div class="form-group">
@@ -197,8 +210,21 @@
                 
                 <!-- Step 3: Security -->
                 <div class="form-section" id="section-3">
-                    <h2 class="section-title">Security Information</h2>
-                    <p class="section-subtitle">This information is required for regulatory compliance</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <div>
+                            <h2 class="section-title" style="margin-bottom: 0.25rem;">Security Information</h2>
+                            <p class="section-subtitle" style="margin-bottom: 0;">This information is required for regulatory compliance</p>
+                        </div>
+                        <button type="button" class="btn-voice-filler" id="voiceFillerBtnSecurity" onclick="startVoiceFilling('security')">
+                            <span class="voice-icon">🎤</span>
+                            <span class="voice-text">Filler Buddy</span>
+                        </button>
+                    </div>
+                    
+                    <div id="voiceStatusSecurity" class="voice-status" style="display: none;">
+                        <span class="status-text">Recording...</span>
+                        <button type="button" class="btn-stop-recording" onclick="stopVoiceRecording('security')">Stop</button>
+                    </div>
                     
                     <div class="form-row">
                         <div class="form-group">
@@ -236,8 +262,21 @@
                 
                 <!-- Step 4: Address -->
                 <div class="form-section" id="section-4">
-                    <h2 class="section-title">Address Information</h2>
-                    <p class="section-subtitle">Enter your residential address</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <div>
+                            <h2 class="section-title" style="margin-bottom: 0.25rem;">Address Information</h2>
+                            <p class="section-subtitle" style="margin-bottom: 0;">Enter your residential address</p>
+                        </div>
+                        <button type="button" class="btn-voice-filler" id="voiceFillerBtnAddress" onclick="startVoiceFilling('address')">
+                            <span class="voice-icon">🎤</span>
+                            <span class="voice-text">Filler Buddy</span>
+                        </button>
+                    </div>
+                    
+                    <div id="voiceStatusAddress" class="voice-status" style="display: none;">
+                        <span class="status-text">Recording...</span>
+                        <button type="button" class="btn-stop-recording" onclick="stopVoiceRecording('address')">Stop</button>
+                    </div>
                     
                     <div class="form-group">
                         <label class="form-label">Street Address<span class="required">*</span></label>
@@ -327,8 +366,21 @@
                 
                 <!-- Step 5: Employment -->
                 <div class="form-section" id="section-5">
-                    <h2 class="section-title">Employment Information</h2>
-                    <p class="section-subtitle">Tell us about your employment status</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <div>
+                            <h2 class="section-title" style="margin-bottom: 0.25rem;">Employment Information</h2>
+                            <p class="section-subtitle" style="margin-bottom: 0;">Tell us about your employment status</p>
+                        </div>
+                        <button type="button" class="btn-voice-filler" id="voiceFillerBtnEmployment" onclick="startVoiceFilling('employment')">
+                            <span class="voice-icon">🎤</span>
+                            <span class="voice-text">Filler Buddy</span>
+                        </button>
+                    </div>
+                    
+                    <div id="voiceStatusEmployment" class="voice-status" style="display: none;">
+                        <span class="status-text">Recording...</span>
+                        <button type="button" class="btn-stop-recording" onclick="stopVoiceRecording('employment')">Stop</button>
+                    </div>
                     
                     <div class="form-row">
                         <div class="form-group">
@@ -415,8 +467,21 @@
                 
                 <!-- Step 6: Trusted Contact -->
                 <div class="form-section" id="section-6">
-                    <h2 class="section-title">Trusted Contact Person (Optional)</h2>
-                    <p class="section-subtitle">Designate someone we can contact if we're unable to reach you</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <div>
+                            <h2 class="section-title" style="margin-bottom: 0.25rem;">Trusted Contact Person (Optional)</h2>
+                            <p class="section-subtitle" style="margin-bottom: 0;">Designate someone we can contact if we're unable to reach you</p>
+                        </div>
+                        <button type="button" class="btn-voice-filler" id="voiceFillerBtnTrusted" onclick="startVoiceFilling('trusted')">
+                            <span class="voice-icon">🎤</span>
+                            <span class="voice-text">Filler Buddy</span>
+                        </button>
+                    </div>
+                    
+                    <div id="voiceStatusTrusted" class="voice-status" style="display: none;">
+                        <span class="status-text">Recording...</span>
+                        <button type="button" class="btn-stop-recording" onclick="stopVoiceRecording('trusted')">Stop</button>
+                    </div>
                     
                     <div class="form-row">
                         <div class="form-group">
@@ -508,6 +573,8 @@
     
     <script src="static/js/auth.js"></script>
     <script src="static/js/signup.js"></script>
+    <script src="static/js/voice-filler.js"></script>
+    <script src="static/js/voice-assistant-auto.js"></script>
     <script>
         // Redirect if already logged in
         redirectIfLoggedIn();

@@ -620,3 +620,109 @@ html {
 .form-section {
     scroll-margin-top: 120px; /* Better scroll targeting */
 }
+
+/* Voice Filler Button */
+.btn-voice-filler {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-voice-filler:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-voice-filler:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.voice-icon {
+    font-size: 1.2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.voice-text {
+    font-weight: 600;
+}
+
+/* Voice Status */
+.voice-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: rgba(102, 126, 234, 0.1);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.status-text {
+    color: var(--text-primary);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-text::before {
+    content: '🎙️';
+    font-size: 1.2rem;
+    animation: recording-pulse 1.5s infinite;
+}
+
+.status-text.success {
+    color: var(--secondary-color);
+}
+
+.status-text.success::before {
+    content: '✓';
+    animation: none;
+}
+
+.status-text.error {
+    color: var(--danger-color);
+}
+
+.status-text.error::before {
+    content: '✗';
+    animation: none;
+}
+
+@keyframes recording-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.btn-stop-recording {
+    padding: 0.5rem 1.5rem;
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-stop-recording:hover {
+    background: #c93538;
+    transform: scale(1.05);
+}

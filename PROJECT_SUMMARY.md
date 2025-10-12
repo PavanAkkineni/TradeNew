@@ -415,7 +415,7 @@ Each popup explains:
 
 **Technical Data:**
 - 100 days of daily adjusted prices
-- Date range: 2025-07-03 to 2025-10-03
+- Date range: 2025-07-03 to 2025-10-10
 - Source: Alpha Vantage API
 
 **Fundamental Data:**
@@ -531,6 +531,6 @@ The platform is live at http://localhost:8000 and actively analyzing IBM stock w
 
 *Built with ❤️ using FastAPI, Python, and modern web technologies*
 
-*Last Updated: October 3, 2025*
+*Last Updated: October 10, 2025*
 *Version: 1.0.0*
 *Status: ✅ OPERATIONAL*

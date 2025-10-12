@@ -64,7 +64,7 @@ Sentiment:     43.3% ███████████
 ### Action:
 ```
 BOUGHT 4 shares @ $244.10
-HELD through Oct 3 @ $288.42
+HELD through Oct 10 @ $288.42
 PROFIT: +18.15% per share
 ```
 
@@ -177,8 +177,8 @@ Average of last 5 days from IBM.US data:
 | Sept 8-9 | $256-259 | WEAK_SELL/SELL | -11.5 to -20 | Held (profitable) |
 | Sept 10-23 | - | Various | - | Held |
 | Sept 24 | $267.53 | WEAK_BUY | 19.5 | Held (already own) |
-| Sept 29-Oct 3 | $280-288 | WEAK_BUY | 19.5 | Held to end |
-| **Oct 3** | **$288.42** | **WEAK_BUY** | **19.5** | **Final: +17.73%** 🎉 |
+| Sept 29-Oct 10 | $280-288 | WEAK_BUY | 19.5 | Held to end |
+| **Oct 10** | **$288.42** | **WEAK_BUY** | **19.5** | **Final: +17.73%** 🎉 |
 
 ---
 

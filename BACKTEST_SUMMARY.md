@@ -9,7 +9,7 @@ I've built a **complete, separate backtesting system** to test the credibility o
 ## 📁 Files Created
 
 ### 1. **`backtest_signals.py`** - Signal Generation Engine
-- Generates trade signals for each day from **Sept 3 to Oct 3, 2025**
+- Generates trade signals for each day from **Sept 3 to Oct 10, 2025**
 - Uses **only data available up to that date** (no look-ahead bias)
 - Calculates technical indicators: RSI, MACD, Moving Averages, Bollinger Bands, Volume
 - Evaluates fundamental metrics: P/E, ROE, Profit Margins
@@ -74,7 +74,7 @@ For **September 4, 2025**:
 6. Explain: "Strong bullish momentum, RSI improving, Volume spike"
 ```
 
-**Repeats for each day through October 3, 2025**
+**Repeats for each day through October 10, 2025**
 
 ### Step 2: Trade Execution
 
@@ -86,7 +86,7 @@ Sept 5: HOLD signal → No action
 ...
 Sept 10: SELL signal → Sell 5 shares at $195.67 = $978.35 (Profit: +3.28%)
 ...
-Oct 3: Final portfolio value calculated
+Oct 10: Final portfolio value calculated
 ```
 
 ### Step 3: Performance Analysis
@@ -131,12 +131,12 @@ python analyze_backtest_performance.py
 TRADING SIGNAL BACKTEST
 ================================================================================
 Symbol: IBM
-Period: 2025-09-03 to 2025-10-03
+Period: 2025-09-03 to 2025-10-10
 Initial Capital: $1,000.00
 ================================================================================
 
 ✅ Loaded 100 days of price data
-   Date range: 2025-05-13 to 2025-10-03
+   Date range: 2025-05-13 to 2025-10-10
 
 📊 Found 22 trading days in backtest period
 
@@ -250,7 +250,7 @@ After running the backtest, you'll know:
 Edit `backtest_signals.py`:
 ```python
 START_DATE = "2025-09-03"  # Change start date
-END_DATE = "2025-10-03"    # Change end date
+END_DATE = "2025-10-10"    # Change end date
 ```
 
 ### Change Initial Capital
@@ -331,7 +331,7 @@ Based on the signal from your screenshot (WEAK_BUY with 62% confidence), you sho
 
 Everything is set up and ready to run. The system will:
 
-1. ✅ Generate signals for each day (Sept 3 - Oct 3, 2025)
+1. ✅ Generate signals for each day (Sept 3 - Oct 10, 2025)
 2. ✅ Provide detailed explanations for each signal
 3. ✅ Simulate trades with $1,000
 4. ✅ Calculate realistic performance

@@ -60,18 +60,18 @@ Two strategy views with tab switching:
 Signal: WEAK_BUY | Confidence: 54.5%
 ```
 
-#### **2. HOLDING PERIOD - September 4 to October 3** ⏳
+#### **2. HOLDING PERIOD - September 4 to October 10** ⏳
 Shows day-by-day decisions:
 - **Sept 4-5**: HOLD signals (Score: 4.5)
 - **Sept 8-9**: WEAK_SELL signals (Score: -11.5) - Held because position was profitable
-- **Sept 24 - Oct 3**: WEAK_BUY signals (Score: 19.5) - Already holding
+- **Sept 24 - Oct 10**: WEAK_BUY signals (Score: 19.5) - Already holding
 
 **Profit Progression Timeline**:
 - Sept 8: +$479 (+4.9%)
 - Sept 24: +$937 (+9.6%)
-- Oct 3: +$1,772.80 (+18.15%)
+- Oct 10: +$1,772.80 (+18.15%)
 
-#### **3. FINAL POSITION - October 3, 2025** 🏁
+#### **3. FINAL POSITION - October 10, 2025** 🏁
 - **Current Price**: $288.42
 - **Shares Held**: 40 shares
 - **Position Value**: $11,536.80

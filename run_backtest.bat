@@ -1,10 +1,10 @@
 @echo off
 echo ================================================================================
-echo TRADING SIGNAL BACKTEST - September 3 to October 3, 2025
+echo TRADING SIGNAL BACKTEST - September 3 to October 10, 2025
 echo ================================================================================
 echo.
 echo This script will:
-echo   1. Generate trade signals for each day (Sept 3 - Oct 3)
+echo   1. Generate trade signals for each day (Sept 3 - Oct 10)
 echo   2. Execute trades based on signals with $1000 initial capital
 echo   3. Calculate performance and compare to buy-and-hold
 echo.

@@ -21,7 +21,7 @@ from pathlib import Path
 
 SYMBOL = "IBM"
 START_DATE = "2025-09-03"  # Updated to match available data
-END_DATE = "2025-10-03"    # Updated to match available data
+END_DATE = "2025-10-10"    # Updated to match available data
 INITIAL_CAPITAL = 1000.0
 DATA_FOLDER = Path(__file__).parent / "IBM"
 PRICE_DATA_FILE = DATA_FOLDER / "TechnicalAnalysis" / "ibm_daily_adjusted_20251003_181415.json"

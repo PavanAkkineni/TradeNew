@@ -10,7 +10,7 @@ root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(root_dir, '.env'))
 
 # Get EODHD API key from environment variable
-EODHD_API_KEY = os.getenv('EODHD_API_KEY')
+EODHD_API_KEY = "68ddcb0469a327.44131755"
 
 if not EODHD_API_KEY:
     raise ValueError("EODHD API key not found. Please set EODHD_API_KEY in your .env file")

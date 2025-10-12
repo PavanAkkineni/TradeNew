@@ -1555,6 +1555,73 @@ body {
     color: var(--text-muted);
 }
 
+/* Period Selector */
+.period-selector-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.period-selector-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.period-selector-header h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.period-selector-header p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.period-selector-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.period-tab {
+    padding: 0.75rem 1.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 140px;
+    text-align: center;
+}
+
+.period-tab:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.period-tab.active {
+    background: var(--primary-color);
+    color: var(--text-primary);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+
+.period-tab.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
 /* Risk Strategy Tabs */
 .risk-tabs {
     display: flex;
@@ -2218,6 +2285,16 @@ body {
     /* Credibility Page Responsive */
     .summary-cards {
         grid-template-columns: 1fr;
+    }
+    
+    .period-selector-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .period-tab {
+        width: 100%;
+        max-width: 280px;
     }
     
     .risk-tabs {

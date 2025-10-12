@@ -1,7 +1,7 @@
 # 📊 RISK STRATEGY COMPARISON REPORT
 ## High Risk vs Low Risk - $10,000 Initial Capital
 
-**Backtest Period:** September 3 - October 3, 2025  
+**Backtest Period:** September 3 - October 10, 2025  
 **Stock:** IBM  
 **Initial Capital:** $10,000 per strategy  
 
@@ -64,7 +64,7 @@ Reason:     Weak bearish - HIGH RISK exit
 ✅ RESULT: Captured 4.91% gain by acting on weak signals
 ```
 
-#### Trade #2: Sept 24 - Oct 3 📊 HOLDING
+#### Trade #2: Sept 24 - Oct 10 📊 HOLDING
 ```
 📅 Sept 24, 2025
 Signal:     WEAK_BUY (19.5 points, 60% confidence)
@@ -73,7 +73,7 @@ Cost:       $9,898.61 (94.69% of capital)
 Reason:     Weak bullish - HIGH RISK entry
             RSI still overbought but Golden Cross occurred
 
-📅 Oct 3, 2025 (End)
+📅 Oct 10, 2025 (End)
 Price:      $288.42
 Value:      37 × $288.42 + $557.01 = $11,228.55
 Profit:     +$772.93 (+7.81% on this position)
@@ -285,7 +285,7 @@ Result: Similar to HIGH RISK (one late entry)
 ### Scenario 2: If HIGH RISK hadn't sold on Sept 8
 ```
 Sept 3 Entry: 38 shares @ $244.10
-Oct 3 Exit: 38 shares @ $288.42
+Oct 10 Exit: 38 shares @ $288.42
 
 Return: 38 × ($288.42 - $244.10) = $1,684.16
 vs Actual: $1,228.55
@@ -377,7 +377,7 @@ shares_to_buy = int(max_to_spend / price)
 
 ### Period-Specific Findings:
 
-**Sept 3 - Oct 3, 2025 was:**
+**Sept 3 - Oct 10, 2025 was:**
 - ✅ Strong uptrend (+18.16%)
 - ✅ Momentum-driven rally
 - ❌ Persistently overbought (RSI 70-86)
@@ -430,7 +430,7 @@ run_risk_comparison.bat
 ---
 
 **Report Generated:** October 11, 2025  
-**Analysis Period:** September 3 - October 3, 2025  
+**Analysis Period:** September 3 - October 10, 2025  
 **Stock:** IBM  
 **Initial Capital:** $10,000 per strategy  
 **Result:** HIGH RISK +12.29% | LOW RISK 0% | Buy-and-Hold +18.16%

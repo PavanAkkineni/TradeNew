@@ -18,37 +18,39 @@ class DataLoader:
         # Get the project root directory
         self.root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         
-        # Define data folders - Data is in IBM subfolder
-        self.folders = {
-            'technical': os.path.join(self.root_dir, 'IBM', 'TechnicalAnalysis'),
-            'fundamental': os.path.join(self.root_dir, 'IBM', 'FundamentalData'),
-            'sentiment': os.path.join(self.root_dir, 'IBM', 'SentimentData'),
-            'alternative': os.path.join(self.root_dir, 'IBM', 'AlternativeData')
-        }
-        
         # Cache for loaded data
         self.cache = {}
+    
+    def _get_folders(self, symbol: str) -> Dict[str, str]:
+        """Get data folders for the specified symbol"""
+        symbol_upper = symbol.upper()
+        
+        # Define data folders based on symbol
+        return {
+            'technical': os.path.join(self.root_dir, symbol_upper, 'TechnicalAnalysis'),
+            'fundamental': os.path.join(self.root_dir, symbol_upper, 'FundamentalData'),
+            'sentiment': os.path.join(self.root_dir, symbol_upper, 'SentimentData'),
+            'alternative': os.path.join(self.root_dir, symbol_upper, 'AlternativeData')
+        }
     
     def get_available_symbols(self) -> List[str]:
         """
         Get list of symbols that have data available
-        Currently only IBM, but designed to support multiple
         """
-        symbols = set()
+        symbols = []
         
-        # Check each folder for available data
-        for folder_type, folder_path in self.folders.items():
-            if os.path.exists(folder_path):
-                # Look for JSON files
-                files = glob.glob(os.path.join(folder_path, '**/*.json'), recursive=True)
-                for file in files:
-                    # Extract symbol from filename (assumes format like ibm_*.json)
-                    filename = os.path.basename(file).lower()
-                    if 'ibm' in filename:
-                        symbols.add('IBM')
-                    # Add logic for other symbols as needed
+        # Check for IBM and MSFT folders
+        for symbol in ['IBM', 'MSFT']:
+            symbol_folder = os.path.join(self.root_dir, symbol)
+            if os.path.exists(symbol_folder):
+                # Check if it has data
+                tech_folder = os.path.join(symbol_folder, 'TechnicalAnalysis')
+                if os.path.exists(tech_folder):
+                    files = glob.glob(os.path.join(tech_folder, '*.json'))
+                    if files:
+                        symbols.append(symbol)
         
-        return sorted(list(symbols))
+        return symbols
     
     def load_price_data(self, symbol: str = 'IBM') -> pd.DataFrame:
         """
@@ -62,8 +64,11 @@ class DataLoader:
         if cache_key in self.cache:
             return self.cache[cache_key]
         
+        # Get folders for this symbol
+        folders = self._get_folders(symbol)
+        
         # Try daily data first - files are directly in technical folder
-        technical_path = self.folders['technical']
+        technical_path = folders['technical']
         if os.path.exists(technical_path):
             # Look for daily adjusted data
             files = glob.glob(os.path.join(technical_path, f'{symbol_lower}_daily*.json'))
@@ -148,11 +153,14 @@ class DataLoader:
         if cache_key in self.cache:
             return self.cache[cache_key]
         
+        # Get folders for this symbol
+        folders = self._get_folders(symbol)
+        
         result = {}
         
         # Load company overview
         overview_files = glob.glob(
-            os.path.join(self.folders['fundamental'], 'company_overview*.json')
+            os.path.join(folders['fundamental'], 'company_overview*.json')
         )
         if overview_files:
             latest_file = max(overview_files, key=os.path.getctime)
@@ -160,7 +168,7 @@ class DataLoader:
         
         # Load income statement
         income_files = glob.glob(
-            os.path.join(self.folders['fundamental'], 'income_statement*.json')
+            os.path.join(folders['fundamental'], 'income_statement*.json')
         )
         if income_files:
             latest_file = max(income_files, key=os.path.getctime)
@@ -168,7 +176,7 @@ class DataLoader:
         
         # Load balance sheet
         balance_files = glob.glob(
-            os.path.join(self.folders['fundamental'], 'balance_sheet*.json')
+            os.path.join(folders['fundamental'], 'balance_sheet*.json')
         )
         if balance_files:
             latest_file = max(balance_files, key=os.path.getctime)
@@ -176,7 +184,7 @@ class DataLoader:
         
         # Load cash flow
         cash_files = glob.glob(
-            os.path.join(self.folders['fundamental'], 'cash_flow*.json')
+            os.path.join(folders['fundamental'], 'cash_flow*.json')
         )
         if cash_files:
             latest_file = max(cash_files, key=os.path.getctime)
@@ -184,7 +192,7 @@ class DataLoader:
         
         # Load earnings
         earnings_files = glob.glob(
-            os.path.join(self.folders['fundamental'], 'earnings_history*.json')
+            os.path.join(folders['fundamental'], 'earnings_history*.json')
         )
         if earnings_files:
             latest_file = max(earnings_files, key=os.path.getctime)
@@ -204,11 +212,14 @@ class DataLoader:
         if cache_key in self.cache:
             return self.cache[cache_key]
         
+        # Get folders for this symbol
+        folders = self._get_folders(symbol)
+        
         result = {}
         
         # Load earnings transcripts
         transcript_files = glob.glob(
-            os.path.join(self.folders['sentiment'], 'earnings_transcript_*.json')
+            os.path.join(folders['sentiment'], 'earnings_transcript_*.json')
         )
         if transcript_files:
             transcripts = []
@@ -220,7 +231,7 @@ class DataLoader:
         
         # Load financial news (if EODHD data exists)
         news_files = glob.glob(
-            os.path.join(self.folders['sentiment'], 'financial_news*.json')
+            os.path.join(folders['sentiment'], 'financial_news*.json')
         )
         if news_files:
             latest_file = max(news_files, key=os.path.getctime)
@@ -228,7 +239,7 @@ class DataLoader:
         
         # Load sentiment scores (if EODHD data exists)
         sentiment_files = glob.glob(
-            os.path.join(self.folders['sentiment'], 'sentiment_scores*.json')
+            os.path.join(folders['sentiment'], 'sentiment_scores*.json')
         )
         if sentiment_files:
             latest_file = max(sentiment_files, key=os.path.getctime)
@@ -248,9 +259,12 @@ class DataLoader:
         if cache_key in self.cache:
             return self.cache[cache_key]
         
+        # Get folders for this symbol
+        folders = self._get_folders(symbol)
+        
         # Load insider transactions
         insider_files = glob.glob(
-            os.path.join(self.folders['alternative'], 'insider_transactions*.json')
+            os.path.join(folders['alternative'], 'insider_transactions*.json')
         )
         
         if insider_files:

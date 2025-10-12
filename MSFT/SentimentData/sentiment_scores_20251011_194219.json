@@ -1,0 +1,459 @@
+{
+  "MSFT.US": [
+    {
+      "date": "2025-10-11",
+      "count": 15,
+      "normalized": 0.7437
+    },
+    {
+      "date": "2025-10-10",
+      "count": 73,
+      "normalized": 0.8848
+    },
+    {
+      "date": "2025-10-09",
+      "count": 87,
+      "normalized": 0.8462
+    },
+    {
+      "date": "2025-10-08",
+      "count": 90,
+      "normalized": 0.8016
+    },
+    {
+      "date": "2025-10-07",
+      "count": 86,
+      "normalized": 0.9048
+    },
+    {
+      "date": "2025-10-06",
+      "count": 84,
+      "normalized": 0.8243
+    },
+    {
+      "date": "2025-10-05",
+      "count": 14,
+      "normalized": 0.9813
+    },
+    {
+      "date": "2025-10-04",
+      "count": 13,
+      "normalized": 0.7684
+    },
+    {
+      "date": "2025-10-03",
+      "count": 86,
+      "normalized": 0.7508
+    },
+    {
+      "date": "2025-10-02",
+      "count": 92,
+      "normalized": 0.8668
+    },
+    {
+      "date": "2025-10-01",
+      "count": 85,
+      "normalized": 0.8346
+    },
+    {
+      "date": "2025-09-30",
+      "count": 99,
+      "normalized": 0.9055
+    },
+    {
+      "date": "2025-09-29",
+      "count": 61,
+      "normalized": 0.775
+    },
+    {
+      "date": "2025-09-28",
+      "count": 19,
+      "normalized": 0.8847
+    },
+    {
+      "date": "2025-09-27",
+      "count": 23,
+      "normalized": 0.9592
+    },
+    {
+      "date": "2025-09-26",
+      "count": 80,
+      "normalized": 0.793
+    },
+    {
+      "date": "2025-09-25",
+      "count": 84,
+      "normalized": 0.791
+    },
+    {
+      "date": "2025-09-24",
+      "count": 81,
+      "normalized": 0.8521
+    },
+    {
+      "date": "2025-09-23",
+      "count": 107,
+      "normalized": 0.8223
+    },
+    {
+      "date": "2025-09-22",
+      "count": 94,
+      "normalized": 0.7917
+    },
+    {
+      "date": "2025-09-21",
+      "count": 20,
+      "normalized": 0.8704
+    },
+    {
+      "date": "2025-09-20",
+      "count": 18,
+      "normalized": 0.8521
+    },
+    {
+      "date": "2025-09-19",
+      "count": 80,
+      "normalized": 0.8931
+    },
+    {
+      "date": "2025-09-18",
+      "count": 87,
+      "normalized": 0.8675
+    },
+    {
+      "date": "2025-09-17",
+      "count": 110,
+      "normalized": 0.8204
+    },
+    {
+      "date": "2025-09-16",
+      "count": 108,
+      "normalized": 0.9093
+    },
+    {
+      "date": "2025-09-15",
+      "count": 108,
+      "normalized": 0.7546
+    },
+    {
+      "date": "2025-09-14",
+      "count": 20,
+      "normalized": 0.861
+    },
+    {
+      "date": "2025-09-13",
+      "count": 27,
+      "normalized": 0.9114
+    },
+    {
+      "date": "2025-09-12",
+      "count": 110,
+      "normalized": 0.813
+    },
+    {
+      "date": "2025-09-11",
+      "count": 125,
+      "normalized": 0.7994
+    },
+    {
+      "date": "2025-09-10",
+      "count": 109,
+      "normalized": 0.8964
+    },
+    {
+      "date": "2025-09-09",
+      "count": 142,
+      "normalized": 0.8653
+    },
+    {
+      "date": "2025-09-08",
+      "count": 102,
+      "normalized": 0.8965
+    },
+    {
+      "date": "2025-09-07",
+      "count": 16,
+      "normalized": 0.7359
+    },
+    {
+      "date": "2025-09-06",
+      "count": 13,
+      "normalized": 0.7354
+    },
+    {
+      "date": "2025-09-05",
+      "count": 89,
+      "normalized": 0.5168
+    },
+    {
+      "date": "2025-09-04",
+      "count": 89,
+      "normalized": 0.8786
+    },
+    {
+      "date": "2025-09-03",
+      "count": 80,
+      "normalized": 0.8522
+    },
+    {
+      "date": "2025-09-02",
+      "count": 97,
+      "normalized": 0.8743
+    },
+    {
+      "date": "2025-09-01",
+      "count": 35,
+      "normalized": 0.8602
+    },
+    {
+      "date": "2025-08-31",
+      "count": 21,
+      "normalized": 0.9058
+    },
+    {
+      "date": "2025-08-30",
+      "count": 14,
+      "normalized": 0.9465
+    },
+    {
+      "date": "2025-08-29",
+      "count": 79,
+      "normalized": 0.8149
+    },
+    {
+      "date": "2025-08-28",
+      "count": 89,
+      "normalized": 0.8407
+    },
+    {
+      "date": "2025-08-27",
+      "count": 108,
+      "normalized": 0.7976
+    },
+    {
+      "date": "2025-08-26",
+      "count": 77,
+      "normalized": 0.8353
+    },
+    {
+      "date": "2025-08-25",
+      "count": 731,
+      "normalized": 0.7152
+    },
+    {
+      "date": "2025-08-24",
+      "count": 184,
+      "normalized": 0.8579
+    },
+    {
+      "date": "2025-08-23",
+      "count": 199,
+      "normalized": 0.7796
+    },
+    {
+      "date": "2025-08-22",
+      "count": 941,
+      "normalized": 0.6722
+    },
+    {
+      "date": "2025-08-21",
+      "count": 979,
+      "normalized": 0.7391
+    },
+    {
+      "date": "2025-08-20",
+      "count": 965,
+      "normalized": 0.7424
+    },
+    {
+      "date": "2025-08-19",
+      "count": 974,
+      "normalized": 0.7399
+    },
+    {
+      "date": "2025-08-18",
+      "count": 945,
+      "normalized": 0.7272
+    },
+    {
+      "date": "2025-08-17",
+      "count": 190,
+      "normalized": 0.783
+    },
+    {
+      "date": "2025-08-16",
+      "count": 176,
+      "normalized": 0.7399
+    },
+    {
+      "date": "2025-08-15",
+      "count": 923,
+      "normalized": 0.6289
+    },
+    {
+      "date": "2025-08-14",
+      "count": 1220,
+      "normalized": 0.7007
+    },
+    {
+      "date": "2025-08-13",
+      "count": 1331,
+      "normalized": 0.7401
+    },
+    {
+      "date": "2025-08-12",
+      "count": 1197,
+      "normalized": 0.7528
+    },
+    {
+      "date": "2025-08-11",
+      "count": 926,
+      "normalized": 0.8121
+    },
+    {
+      "date": "2025-08-10",
+      "count": 184,
+      "normalized": 0.8231
+    },
+    {
+      "date": "2025-08-09",
+      "count": 202,
+      "normalized": 0.8165
+    },
+    {
+      "date": "2025-08-08",
+      "count": 823,
+      "normalized": 0.7622
+    },
+    {
+      "date": "2025-08-07",
+      "count": 530,
+      "normalized": 0.774
+    },
+    {
+      "date": "2025-08-06",
+      "count": 194,
+      "normalized": 0.82
+    },
+    {
+      "date": "2025-08-05",
+      "count": 142,
+      "normalized": 0.9086
+    },
+    {
+      "date": "2025-08-04",
+      "count": 128,
+      "normalized": 0.8958
+    },
+    {
+      "date": "2025-08-03",
+      "count": 28,
+      "normalized": 0.9555
+    },
+    {
+      "date": "2025-08-02",
+      "count": 24,
+      "normalized": 0.9258
+    },
+    {
+      "date": "2025-08-01",
+      "count": 147,
+      "normalized": 0.76
+    },
+    {
+      "date": "2025-07-31",
+      "count": 334,
+      "normalized": 0.771
+    },
+    {
+      "date": "2025-07-30",
+      "count": 247,
+      "normalized": 0.7975
+    },
+    {
+      "date": "2025-07-29",
+      "count": 175,
+      "normalized": 0.8449
+    },
+    {
+      "date": "2025-07-28",
+      "count": 165,
+      "normalized": 0.8302
+    },
+    {
+      "date": "2025-07-27",
+      "count": 44,
+      "normalized": 0.8262
+    },
+    {
+      "date": "2025-07-26",
+      "count": 12,
+      "normalized": 0.7297
+    },
+    {
+      "date": "2025-07-25",
+      "count": 91,
+      "normalized": 0.7969
+    },
+    {
+      "date": "2025-07-24",
+      "count": 91,
+      "normalized": 0.7367
+    },
+    {
+      "date": "2025-07-23",
+      "count": 105,
+      "normalized": 0.6449
+    },
+    {
+      "date": "2025-07-22",
+      "count": 77,
+      "normalized": 0.4676
+    },
+    {
+      "date": "2025-07-21",
+      "count": 73,
+      "normalized": 0.5408
+    },
+    {
+      "date": "2025-07-20",
+      "count": 19,
+      "normalized": 0.8335
+    },
+    {
+      "date": "2025-07-19",
+      "count": 16,
+      "normalized": 0.8286
+    },
+    {
+      "date": "2025-07-18",
+      "count": 56,
+      "normalized": 0.7128
+    },
+    {
+      "date": "2025-07-17",
+      "count": 66,
+      "normalized": 0.8089
+    },
+    {
+      "date": "2025-07-16",
+      "count": 66,
+      "normalized": 0.8153
+    },
+    {
+      "date": "2025-07-15",
+      "count": 59,
+      "normalized": 0.9026
+    },
+    {
+      "date": "2025-07-14",
+      "count": 58,
+      "normalized": 0.8534
+    },
+    {
+      "date": "2025-07-13",
+      "count": 23,
+      "normalized": 0.8304
+    }
+  ]
+}

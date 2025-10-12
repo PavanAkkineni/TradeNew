@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import time
 
 # Load environment variables from root directory
-root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 load_dotenv(os.path.join(root_dir, '.env'))
 
 # Get API key from environment variable
@@ -66,7 +66,7 @@ def fetch_and_save(function_name, filename, additional_params=None):
         
         if "Information" in data and "premium" in data["Information"].lower():
             print(f"⚠️ Premium endpoint: {data['Information']}")
-            return data
+            # Continue to save the data anyway
         
         # Save to file
         script_dir = os.path.dirname(os.path.abspath(__file__))

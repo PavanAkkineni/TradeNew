@@ -1,0 +1,3712 @@
+{
+  "metadata": {
+    "symbol": "IBM",
+    "generated_at": "2025-10-12T04:56:14.485413",
+    "total_signals": 100,
+    "date_range": {
+      "start": "2025-05-20",
+      "end": "2025-10-10"
+    }
+  },
+  "signals": {
+    "2025-05-20": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 265.111606886657,
+      "technical_indicators": {
+        "current_price": 265.111606886657,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 265.111606886657,
+        "sma_50": 265.111606886657,
+        "sma_200": 265.111606886657,
+        "bollinger_bands": {
+          "upper": 270.41383902439014,
+          "middle": 265.111606886657,
+          "lower": 259.80937474892386
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-05-20"
+    },
+    "2025-05-21": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 259.073477761836,
+      "technical_indicators": {
+        "current_price": 259.073477761836,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 259.073477761836,
+        "sma_50": 259.073477761836,
+        "sma_200": 259.073477761836,
+        "bollinger_bands": {
+          "upper": 264.2549473170727,
+          "middle": 259.073477761836,
+          "lower": 253.89200820659926
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-05-21"
+    },
+    "2025-05-22": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 256.590694404591,
+      "technical_indicators": {
+        "current_price": 256.590694404591,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 256.590694404591,
+        "sma_50": 256.590694404591,
+        "sma_200": 256.590694404591,
+        "bollinger_bands": {
+          "upper": 261.7225082926828,
+          "middle": 256.590694404591,
+          "lower": 251.45888051649916
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-05-22"
+    },
+    "2025-05-23": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 256.848903873745,
+      "technical_indicators": {
+        "current_price": 256.848903873745,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 256.848903873745,
+        "sma_50": 256.848903873745,
+        "sma_200": 256.848903873745,
+        "bollinger_bands": {
+          "upper": 261.9858819512199,
+          "middle": 256.848903873745,
+          "lower": 251.71192579627007
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-05-23"
+    },
+    "2025-05-27": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 261.417225251076,
+      "technical_indicators": {
+        "current_price": 261.417225251076,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 261.417225251076,
+        "sma_50": 261.417225251076,
+        "sma_200": 261.417225251076,
+        "bollinger_bands": {
+          "upper": 266.64556975609753,
+          "middle": 261.417225251076,
+          "lower": 256.18888074605445
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-05-27"
+    },
+    "2025-05-28": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 258.447816355811,
+      "technical_indicators": {
+        "current_price": 258.447816355811,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 258.447816355811,
+        "sma_50": 258.447816355811,
+        "sma_200": 258.447816355811,
+        "bollinger_bands": {
+          "upper": 263.61677268292726,
+          "middle": 258.447816355811,
+          "lower": 253.2788600286948
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-05-28"
+    },
+    "2025-05-29": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 256.908490674319,
+      "technical_indicators": {
+        "current_price": 256.908490674319,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 256.908490674319,
+        "sma_50": 256.908490674319,
+        "sma_200": 256.908490674319,
+        "bollinger_bands": {
+          "upper": 262.0466604878054,
+          "middle": 256.908490674319,
+          "lower": 251.77032086083264
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-05-29"
+    },
+    "2025-05-30": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 257.275942611191,
+      "technical_indicators": {
+        "current_price": 257.275942611191,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 257.275942611191,
+        "sma_50": 257.275942611191,
+        "sma_200": 257.275942611191,
+        "bollinger_bands": {
+          "upper": 262.4214614634148,
+          "middle": 257.275942611191,
+          "lower": 252.13042375896717
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-05-30"
+    },
+    "2025-06-02": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 262.082611190818,
+      "technical_indicators": {
+        "current_price": 262.082611190818,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 262.082611190818,
+        "sma_50": 262.082611190818,
+        "sma_200": 262.082611190818,
+        "bollinger_bands": {
+          "upper": 267.32426341463434,
+          "middle": 262.082611190818,
+          "lower": 256.84095896700165
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-02"
+    },
+    "2025-06-03": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 263.373658536585,
+      "technical_indicators": {
+        "current_price": 263.373658536585,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 263.373658536585,
+        "sma_50": 263.373658536585,
+        "sma_200": 263.373658536585,
+        "bollinger_bands": {
+          "upper": 268.64113170731673,
+          "middle": 263.373658536585,
+          "lower": 258.1061853658533
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-03"
+    },
+    "2025-06-04": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 263.691454806313,
+      "technical_indicators": {
+        "current_price": 263.691454806313,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 263.691454806313,
+        "sma_50": 263.691454806313,
+        "sma_200": 263.691454806313,
+        "bollinger_bands": {
+          "upper": 268.9652839024393,
+          "middle": 263.691454806313,
+          "lower": 258.4176257101867
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-04"
+    },
+    "2025-06-05": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 265.022226685796,
+      "technical_indicators": {
+        "current_price": 265.022226685796,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 265.022226685796,
+        "sma_50": 265.022226685796,
+        "sma_200": 265.022226685796,
+        "bollinger_bands": {
+          "upper": 270.3226712195119,
+          "middle": 265.022226685796,
+          "lower": 259.7217821520801
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-05"
+    },
+    "2025-06-06": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 267.018384505022,
+      "technical_indicators": {
+        "current_price": 267.018384505022,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 267.018384505022,
+        "sma_50": 267.018384505022,
+        "sma_200": 267.018384505022,
+        "bollinger_bands": {
+          "upper": 272.35875219512246,
+          "middle": 267.018384505022,
+          "lower": 261.6780168149216
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-06"
+    },
+    "2025-06-09": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 270.206278335725,
+      "technical_indicators": {
+        "current_price": 270.206278335725,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 270.206278335725,
+        "sma_50": 270.206278335725,
+        "sma_200": 270.206278335725,
+        "bollinger_bands": {
+          "upper": 275.61040390243954,
+          "middle": 270.206278335725,
+          "lower": 264.8021527690105
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-09"
+    },
+    "2025-06-10": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 274.337629842181,
+      "technical_indicators": {
+        "current_price": 274.337629842181,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 274.337629842181,
+        "sma_50": 274.337629842181,
+        "sma_200": 274.337629842181,
+        "bollinger_bands": {
+          "upper": 279.82438243902465,
+          "middle": 274.337629842181,
+          "lower": 268.85087724533736
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-10"
+    },
+    "2025-06-11": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 279.581268292683,
+      "technical_indicators": {
+        "current_price": 279.581268292683,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 279.581268292683,
+        "sma_50": 279.581268292683,
+        "sma_200": 279.581268292683,
+        "bollinger_bands": {
+          "upper": 285.1728936585366,
+          "middle": 279.581268292683,
+          "lower": 273.98964292682933
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-11"
+    },
+    "2025-06-12": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 279.094642754663,
+      "technical_indicators": {
+        "current_price": 279.094642754663,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 279.094642754663,
+        "sma_50": 279.094642754663,
+        "sma_200": 279.094642754663,
+        "bollinger_bands": {
+          "upper": 284.6765356097563,
+          "middle": 279.094642754663,
+          "lower": 273.51274989956977
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-12"
+    },
+    "2025-06-13": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 275.310880918221,
+      "technical_indicators": {
+        "current_price": 275.310880918221,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 275.310880918221,
+        "sma_50": 275.310880918221,
+        "sma_200": 275.310880918221,
+        "bollinger_bands": {
+          "upper": 280.81709853658543,
+          "middle": 275.310880918221,
+          "lower": 269.8046632998566
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-13"
+    },
+    "2025-06-16": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 279.889133428981,
+      "technical_indicators": {
+        "current_price": 279.889133428981,
+        "price_change": 0,
+        "price_change_percent": 0,
+        "rsi": 50.0,
+        "macd": {
+          "macd": 0,
+          "signal": 0,
+          "histogram": 0
+        },
+        "sma_20": 279.889133428981,
+        "sma_50": 279.889133428981,
+        "sma_200": 279.889133428981,
+        "bollinger_bands": {
+          "upper": 285.4869160975606,
+          "middle": 279.889133428981,
+          "lower": 274.2913507604014
+        },
+        "volume": 1000000,
+        "avg_volume": 1000000,
+        "volume_ratio": 1.0
+      },
+      "date": "2025-06-16"
+    },
+    "2025-06-17": {
+      "signal": "HOLD",
+      "confidence": 57.0,
+      "final_score": -0.7,
+      "technical_score": -4,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -4.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 83.0"
+      ],
+      "price": 281.100731707317,
+      "technical_indicators": {
+        "current_price": 281.100731707317,
+        "price_change": 1.2115982783359982,
+        "price_change_percent": 0.43288507256157155,
+        "rsi": 83.04839177050127,
+        "macd": {
+          "macd": 0.0,
+          "signal": 0.0,
+          "histogram": 0.0
+        },
+        "sma_20": 266.6191529411766,
+        "sma_50": 281.100731707317,
+        "sma_200": 281.100731707317,
+        "bollinger_bands": {
+          "upper": 283.53368330430413,
+          "middle": 266.6191529411766,
+          "lower": 249.70462257804905
+        },
+        "volume": 3069556,
+        "avg_volume": 3510541.0,
+        "volume_ratio": 0.8743826094040776
+      },
+      "date": "2025-06-17"
+    },
+    "2025-06-18": {
+      "signal": "HOLD",
+      "confidence": 57.0,
+      "final_score": -0.7,
+      "technical_score": -4,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -4.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 87.0"
+      ],
+      "price": 281.259629842181,
+      "technical_indicators": {
+        "current_price": 281.259629842181,
+        "price_change": 0.15889813486404591,
+        "price_change_percent": 0.05652711535076727,
+        "rsi": 87.01690821256032,
+        "macd": {
+          "macd": 0.0,
+          "signal": 0.0,
+          "histogram": 0.0
+        },
+        "sma_20": 267.4265540889528,
+        "sma_50": 281.259629842181,
+        "sma_200": 281.259629842181,
+        "bollinger_bands": {
+          "upper": 285.47947420476544,
+          "middle": 267.4265540889528,
+          "lower": 249.3736339731402
+        },
+        "volume": 3534110,
+        "avg_volume": 3565353.5,
+        "volume_ratio": 0.9912369138151378
+      },
+      "date": "2025-06-18"
+    },
+    "2025-06-20": {
+      "signal": "HOLD",
+      "confidence": 53.0,
+      "final_score": -0.3,
+      "technical_score": -3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 81.3",
+        "High volume confirmation (2.0x average)"
+      ],
+      "price": 279.035055954089,
+      "technical_indicators": {
+        "current_price": 279.035055954089,
+        "price_change": -2.2245738880920385,
+        "price_change_percent": -0.7909325235691593,
+        "rsi": 81.3089454129747,
+        "macd": {
+          "macd": 0.0,
+          "signal": 0.0,
+          "histogram": 0.0
+        },
+        "sma_20": 268.42463299856547,
+        "sma_50": 279.035055954089,
+        "sma_200": 279.035055954089,
+        "bollinger_bands": {
+          "upper": 286.7254516948398,
+          "middle": 268.42463299856547,
+          "lower": 250.12381430229112
+        },
+        "volume": 7676962,
+        "avg_volume": 3761506.4,
+        "volume_ratio": 2.0409275390306396
+      },
+      "date": "2025-06-20"
+    },
+    "2025-06-23": {
+      "signal": "HOLD",
+      "confidence": 57.0,
+      "final_score": -0.7,
+      "technical_score": -4,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -4.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 83.0"
+      ],
+      "price": 287.188516499283,
+      "technical_indicators": {
+        "current_price": 287.188516499283,
+        "price_change": 8.153460545194037,
+        "price_change_percent": 2.9220201444995375,
+        "rsi": 82.95099061522393,
+        "macd": {
+          "macd": 0.0,
+          "signal": 0.0,
+          "histogram": 0.0
+        },
+        "sma_20": 269.95452410330006,
+        "sma_50": 287.188516499283,
+        "sma_200": 287.188516499283,
+        "bollinger_bands": {
+          "upper": 289.13696247961263,
+          "middle": 269.95452410330006,
+          "lower": 250.77208572698748
+        },
+        "volume": 3786159,
+        "avg_volume": 3796251.7,
+        "volume_ratio": 0.9973414038905797
+      },
+      "date": "2025-06-23"
+    },
+    "2025-06-24": {
+      "signal": "HOLD",
+      "confidence": 57.0,
+      "final_score": -0.7,
+      "technical_score": -4,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -4.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 84.3"
+      ],
+      "price": 291.766769010043,
+      "technical_indicators": {
+        "current_price": 291.766769010043,
+        "price_change": 4.578252510759967,
+        "price_change_percent": 1.594162805173095,
+        "rsi": 84.30525557955342,
+        "macd": {
+          "macd": 0.0,
+          "signal": 0.0,
+          "histogram": 0.0
+        },
+        "sma_20": 271.70041736011495,
+        "sma_50": 291.766769010043,
+        "sma_200": 291.766769010043,
+        "bollinger_bands": {
+          "upper": 292.1106284873509,
+          "middle": 271.70041736011495,
+          "lower": 251.29020623287903
+        },
+        "volume": 4219120,
+        "avg_volume": 3871071.65,
+        "volume_ratio": 1.089910076967963
+      },
+      "date": "2025-06-24"
+    },
+    "2025-06-25": {
+      "signal": "HOLD",
+      "confidence": 57.0,
+      "final_score": -0.7,
+      "technical_score": -4,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -4.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 79.0"
+      ],
+      "price": 289.055569583931,
+      "technical_indicators": {
+        "current_price": 289.055569583931,
+        "price_change": -2.711199426111989,
+        "price_change_percent": -0.9292351679771543,
+        "rsi": 78.97005444646044,
+        "macd": {
+          "macd": 0.0,
+          "signal": 0.0,
+          "histogram": 0.0
+        },
+        "sma_20": 273.0823345767577,
+        "sma_50": 289.055569583931,
+        "sma_200": 289.055569583931,
+        "bollinger_bands": {
+          "upper": 294.2490393565721,
+          "middle": 273.0823345767577,
+          "lower": 251.91562979694336
+        },
+        "volume": 3862309,
+        "avg_volume": 3899976.3,
+        "volume_ratio": 0.9903416592557243
+      },
+      "date": "2025-06-25"
+    },
+    "2025-06-26": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 78.7"
+      ],
+      "price": 289.919578192253,
+      "technical_indicators": {
+        "current_price": 289.919578192253,
+        "price_change": 0.864008608322024,
+        "price_change_percent": 0.29890744176480843,
+        "rsi": 78.7434074753497,
+        "macd": {
+          "macd": 6.603400956842904,
+          "signal": 5.943060861158614,
+          "histogram": 0.6603400956842904
+        },
+        "sma_20": 274.65592266857976,
+        "sma_50": 289.919578192253,
+        "sma_200": 289.919578192253,
+        "bollinger_bands": {
+          "upper": 295.9159650746189,
+          "middle": 274.65592266857976,
+          "lower": 253.3958802625406
+        },
+        "volume": 3621110,
+        "avg_volume": 3965109.95,
+        "volume_ratio": 0.913243275889487
+      },
+      "date": "2025-06-26"
+    },
+    "2025-06-27": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 73.8"
+      ],
+      "price": 287.70493543759,
+      "technical_indicators": {
+        "current_price": 287.70493543759,
+        "price_change": -2.214642754663032,
+        "price_change_percent": -0.763881752474973,
+        "rsi": 73.76226328998341,
+        "macd": {
+          "macd": 6.554182749164113,
+          "signal": 5.8987644742477015,
+          "histogram": 0.6554182749164115
+        },
+        "sma_20": 276.19574490674336,
+        "sma_50": 287.70493543759,
+        "sma_200": 287.70493543759,
+        "bollinger_bands": {
+          "upper": 296.53207376366805,
+          "middle": 276.19574490674336,
+          "lower": 255.8594160498187
+        },
+        "volume": 3562501,
+        "avg_volume": 4028473.6,
+        "volume_ratio": 0.8843302336646813
+      },
+      "date": "2025-06-27"
+    },
+    "2025-06-30": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 74.8"
+      ],
+      "price": 292.749951219512,
+      "technical_indicators": {
+        "current_price": 292.749951219512,
+        "price_change": 5.045015781922018,
+        "price_change_percent": 1.7535381429062766,
+        "rsi": 74.83588621444113,
+        "macd": {
+          "macd": 6.843381335447589,
+          "signal": 6.15904320190283,
+          "histogram": 0.6843381335447587
+        },
+        "sma_20": 277.9694453371593,
+        "sma_50": 292.749951219512,
+        "sma_200": 292.749951219512,
+        "bollinger_bands": {
+          "upper": 297.57043470142713,
+          "middle": 277.9694453371593,
+          "lower": 258.36845597289147
+        },
+        "volume": 3495386,
+        "avg_volume": 3719796.75,
+        "volume_ratio": 0.9396712333812325
+      },
+      "date": "2025-06-30"
+    },
+    "2025-07-01": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 289.194605451937,
+      "technical_indicators": {
+        "current_price": 289.194605451937,
+        "price_change": -3.5553457675750337,
+        "price_change_percent": -1.2144650247641329,
+        "rsi": 66.57801418439695,
+        "macd": {
+          "macd": 6.70835684654179,
+          "signal": 6.037521161887611,
+          "histogram": 0.670835684654179
+        },
+        "sma_20": 279.32504505021524,
+        "sma_50": 289.194605451937,
+        "sma_200": 289.194605451937,
+        "bollinger_bands": {
+          "upper": 298.0752644039134,
+          "middle": 279.32504505021524,
+          "lower": 260.57482569651705
+        },
+        "volume": 3272797,
+        "avg_volume": 3741842.55,
+        "volume_ratio": 0.874648507057038
+      },
+      "date": "2025-07-01"
+    },
+    "2025-07-02": {
+      "signal": "WEAK_BUY",
+      "confidence": 56.5,
+      "final_score": 2.1,
+      "technical_score": 3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 285.669053084648,
+      "technical_indicators": {
+        "current_price": 285.669053084648,
+        "price_change": -3.525552367288981,
+        "price_change_percent": -1.2190934065936143,
+        "rsi": 57.063839594375786,
+        "macd": {
+          "macd": 6.244879273552215,
+          "signal": 5.620391346196993,
+          "histogram": 0.6244879273552213
+        },
+        "sma_20": 280.43981477761844,
+        "sma_50": 285.669053084648,
+        "sma_200": 285.669053084648,
+        "bollinger_bands": {
+          "upper": 297.8685215821408,
+          "middle": 280.43981477761844,
+          "lower": 263.0111079730961
+        },
+        "volume": 3257515,
+        "avg_volume": 3779972.2,
+        "volume_ratio": 0.8617827930057262
+      },
+      "date": "2025-07-02"
+    },
+    "2025-07-03": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 289.959302725968,
+      "technical_indicators": {
+        "current_price": 289.959302725968,
+        "price_change": 4.290249641319974,
+        "price_change_percent": 1.5018251347123377,
+        "rsi": 61.58407454468347,
+        "macd": {
+          "macd": 6.152831240192143,
+          "signal": 5.537548116172928,
+          "histogram": 0.6152831240192143
+        },
+        "sma_20": 281.7532071736012,
+        "sma_50": 289.959302725968,
+        "sma_200": 289.959302725968,
+        "bollinger_bands": {
+          "upper": 297.84303129783484,
+          "middle": 281.7532071736012,
+          "lower": 265.66338304936755
+        },
+        "volume": 1853289,
+        "avg_volume": 3743199.6,
+        "volume_ratio": 0.4951082491032538
+      },
+      "date": "2025-07-03"
+    },
+    "2025-07-07": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 290.455859397418,
+      "technical_indicators": {
+        "current_price": 290.455859397418,
+        "price_change": 0.4965566714500369,
+        "price_change_percent": 0.1712504709391297,
+        "rsi": 67.3650649054882,
+        "macd": {
+          "macd": 6.050207458613215,
+          "signal": 5.445186712751894,
+          "histogram": 0.6050207458613217
+        },
+        "sma_20": 283.02488880918224,
+        "sma_50": 290.455859397418,
+        "sma_200": 290.455859397418,
+        "bollinger_bands": {
+          "upper": 297.5705353451308,
+          "middle": 283.02488880918224,
+          "lower": 268.4792422732337
+        },
+        "volume": 4488064,
+        "avg_volume": 3834628.9,
+        "volume_ratio": 1.1704037384165127
+      },
+      "date": "2025-07-07"
+    },
+    "2025-07-08": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 288.419977044476,
+      "technical_indicators": {
+        "current_price": 288.419977044476,
+        "price_change": -2.0358823529419965,
+        "price_change_percent": -0.7009265907617268,
+        "rsi": 60.38694074969693,
+        "macd": {
+          "macd": 5.738449408325323,
+          "signal": 5.164604467492791,
+          "histogram": 0.5738449408325321
+        },
+        "sma_20": 284.094968436155,
+        "sma_50": 288.419977044476,
+        "sma_200": 288.419977044476,
+        "bollinger_bands": {
+          "upper": 296.80619618653395,
+          "middle": 284.094968436155,
+          "lower": 271.38374068577605
+        },
+        "volume": 2925329,
+        "avg_volume": 3856118.2,
+        "volume_ratio": 0.7586201584795819
+      },
+      "date": "2025-07-08"
+    },
+    "2025-07-09": {
+      "signal": "WEAK_BUY",
+      "confidence": 56.5,
+      "final_score": 2.1,
+      "technical_score": 3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 288.141905308465,
+      "technical_indicators": {
+        "current_price": 288.141905308465,
+        "price_change": -0.2780717360109861,
+        "price_change_percent": -0.09641209283090188,
+        "rsi": 58.77258104429575,
+        "macd": {
+          "macd": 5.406616730061103,
+          "signal": 4.865955057054992,
+          "histogram": 0.5406616730061105
+        },
+        "sma_20": 284.991749784792,
+        "sma_50": 288.141905308465,
+        "sma_200": 288.141905308465,
+        "bollinger_bands": {
+          "upper": 296.0847584317501,
+          "middle": 284.991749784792,
+          "lower": 273.89874113783384
+        },
+        "volume": 2971309,
+        "avg_volume": 3788110.45,
+        "volume_ratio": 0.7843776044069676
+      },
+      "date": "2025-07-09"
+    },
+    "2025-07-10": {
+      "signal": "WEAK_BUY",
+      "confidence": 56.5,
+      "final_score": 2.1,
+      "technical_score": 3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 285.450568149211,
+      "technical_indicators": {
+        "current_price": 285.450568149211,
+        "price_change": -2.691337159254033,
+        "price_change_percent": -0.9340318466947288,
+        "rsi": 54.91154562383568,
+        "macd": {
+          "macd": 4.870326434043932,
+          "signal": 4.383293790639539,
+          "histogram": 0.487032643404393
+        },
+        "sma_20": 285.54739670014345,
+        "sma_50": 285.450568149211,
+        "sma_200": 285.450568149211,
+        "bollinger_bands": {
+          "upper": 295.50530387842775,
+          "middle": 285.54739670014345,
+          "lower": 275.58948952185915
+        },
+        "volume": 3489068,
+        "avg_volume": 3704388.5,
+        "volume_ratio": 0.9418742121675413
+      },
+      "date": "2025-07-10"
+    },
+    "2025-07-11": {
+      "signal": "WEAK_BUY",
+      "confidence": 56.5,
+      "final_score": 2.1,
+      "technical_score": 3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 281.637012912482,
+      "technical_indicators": {
+        "current_price": 281.637012912482,
+        "price_change": -3.8135552367289733,
+        "price_change_percent": -1.3359774553804875,
+        "rsi": 52.93985637342885,
+        "macd": {
+          "macd": 4.090438446097153,
+          "signal": 3.6813946014874377,
+          "histogram": 0.4090438446097151
+        },
+        "sma_20": 285.6501839311334,
+        "sma_50": 281.637012912482,
+        "sma_200": 281.637012912482,
+        "bollinger_bands": {
+          "upper": 295.39989865262186,
+          "middle": 285.6501839311334,
+          "lower": 275.900469209645
+        },
+        "volume": 3790679,
+        "avg_volume": 3661120.75,
+        "volume_ratio": 1.0353875927200709
+      },
+      "date": "2025-07-11"
+    },
+    "2025-07-14": {
+      "signal": "WEAK_BUY",
+      "confidence": 56.5,
+      "final_score": 2.1,
+      "technical_score": 3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 281.835635581062,
+      "technical_indicators": {
+        "current_price": 281.835635581062,
+        "price_change": 0.19862266857995792,
+        "price_change_percent": 0.07052434853144796,
+        "rsi": 42.626538987688406,
+        "macd": {
+          "macd": 3.4486449539332398,
+          "signal": 3.103780458539916,
+          "histogram": 0.344864495393324
+        },
+        "sma_20": 285.7872335724534,
+        "sma_50": 281.835635581062,
+        "sma_200": 281.835635581062,
+        "bollinger_bands": {
+          "upper": 295.23693931037934,
+          "middle": 285.7872335724534,
+          "lower": 276.3375278345274
+        },
+        "volume": 2857401,
+        "avg_volume": 3633090.45,
+        "volume_ratio": 0.7864932181911408
+      },
+      "date": "2025-07-14"
+    },
+    "2025-07-15": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 280.753142037303,
+      "technical_indicators": {
+        "current_price": 280.753142037303,
+        "price_change": -1.0824935437589716,
+        "price_change_percent": -0.38408682476479206,
+        "rsi": 33.2122313048762,
+        "macd": {
+          "macd": 2.82016173630916,
+          "signal": 2.538145562678244,
+          "histogram": 0.2820161736309159
+        },
+        "sma_20": 286.0593466284075,
+        "sma_50": 280.753142037303,
+        "sma_200": 280.753142037303,
+        "bollinger_bands": {
+          "upper": 294.55160068738354,
+          "middle": 286.0593466284075,
+          "lower": 277.5670925694315
+        },
+        "volume": 2864106,
+        "avg_volume": 3614104.55,
+        "volume_ratio": 0.7924801179312868
+      },
+      "date": "2025-07-15"
+    },
+    "2025-07-16": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 279.978513629842,
+      "technical_indicators": {
+        "current_price": 279.978513629842,
+        "price_change": -0.774628407461023,
+        "price_change_percent": -0.27591085956861705,
+        "rsi": 35.296010296011616,
+        "macd": {
+          "macd": 2.2338280405805335,
+          "signal": 2.01044523652248,
+          "histogram": 0.22338280405805344
+        },
+        "sma_20": 286.0638156384506,
+        "sma_50": 279.978513629842,
+        "sma_200": 279.978513629842,
+        "bollinger_bands": {
+          "upper": 294.54316106837643,
+          "middle": 286.0638156384506,
+          "lower": 277.58447020852475
+        },
+        "volume": 2804831,
+        "avg_volume": 3570080.05,
+        "volume_ratio": 0.7856493301879884
+      },
+      "date": "2025-07-16"
+    },
+    "2025-07-17": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 280.057962697274,
+      "technical_indicators": {
+        "current_price": 280.057962697274,
+        "price_change": 0.07944906743199454,
+        "price_change_percent": 0.028376844494943532,
+        "rsi": 33.60845163420312,
+        "macd": {
+          "macd": 1.7553308764791495,
+          "signal": 1.5797977888312347,
+          "histogram": 0.17553308764791486
+        },
+        "sma_20": 286.0116771879484,
+        "sma_50": 280.057962697274,
+        "sma_200": 280.057962697274,
+        "bollinger_bands": {
+          "upper": 294.624228420692,
+          "middle": 286.0116771879484,
+          "lower": 277.3991259552048
+        },
+        "volume": 3337168,
+        "avg_volume": 3583460.65,
+        "volume_ratio": 0.9312696094486206
+      },
+      "date": "2025-07-17"
+    },
+    "2025-07-18": {
+      "signal": "WEAK_BUY",
+      "confidence": 56.5,
+      "final_score": 2.1,
+      "technical_score": 3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 283.90131133429,
+      "technical_indicators": {
+        "current_price": 283.90131133429,
+        "price_change": 3.8433486370160495,
+        "price_change_percent": 1.3723404255320106,
+        "rsi": 44.00250548073942,
+        "macd": {
+          "macd": 1.667028079335637,
+          "signal": 1.5003252714020732,
+          "histogram": 0.16670280793356373
+        },
+        "sma_20": 286.1437612625539,
+        "sma_50": 283.90131133429,
+        "sma_200": 283.90131133429,
+        "bollinger_bands": {
+          "upper": 294.5390332615752,
+          "middle": 286.1437612625539,
+          "lower": 277.7484892635326
+        },
+        "volume": 4478165,
+        "avg_volume": 3630663.4,
+        "volume_ratio": 1.233428854902936
+      },
+      "date": "2025-07-18"
+    },
+    "2025-07-21": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 282.749299856528,
+      "technical_indicators": {
+        "current_price": 282.749299856528,
+        "price_change": -1.1520114777620165,
+        "price_change_percent": -0.4057788505265262,
+        "rsi": 32.02427704391539,
+        "macd": {
+          "macd": 1.4869491536685473,
+          "signal": 1.3382542383016927,
+          "histogram": 0.14869491536685464
+        },
+        "sma_20": 286.3294734576758,
+        "sma_50": 282.749299856528,
+        "sma_200": 282.749299856528,
+        "bollinger_bands": {
+          "upper": 294.2377204995153,
+          "middle": 286.3294734576758,
+          "lower": 278.4212264158363
+        },
+        "volume": 3051791,
+        "avg_volume": 3399404.85,
+        "volume_ratio": 0.8977427328198346
+      },
+      "date": "2025-07-21"
+    },
+    "2025-07-22": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 280.018238163558,
+      "technical_indicators": {
+        "current_price": 280.018238163558,
+        "price_change": -2.731061692970002,
+        "price_change_percent": -0.9658951213515969,
+        "rsi": 33.0022075055207,
+        "macd": {
+          "macd": 1.1110539155594665,
+          "signal": 0.9999485240035199,
+          "histogram": 0.11110539155594668
+        },
+        "sma_20": 285.97095954088957,
+        "sma_50": 280.018238163558,
+        "sma_200": 280.018238163558,
+        "bollinger_bands": {
+          "upper": 294.32829102640113,
+          "middle": 285.97095954088957,
+          "lower": 277.613628055378
+        },
+        "volume": 4824219,
+        "avg_volume": 3451307.85,
+        "volume_ratio": 1.397794462177577
+      },
+      "date": "2025-07-22"
+    },
+    "2025-07-23": {
+      "signal": "WEAK_BUY",
+      "confidence": 56.5,
+      "final_score": 2.1,
+      "technical_score": 3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "High volume confirmation (2.2x average)"
+      ],
+      "price": 280.067893830703,
+      "technical_indicators": {
+        "current_price": 280.067893830703,
+        "price_change": 0.04965566714497527,
+        "price_change_percent": 0.017733011774744296,
+        "rsi": 38.091216216218804,
+        "macd": {
+          "macd": 0.8078486521345098,
+          "signal": 0.7270637869210589,
+          "histogram": 0.08078486521345096
+        },
+        "sma_20": 285.3860157819225,
+        "sma_50": 280.067893830703,
+        "sma_200": 280.067893830703,
+        "bollinger_bands": {
+          "upper": 293.676209279623,
+          "middle": 285.3860157819225,
+          "lower": 277.095822284222
+        },
+        "volume": 8105906,
+        "avg_volume": 3645647.15,
+        "volume_ratio": 2.2234477629026714
+      },
+      "date": "2025-07-23"
+    },
+    "2025-07-24": {
+      "signal": "WEAK_BUY",
+      "confidence": 68.5,
+      "final_score": 2.9,
+      "technical_score": 5,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 5.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 11.5",
+        "High volume confirmation (4.9x average)"
+      ],
+      "price": 258.715956958393,
+      "technical_indicators": {
+        "current_price": 258.715956958393,
+        "price_change": -21.351936872309977,
+        "price_change_percent": -7.623843126130307,
+        "rsi": 11.502692119435693,
+        "macd": {
+          "macd": -1.1421999930936977,
+          "signal": -1.027979993784328,
+          "histogram": -0.11421999930936977
+        },
+        "sma_20": 283.8690351506456,
+        "sma_50": 258.715956958393,
+        "sma_200": 258.715956958393,
+        "bollinger_bands": {
+          "upper": 297.97887816166366,
+          "middle": 283.8690351506456,
+          "lower": 269.7591921396275
+        },
+        "volume": 22647720,
+        "avg_volume": 4584917.7,
+        "volume_ratio": 4.939613201781135
+      },
+      "date": "2025-07-24"
+    },
+    "2025-07-25": {
+      "signal": "WEAK_BUY",
+      "confidence": 68.5,
+      "final_score": 2.9,
+      "technical_score": 5,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 5.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 10.2",
+        "High volume confirmation (1.6x average)"
+      ],
+      "price": 257.931397417504,
+      "technical_indicators": {
+        "current_price": 257.931397417504,
+        "price_change": -0.7845595408890063,
+        "price_change_percent": -0.30325131472860023,
+        "rsi": 10.206561360876407,
+        "macd": {
+          "macd": -2.7195853053736414,
+          "signal": -2.4476267748362774,
+          "histogram": -0.27195853053736396
+        },
+        "sma_20": 282.26962611190817,
+        "sma_50": 257.931397417504,
+        "sma_200": 257.931397417504,
+        "bollinger_bands": {
+          "upper": 300.0484232792721,
+          "middle": 282.26962611190817,
+          "lower": 264.49082894454426
+        },
+        "volume": 7758653,
+        "avg_volume": 4791794.85,
+        "volume_ratio": 1.6191538333491051
+      },
+      "date": "2025-07-25"
+    },
+    "2025-07-28": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 18.1"
+      ],
+      "price": 261.397362984218,
+      "technical_indicators": {
+        "current_price": 261.397362984218,
+        "price_change": 3.465965566713976,
+        "price_change_percent": 1.3437548128752026,
+        "rsi": 18.055881662362594,
+        "macd": {
+          "macd": -3.6479487919476696,
+          "signal": -3.2831539127529026,
+          "histogram": -0.36479487919476705
+        },
+        "sma_20": 280.95424748923955,
+        "sma_50": 261.397362984218,
+        "sma_200": 261.397362984218,
+        "bollinger_bands": {
+          "upper": 300.7124483475037,
+          "middle": 280.95424748923955,
+          "lower": 261.1960466309754
+        },
+        "volume": 5192516,
+        "avg_volume": 4873295.6,
+        "volume_ratio": 1.0655040092376091
+      },
+      "date": "2025-07-28"
+    },
+    "2025-07-29": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 17.8"
+      ],
+      "price": 260.6028723099,
+      "technical_indicators": {
+        "current_price": 260.6028723099,
+        "price_change": -0.7944906743179558,
+        "price_change_percent": -0.30393981991544566,
+        "rsi": 17.83808861053177,
+        "macd": {
+          "macd": -4.397105209386382,
+          "signal": -3.9573946884477436,
+          "histogram": -0.43971052093863827
+        },
+        "sma_20": 279.34689354375894,
+        "sma_50": 260.6028723099,
+        "sma_200": 260.6028723099,
+        "bollinger_bands": {
+          "upper": 300.2049884560676,
+          "middle": 279.34689354375894,
+          "lower": 258.48879863145027
+        },
+        "volume": 4627265,
+        "avg_volume": 4929889.55,
+        "volume_ratio": 0.9386143346761187
+      },
+      "date": "2025-07-29"
+    },
+    "2025-07-30": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 18.1"
+      ],
+      "price": 258.467678622669,
+      "technical_indicators": {
+        "current_price": 258.467678622669,
+        "price_change": -2.1351936872310375,
+        "price_change_percent": -0.8193285316870715,
+        "rsi": 18.072855464160384,
+        "macd": {
+          "macd": -5.104270500556083,
+          "signal": -4.593843450500475,
+          "histogram": -0.5104270500556085
+        },
+        "sma_20": 277.81054720229554,
+        "sma_50": 258.467678622669,
+        "sma_200": 258.467678622669,
+        "bollinger_bands": {
+          "upper": 300.02341554985674,
+          "middle": 277.81054720229554,
+          "lower": 255.59767885473437
+        },
+        "volume": 3718290,
+        "avg_volume": 4952164.2,
+        "volume_ratio": 0.750841419999765
+      },
+      "date": "2025-07-30"
+    },
+    "2025-07-31": {
+      "signal": "WEAK_BUY",
+      "confidence": 62.5,
+      "final_score": 2.5,
+      "technical_score": 4,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 4.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 16.8"
+      ],
+      "price": 251.406642754663,
+      "technical_indicators": {
+        "current_price": 251.406642754663,
+        "price_change": -7.061035868005973,
+        "price_change_percent": -2.731883501114357,
+        "rsi": 16.783064164120972,
+        "macd": {
+          "macd": -6.163422572845548,
+          "signal": -5.547080315560993,
+          "histogram": -0.6163422572845549
+        },
+        "sma_20": 276.09742668579634,
+        "sma_50": 274.55750513629846,
+        "sma_200": 251.406642754663,
+        "bollinger_bands": {
+          "upper": 300.7703755100701,
+          "middle": 276.09742668579634,
+          "lower": 251.42447786152258
+        },
+        "volume": 6739092,
+        "avg_volume": 5126243.05,
+        "volume_ratio": 1.3146259227798418
+      },
+      "date": "2025-07-31"
+    },
+    "2025-08-01": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 15.4",
+        "High volume confirmation (1.8x average)"
+      ],
+      "price": 248.327991391679,
+      "technical_indicators": {
+        "current_price": 248.327991391679,
+        "price_change": -3.0786513629840044,
+        "price_change_percent": -1.22457041279865,
+        "rsi": 15.373563218390785,
+        "macd": {
+          "macd": -7.168594560742349,
+          "signal": -6.451735104668114,
+          "histogram": -0.7168594560742347
+        },
+        "sma_20": 274.01586111908193,
+        "sma_50": 274.22183282639895,
+        "sma_200": 248.327991391679,
+        "bollinger_bands": {
+          "upper": 300.6094830741922,
+          "middle": 274.01586111908193,
+          "lower": 247.42223916397165
+        },
+        "volume": 9683404,
+        "avg_volume": 5517748.8,
+        "volume_ratio": 1.7549555717360674
+      },
+      "date": "2025-08-01"
+    },
+    "2025-08-04": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 19.0"
+      ],
+      "price": 250.244700143472,
+      "technical_indicators": {
+        "current_price": 250.244700143472,
+        "price_change": 1.9167087517929815,
+        "price_change_percent": 0.7718456308736554,
+        "rsi": 19.007263922517467,
+        "macd": {
+          "macd": -7.721529242732231,
+          "signal": -6.9493763184590085,
+          "histogram": -0.7721529242732226
+        },
+        "sma_20": 272.0053031563846,
+        "sma_50": 274.04525727403166,
+        "sma_200": 250.244700143472,
+        "bollinger_bands": {
+          "upper": 299.39161845350327,
+          "middle": 272.0053031563846,
+          "lower": 244.61898785926599
+        },
+        "volume": 5280588,
+        "avg_volume": 5557375.0,
+        "volume_ratio": 0.9501946512517151
+      },
+      "date": "2025-08-04"
+    },
+    "2025-08-05": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 18.8"
+      ],
+      "price": 248.943721664275,
+      "technical_indicators": {
+        "current_price": 248.943721664275,
+        "price_change": -1.3009784791969992,
+        "price_change_percent": -0.5198825303597292,
+        "rsi": 18.806148931921868,
+        "macd": {
+          "macd": -8.17052729969464,
+          "signal": -7.353474569725177,
+          "histogram": -0.8170527299694639
+        },
+        "sma_20": 270.03149038737456,
+        "sma_50": 273.89231781922535,
+        "sma_200": 248.943721664275,
+        "bollinger_bands": {
+          "upper": 298.08332673684964,
+          "middle": 270.03149038737456,
+          "lower": 241.97965403789948
+        },
+        "volume": 5823016,
+        "avg_volume": 5702259.35,
+        "volume_ratio": 1.0211769831198576
+      },
+      "date": "2025-08-05"
+    },
+    "2025-08-06": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 21.2"
+      ],
+      "price": 250.542634146341,
+      "technical_indicators": {
+        "current_price": 250.542634146341,
+        "price_change": 1.5989124820659981,
+        "price_change_percent": 0.642278693102487,
+        "rsi": 21.212708252614405,
+        "macd": {
+          "macd": -8.301646407865633,
+          "signal": -7.471481767079069,
+          "histogram": -0.8301646407865633
+        },
+        "sma_20": 268.1515268292684,
+        "sma_50": 273.76619242467723,
+        "sma_200": 250.542634146341,
+        "bollinger_bands": {
+          "upper": 296.13606092316434,
+          "middle": 268.1515268292684,
+          "lower": 240.16699273537245
+        },
+        "volume": 3692105,
+        "avg_volume": 5738299.15,
+        "volume_ratio": 0.64341452118264
+      },
+      "date": "2025-08-06"
+    },
+    "2025-08-07": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 14.2"
+      ],
+      "price": 248.437233859397,
+      "technical_indicators": {
+        "current_price": 248.437233859397,
+        "price_change": -2.10540028694399,
+        "price_change_percent": -0.8403361344537607,
+        "rsi": 14.196911971123498,
+        "macd": {
+          "macd": -8.47772155644111,
+          "signal": -7.629949400797,
+          "histogram": -0.8477721556441109
+        },
+        "sma_20": 266.3008601147776,
+        "sma_50": 273.50659259684363,
+        "sma_200": 248.437233859397,
+        "bollinger_bands": {
+          "upper": 294.35996884336157,
+          "middle": 266.3008601147776,
+          "lower": 238.24175138619364
+        },
+        "volume": 6251285,
+        "avg_volume": 5876410.0,
+        "volume_ratio": 1.063793200270233
+      },
+      "date": "2025-08-07"
+    },
+    "2025-08-08": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 12.9"
+      ],
+      "price": 242.27,
+      "technical_indicators": {
+        "current_price": 242.27,
+        "price_change": -6.167233859396987,
+        "price_change_percent": -2.4824112567954817,
+        "rsi": 12.891478514201296,
+        "macd": {
+          "macd": -9.011033031357385,
+          "signal": -8.109929728221648,
+          "histogram": -0.9011033031357378
+        },
+        "sma_20": 264.3325094691535,
+        "sma_50": 273.18303626972744,
+        "sma_200": 242.27,
+        "bollinger_bands": {
+          "upper": 293.3199704933666,
+          "middle": 264.3325094691535,
+          "lower": 235.34504844494032
+        },
+        "volume": 6828390,
+        "avg_volume": 6028295.55,
+        "volume_ratio": 1.1327231625197938
+      },
+      "date": "2025-08-08"
+    },
+    "2025-08-11": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 12.2"
+      ],
+      "price": 236.3,
+      "technical_indicators": {
+        "current_price": 236.3,
+        "price_change": -5.969999999999999,
+        "price_change_percent": -2.4641928426961646,
+        "rsi": 12.168837789848226,
+        "macd": {
+          "macd": -9.802419138128215,
+          "signal": -8.822177224315395,
+          "histogram": -0.9802419138128204
+        },
+        "sma_20": 262.05572769010047,
+        "sma_50": 272.77086645624104,
+        "sma_200": 236.3,
+        "bollinger_bands": {
+          "upper": 292.31180787644195,
+          "middle": 262.05572769010047,
+          "lower": 231.79964750375896
+        },
+        "volume": 9381960,
+        "avg_volume": 6354523.5,
+        "volume_ratio": 1.4764222683258628
+      },
+      "date": "2025-08-11"
+    },
+    "2025-08-12": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 11.8"
+      ],
+      "price": 234.77,
+      "technical_indicators": {
+        "current_price": 234.77,
+        "price_change": -1.5300000000000011,
+        "price_change_percent": -0.6474820143884896,
+        "rsi": 11.781068251262738,
+        "macd": {
+          "macd": -10.432793790006997,
+          "signal": -9.389514411006298,
+          "histogram": -1.0432793790006993
+        },
+        "sma_20": 259.7565705882353,
+        "sma_50": 272.32074760401724,
+        "sma_200": 234.77,
+        "bollinger_bands": {
+          "upper": 290.9538368336544,
+          "middle": 259.7565705882353,
+          "lower": 228.5593043428162
+        },
+        "volume": 8800597,
+        "avg_volume": 6651348.05,
+        "volume_ratio": 1.3231298277948333
+      },
+      "date": "2025-08-12"
+    },
+    "2025-08-13": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 28.4"
+      ],
+      "price": 240.07,
+      "technical_indicators": {
+        "current_price": 240.07,
+        "price_change": 5.299999999999983,
+        "price_change_percent": 2.257528645056857,
+        "rsi": 28.423591591711954,
+        "macd": {
+          "macd": -10.384992804555822,
+          "signal": -9.34649352410024,
+          "histogram": -1.0384992804555822
+        },
+        "sma_20": 257.7611449067432,
+        "sma_50": 271.8804953802009,
+        "sma_200": 240.07,
+        "bollinger_bands": {
+          "upper": 288.632966084245,
+          "middle": 257.7611449067432,
+          "lower": 226.88932372924137
+        },
+        "volume": 5663562,
+        "avg_volume": 6794284.6,
+        "volume_ratio": 0.833577386499235
+      },
+      "date": "2025-08-13"
+    },
+    "2025-08-14": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 27.1"
+      ],
+      "price": 237.11,
+      "technical_indicators": {
+        "current_price": 237.11,
+        "price_change": -2.9599999999999795,
+        "price_change_percent": -1.2329737159994918,
+        "rsi": 27.06114991265659,
+        "macd": {
+          "macd": -10.465319749805673,
+          "signal": -9.418787774825105,
+          "histogram": -1.0465319749805673
+        },
+        "sma_20": 255.6137467718795,
+        "sma_50": 271.3552222094692,
+        "sma_200": 237.11,
+        "bollinger_bands": {
+          "upper": 285.9532986520939,
+          "middle": 255.6137467718795,
+          "lower": 225.2741948916651
+        },
+        "volume": 4556725,
+        "avg_volume": 6855262.45,
+        "volume_ratio": 0.6647046751652812
+      },
+      "date": "2025-08-14"
+    },
+    "2025-08-15": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 25.7"
+      ],
+      "price": 239.72,
+      "technical_indicators": {
+        "current_price": 239.72,
+        "price_change": 2.609999999999985,
+        "price_change_percent": 1.1007549238749885,
+        "rsi": 25.659059200027613,
+        "macd": {
+          "macd": -10.200785934832737,
+          "signal": -9.180707341349464,
+          "histogram": -1.020078593483273
+        },
+        "sma_20": 253.404681205165,
+        "sma_50": 270.8757931133429,
+        "sma_200": 239.72,
+        "bollinger_bands": {
+          "upper": 281.53746459208327,
+          "middle": 253.404681205165,
+          "lower": 225.27189781824674
+        },
+        "volume": 4344322,
+        "avg_volume": 6848570.3,
+        "volume_ratio": 0.6343399877197727
+      },
+      "date": "2025-08-15"
+    },
+    "2025-08-18": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI oversold at 26.0"
+      ],
+      "price": 239.45,
+      "technical_indicators": {
+        "current_price": 239.45,
+        "price_change": -0.27000000000001023,
+        "price_change_percent": -0.11263140330385878,
+        "rsi": 25.964892809684315,
+        "macd": {
+          "macd": -9.898820285667796,
+          "signal": -8.908938257101017,
+          "histogram": -0.9898820285667789
+        },
+        "sma_20": 251.23971621233858,
+        "sma_50": 270.36434857962706,
+        "sma_200": 239.45,
+        "bollinger_bands": {
+          "upper": 276.52667933888625,
+          "middle": 251.23971621233858,
+          "lower": 225.9527530857909
+        },
+        "volume": 3569594,
+        "avg_volume": 6874460.45,
+        "volume_ratio": 0.5192544238144536
+      },
+      "date": "2025-08-18"
+    },
+    "2025-08-19": {
+      "signal": "HOLD",
+      "confidence": 57.0,
+      "final_score": -0.7,
+      "technical_score": -4,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -4.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 241.28,
+      "technical_indicators": {
+        "current_price": 241.28,
+        "price_change": 1.8300000000000125,
+        "price_change_percent": 0.7642514094800638,
+        "rsi": 30.33397828390548,
+        "macd": {
+          "macd": -9.403447537340071,
+          "signal": -8.463102783606065,
+          "histogram": -0.9403447537340064
+        },
+        "sma_20": 249.3028043041607,
+        "sma_50": 269.84958088952664,
+        "sma_200": 241.28,
+        "bollinger_bands": {
+          "upper": 271.1802474241854,
+          "middle": 249.3028043041607,
+          "lower": 227.425361184136
+        },
+        "volume": 3328305,
+        "avg_volume": 6799664.75,
+        "volume_ratio": 0.489480749767847
+      },
+      "date": "2025-08-19"
+    },
+    "2025-08-20": {
+      "signal": "HOLD",
+      "confidence": 57.0,
+      "final_score": -0.7,
+      "technical_score": -4,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -4.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 242.55,
+      "technical_indicators": {
+        "current_price": 242.55,
+        "price_change": 1.2700000000000102,
+        "price_change_percent": 0.5263594164456276,
+        "rsi": 38.31820516667334,
+        "macd": {
+          "macd": -8.806862648623564,
+          "signal": -7.9261763837612085,
+          "histogram": -0.8806862648623559
+        },
+        "sma_20": 247.4269096126255,
+        "sma_50": 269.29645532281205,
+        "sma_200": 242.55,
+        "bollinger_bands": {
+          "upper": 264.2901394448321,
+          "middle": 247.4269096126255,
+          "lower": 230.56367978041888
+        },
+        "volume": 3240064,
+        "avg_volume": 6556372.65,
+        "volume_ratio": 0.4941854548185268
+      },
+      "date": "2025-08-20"
+    },
+    "2025-08-21": {
+      "signal": "HOLD",
+      "confidence": 53.0,
+      "final_score": -0.3,
+      "technical_score": -3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 239.4,
+      "technical_indicators": {
+        "current_price": 239.4,
+        "price_change": -3.1500000000000057,
+        "price_change_percent": -1.2987012987013011,
+        "rsi": 38.24621973058837,
+        "macd": {
+          "macd": -8.490371779701888,
+          "signal": -7.6413346017317,
+          "histogram": -0.8490371779701888
+        },
+        "sma_20": 246.46111176470586,
+        "sma_50": 268.5977027259685,
+        "sma_200": 239.4,
+        "bollinger_bands": {
+          "upper": 262.8328922430929,
+          "middle": 246.46111176470586,
+          "lower": 230.08933128631884
+        },
+        "volume": 2991902,
+        "avg_volume": 5573581.75,
+        "volume_ratio": 0.5368005950572089
+      },
+      "date": "2025-08-21"
+    },
+    "2025-08-22": {
+      "signal": "HOLD",
+      "confidence": 53.0,
+      "final_score": -0.3,
+      "technical_score": -3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 242.09,
+      "technical_indicators": {
+        "current_price": 242.09,
+        "price_change": 2.6899999999999977,
+        "price_change_percent": 1.123642439431912,
+        "rsi": 39.478491890749225,
+        "macd": {
+          "macd": -7.931065580065734,
+          "signal": -7.137959022059161,
+          "histogram": -0.7931065580065733
+        },
+        "sma_20": 245.66904189383067,
+        "sma_50": 267.8478773601148,
+        "sma_200": 242.09,
+        "bollinger_bands": {
+          "upper": 261.2585746107422,
+          "middle": 245.66904189383067,
+          "lower": 230.07950917691915
+        },
+        "volume": 3134882,
+        "avg_volume": 5342393.2,
+        "volume_ratio": 0.586793574085861
+      },
+      "date": "2025-08-22"
+    },
+    "2025-08-25": {
+      "signal": "HOLD",
+      "confidence": 53.0,
+      "final_score": -0.3,
+      "technical_score": -3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 239.43,
+      "technical_indicators": {
+        "current_price": 239.43,
+        "price_change": -2.6599999999999966,
+        "price_change_percent": -1.0987649221363942,
+        "rsi": 38.140918932383705,
+        "macd": {
+          "macd": -7.614673935563758,
+          "signal": -6.853206542007382,
+          "histogram": -0.7614673935563756
+        },
+        "sma_20": 244.5706737446198,
+        "sma_50": 267.0545845050216,
+        "sma_200": 239.43,
+        "bollinger_bands": {
+          "upper": 258.5891255797185,
+          "middle": 244.5706737446198,
+          "lower": 230.55222190952114
+        },
+        "volume": 3513327,
+        "avg_volume": 5258433.75,
+        "volume_ratio": 0.6681318367850503
+      },
+      "date": "2025-08-25"
+    },
+    "2025-08-26": {
+      "signal": "HOLD",
+      "confidence": 51.0,
+      "final_score": 0.1,
+      "technical_score": -2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 242.63,
+      "technical_indicators": {
+        "current_price": 242.63,
+        "price_change": 3.1999999999999886,
+        "price_change_percent": 1.336507538737831,
+        "rsi": 40.51530272748899,
+        "macd": {
+          "macd": -7.024741177785103,
+          "signal": -6.322267060006593,
+          "histogram": -0.7024741177785101
+        },
+        "sma_20": 243.67203012912483,
+        "sma_50": 266.4009668866571,
+        "sma_200": 242.63,
+        "bollinger_bands": {
+          "upper": 255.61496591609105,
+          "middle": 243.67203012912483,
+          "lower": 231.72909434215862
+        },
+        "volume": 5386582,
+        "avg_volume": 5296399.6,
+        "volume_ratio": 1.0170271140417728
+      },
+      "date": "2025-08-26"
+    },
+    "2025-08-27": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 244.84,
+      "technical_indicators": {
+        "current_price": 244.84,
+        "price_change": 2.210000000000008,
+        "price_change_percent": 0.9108519144376245,
+        "rsi": 45.69886201524944,
+        "macd": {
+          "macd": -6.306192821374111,
+          "signal": -5.675573539236701,
+          "histogram": -0.6306192821374106
+        },
+        "sma_20": 242.99064619799137,
+        "sma_50": 265.6999842180775,
+        "sma_200": 244.84,
+        "bollinger_bands": {
+          "upper": 252.85305801357288,
+          "middle": 242.99064619799137,
+          "lower": 233.12823438240986
+        },
+        "volume": 3698372,
+        "avg_volume": 5295403.7,
+        "volume_ratio": 0.6984117188270272
+      },
+      "date": "2025-08-27"
+    },
+    "2025-08-28": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 245.73,
+      "technical_indicators": {
+        "current_price": 245.73,
+        "price_change": 0.8899999999999864,
+        "price_change_percent": 0.3635026956379621,
+        "rsi": 54.73453749315816,
+        "macd": {
+          "macd": -5.600364988614814,
+          "signal": -5.040328489753333,
+          "histogram": -0.5600364988614812
+        },
+        "sma_20": 242.70681406025818,
+        "sma_50": 264.9925695839312,
+        "sma_200": 245.73,
+        "bollinger_bands": {
+          "upper": 251.8872245267142,
+          "middle": 242.70681406025818,
+          "lower": 233.52640359380217
+        },
+        "volume": 2820817,
+        "avg_volume": 5099489.95,
+        "volume_ratio": 0.5531566936414886
+      },
+      "date": "2025-08-28"
+    },
+    "2025-08-29": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 243.49,
+      "technical_indicators": {
+        "current_price": 243.49,
+        "price_change": -2.2399999999999807,
+        "price_change_percent": -0.9115696089203519,
+        "rsi": 60.95702529716551,
+        "macd": {
+          "macd": -5.16223360980203,
+          "signal": -4.646010248821827,
+          "histogram": -0.5162233609802032
+        },
+        "sma_20": 242.4649144906742,
+        "sma_50": 264.23717698708754,
+        "sma_200": 243.49,
+        "bollinger_bands": {
+          "upper": 251.28812387561695,
+          "middle": 242.4649144906742,
+          "lower": 233.64170510573146
+        },
+        "volume": 2967558,
+        "avg_volume": 4763697.65,
+        "volume_ratio": 0.6229526342839999
+      },
+      "date": "2025-08-29"
+    },
+    "2025-09-02": {
+      "signal": "HOLD",
+      "confidence": 53.0,
+      "final_score": -0.3,
+      "technical_score": -3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 241.5,
+      "technical_indicators": {
+        "current_price": 241.5,
+        "price_change": -1.990000000000009,
+        "price_change_percent": -0.8172820239024227,
+        "rsi": 60.114217012323415,
+        "macd": {
+          "macd": -4.918885850221642,
+          "signal": -4.426997265199478,
+          "histogram": -0.49188858502216437
+        },
+        "sma_20": 242.0276794835006,
+        "sma_50": 263.48647586800575,
+        "sma_200": 241.5,
+        "bollinger_bands": {
+          "upper": 250.10019613437947,
+          "middle": 242.0276794835006,
+          "lower": 233.95516283262174
+        },
+        "volume": 3469501,
+        "avg_volume": 4673143.3,
+        "volume_ratio": 0.7424341128165276
+      },
+      "date": "2025-09-02"
+    },
+    "2025-09-03": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 244.1,
+      "technical_indicators": {
+        "current_price": 244.1,
+        "price_change": 2.5999999999999943,
+        "price_change_percent": 1.0766045548654222,
+        "rsi": 56.591429506051696,
+        "macd": {
+          "macd": -4.464765687015159,
+          "signal": -4.0182891183136435,
+          "histogram": -0.44647656870151575
+        },
+        "sma_20": 241.7854934002869,
+        "sma_50": 262.6247055380201,
+        "sma_200": 244.1,
+        "bollinger_bands": {
+          "upper": 249.28372540913256,
+          "middle": 241.7854934002869,
+          "lower": 234.28726139144123
+        },
+        "volume": 3156289,
+        "avg_volume": 4539806.95,
+        "volume_ratio": 0.6952474047382124
+      },
+      "date": "2025-09-03"
+    },
+    "2025-09-04": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 247.18,
+      "technical_indicators": {
+        "current_price": 247.18,
+        "price_change": 3.0800000000000125,
+        "price_change_percent": 1.2617779598525245,
+        "rsi": 66.40599543825348,
+        "macd": {
+          "macd": -3.8123950100069806,
+          "signal": -3.4311555090062824,
+          "histogram": -0.38123950100069814
+        },
+        "sma_20": 241.61736169296987,
+        "sma_50": 261.73297015781924,
+        "sma_200": 247.18,
+        "bollinger_bands": {
+          "upper": 248.44327171699493,
+          "middle": 241.61736169296987,
+          "lower": 234.7914516689448
+        },
+        "volume": 4765087,
+        "avg_volume": 4593456.05,
+        "volume_ratio": 1.0373642303598398
+      },
+      "date": "2025-09-04"
+    },
+    "2025-09-05": {
+      "signal": "HOLD",
+      "confidence": 53.0,
+      "final_score": -0.3,
+      "technical_score": -3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 248.53,
+      "technical_indicators": {
+        "current_price": 248.53,
+        "price_change": 1.3499999999999943,
+        "price_change_percent": 0.5461606926126686,
+        "rsi": 64.96772001359157,
+        "macd": {
+          "macd": -3.1501399780489407,
+          "signal": -2.835125980244047,
+          "histogram": -0.3150139978048938
+        },
+        "sma_20": 241.622,
+        "sma_50": 260.9224587661406,
+        "sma_200": 248.53,
+        "bollinger_bands": {
+          "upper": 248.46654118257754,
+          "middle": 241.622,
+          "lower": 234.77745881742248
+        },
+        "volume": 3147478,
+        "avg_volume": 4438265.7,
+        "volume_ratio": 0.709168448387396
+      },
+      "date": "2025-09-05"
+    },
+    "2025-09-08": {
+      "signal": "WEAK_SELL",
+      "confidence": 41.5,
+      "final_score": -1.1,
+      "technical_score": -5,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -5.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 72.7",
+        "High volume confirmation (1.6x average)"
+      ],
+      "price": 256.09,
+      "technical_indicators": {
+        "current_price": 256.09,
+        "price_change": 7.559999999999974,
+        "price_change_percent": 3.0418862913933826,
+        "rsi": 72.65795206971677,
+        "macd": {
+          "macd": -1.9923032438590553,
+          "signal": -1.7930729194731498,
+          "histogram": -0.1992303243859055
+        },
+        "sma_20": 242.31300000000002,
+        "sma_50": 260.2458672022956,
+        "sma_200": 256.09,
+        "bollinger_bands": {
+          "upper": 251.62527383617987,
+          "middle": 242.31300000000002,
+          "lower": 233.00072616382016
+        },
+        "volume": 6940270,
+        "avg_volume": 4443859.7,
+        "volume_ratio": 1.56176622767816
+      },
+      "date": "2025-09-08"
+    },
+    "2025-09-09": {
+      "signal": "WEAK_SELL",
+      "confidence": 47.5,
+      "final_score": -1.5,
+      "technical_score": -6,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -6.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 73.5"
+      ],
+      "price": 259.11,
+      "technical_indicators": {
+        "current_price": 259.11,
+        "price_change": 3.0200000000000387,
+        "price_change_percent": 1.179272911866937,
+        "rsi": 73.51622263255081,
+        "macd": {
+          "macd": -0.8215502100195522,
+          "signal": -0.739395189017597,
+          "histogram": -0.08215502100195515
+        },
+        "sma_20": 243.4535,
+        "sma_50": 259.6739684935438,
+        "sma_200": 259.11,
+        "bollinger_bands": {
+          "upper": 254.8864388610278,
+          "middle": 243.4535,
+          "lower": 232.02056113897217
+        },
+        "volume": 4931105,
+        "avg_volume": 4221316.95,
+        "volume_ratio": 1.1681437471782354
+      },
+      "date": "2025-09-09"
+    },
+    "2025-09-10": {
+      "signal": "HOLD",
+      "confidence": 53.0,
+      "final_score": -0.3,
+      "technical_score": -3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 256.88,
+      "technical_indicators": {
+        "current_price": 256.88,
+        "price_change": -2.230000000000018,
+        "price_change_percent": -0.8606383389294191,
+        "rsi": 68.43323900180086,
+        "macd": {
+          "macd": -0.07282290191147922,
+          "signal": -0.06554061172033131,
+          "histogram": -0.007282290191147914
+        },
+        "sma_20": 244.55899999999997,
+        "sma_50": 258.9565694691535,
+        "sma_200": 256.88,
+        "bollinger_bands": {
+          "upper": 256.6749859689585,
+          "middle": 244.55899999999997,
+          "lower": 232.44301403104143
+        },
+        "volume": 5185420,
+        "avg_volume": 4040558.1,
+        "volume_ratio": 1.2833425164706826
+      },
+      "date": "2025-09-10"
+    },
+    "2025-09-11": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 74.6"
+      ],
+      "price": 257.01,
+      "technical_indicators": {
+        "current_price": 257.01,
+        "price_change": 0.12999999999999545,
+        "price_change_percent": 0.05060728744939095,
+        "rsi": 74.56066945606693,
+        "macd": {
+          "macd": 0.5249870734086244,
+          "signal": 0.47248836606776196,
+          "histogram": 0.05249870734086243
+        },
+        "sma_20": 245.406,
+        "sma_50": 258.3128773601148,
+        "sma_200": 257.01,
+        "bollinger_bands": {
+          "upper": 258.4789773196468,
+          "middle": 245.406,
+          "lower": 232.3330226803532
+        },
+        "volume": 3576048,
+        "avg_volume": 3936182.4,
+        "volume_ratio": 0.90850667895878
+      },
+      "date": "2025-09-11"
+    },
+    "2025-09-12": {
+      "signal": "WEAK_BUY",
+      "confidence": 50.5,
+      "final_score": 1.7,
+      "technical_score": 2,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 2.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 253.44,
+      "technical_indicators": {
+        "current_price": 253.44,
+        "price_change": -3.569999999999993,
+        "price_change_percent": -1.3890510096883364,
+        "rsi": 65.45058535257283,
+        "macd": {
+          "macd": 0.7025876287345625,
+          "signal": 0.6323288658611063,
+          "histogram": 0.07025876287345623
+        },
+        "sma_20": 246.2225,
+        "sma_50": 257.66829629842186,
+        "sma_200": 253.44,
+        "bollinger_bands": {
+          "upper": 259.160055990217,
+          "middle": 246.2225,
+          "lower": 233.284944009783
+        },
+        "volume": 3433300,
+        "avg_volume": 3880011.15,
+        "volume_ratio": 0.8848685911637135
+      },
+      "date": "2025-09-12"
+    },
+    "2025-09-15": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 72.8"
+      ],
+      "price": 256.24,
+      "technical_indicators": {
+        "current_price": 256.24,
+        "price_change": 2.8000000000000114,
+        "price_change_percent": 1.1047979797979843,
+        "rsi": 72.79631136425277,
+        "macd": {
+          "macd": 1.0570884897023234,
+          "signal": 0.951379640732091,
+          "histogram": 0.10570884897023236
+        },
+        "sma_20": 247.04849999999996,
+        "sma_50": 256.9939102439024,
+        "sma_200": 256.24,
+        "bollinger_bands": {
+          "upper": 260.32497585016444,
+          "middle": 247.04849999999996,
+          "lower": 233.77202414983552
+        },
+        "volume": 4028365,
+        "avg_volume": 3864213.3,
+        "volume_ratio": 1.0424799790425647
+      },
+      "date": "2025-09-15"
+    },
+    "2025-09-16": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 71.3"
+      ],
+      "price": 257.52,
+      "technical_indicators": {
+        "current_price": 257.52,
+        "price_change": 1.2799999999999727,
+        "price_change_percent": 0.4995316890415129,
+        "rsi": 71.30185979971387,
+        "macd": {
+          "macd": 1.4248929991248929,
+          "signal": 1.2824036992124037,
+          "histogram": 0.14248929991248915
+        },
+        "sma_20": 247.95199999999994,
+        "sma_50": 256.3351930559541,
+        "sma_200": 257.52,
+        "bollinger_bands": {
+          "upper": 261.49388258699645,
+          "middle": 247.95199999999994,
+          "lower": 234.4101174130034
+        },
+        "volume": 2719918,
+        "avg_volume": 3821729.5,
+        "volume_ratio": 0.7116981984203749
+      },
+      "date": "2025-09-16"
+    },
+    "2025-09-17": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 70.8"
+      ],
+      "price": 259.08,
+      "technical_indicators": {
+        "current_price": 259.08,
+        "price_change": 1.5600000000000023,
+        "price_change_percent": 0.6057781919850895,
+        "rsi": 70.75801749271135,
+        "macd": {
+          "macd": 1.8212652728990122,
+          "signal": 1.639138745609111,
+          "histogram": 0.18212652728990109
+        },
+        "sma_20": 248.842,
+        "sma_50": 255.74839351506455,
+        "sma_200": 259.08,
+        "bollinger_bands": {
+          "upper": 262.8447691547065,
+          "middle": 248.842,
+          "lower": 234.8392308452935
+        },
+        "volume": 3974785,
+        "avg_volume": 3854053.5,
+        "volume_ratio": 1.0313258495244033
+      },
+      "date": "2025-09-17"
+    },
+    "2025-09-18": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 74.5"
+      ],
+      "price": 265.0,
+      "technical_indicators": {
+        "current_price": 265.0,
+        "price_change": 5.920000000000016,
+        "price_change_percent": 2.285008491585617,
+        "rsi": 74.4978387998983,
+        "macd": {
+          "macd": 2.583308903087868,
+          "signal": 2.3249780127790816,
+          "histogram": 0.25833089030878664
+        },
+        "sma_20": 249.96449999999996,
+        "sma_50": 255.28555540889528,
+        "sma_200": 265.0,
+        "bollinger_bands": {
+          "upper": 265.3051603182522,
+          "middle": 249.96449999999996,
+          "lower": 234.62383968174768
+        },
+        "volume": 4988421,
+        "avg_volume": 3941471.35,
+        "volume_ratio": 1.2656240670124368
+      },
+      "date": "2025-09-18"
+    },
+    "2025-09-19": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 79.8",
+        "High volume confirmation (2.3x average)"
+      ],
+      "price": 266.4,
+      "technical_indicators": {
+        "current_price": 266.4,
+        "price_change": 1.3999999999999773,
+        "price_change_percent": 0.5283018867924443,
+        "rsi": 79.76097687711089,
+        "macd": {
+          "macd": 3.262593127274755,
+          "signal": 2.9363338145472797,
+          "histogram": 0.3262593127274753
+        },
+        "sma_20": 251.31449999999995,
+        "sma_50": 254.90454404591105,
+        "sma_200": 266.4,
+        "bollinger_bands": {
+          "upper": 267.43123847278036,
+          "middle": 251.31449999999995,
+          "lower": 235.19776152721957
+        },
+        "volume": 9858112,
+        "avg_volume": 4284781.85,
+        "volume_ratio": 2.300726698606605
+      },
+      "date": "2025-09-19"
+    },
+    "2025-09-22": {
+      "signal": "HOLD",
+      "confidence": 53.0,
+      "final_score": -0.3,
+      "technical_score": -3,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bearish (Score: -3.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 86.0"
+      ],
+      "price": 271.37,
+      "technical_indicators": {
+        "current_price": 271.37,
+        "price_change": 4.970000000000027,
+        "price_change_percent": 1.865615615615626,
+        "rsi": 86.013986013986,
+        "macd": {
+          "macd": 4.154082555030556,
+          "signal": 3.7386742995275,
+          "histogram": 0.4154082555030554
+        },
+        "sma_20": 252.77849999999998,
+        "sma_50": 254.69920378766142,
+        "sma_200": 271.37,
+        "bollinger_bands": {
+          "upper": 270.5155350115232,
+          "middle": 252.77849999999998,
+          "lower": 235.04146498847678
+        },
+        "volume": 5030540,
+        "avg_volume": 4379564.75,
+        "volume_ratio": 1.148639256903326
+      },
+      "date": "2025-09-22"
+    },
+    "2025-09-23": {
+      "signal": "HOLD",
+      "confidence": 55.0,
+      "final_score": 0.5,
+      "technical_score": -1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 85.4"
+      ],
+      "price": 272.24,
+      "technical_indicators": {
+        "current_price": 272.24,
+        "price_change": 0.8700000000000045,
+        "price_change_percent": 0.3205954969230219,
+        "rsi": 85.40513336688474,
+        "macd": {
+          "macd": 4.874604670166491,
+          "signal": 4.387144203149842,
+          "histogram": 0.4874604670166489
+        },
+        "sma_20": 254.41899999999995,
+        "sma_50": 254.5072910760402,
+        "sma_200": 272.24,
+        "bollinger_bands": {
+          "upper": 272.96491480623155,
+          "middle": 254.41899999999995,
+          "lower": 235.87308519376836
+        },
+        "volume": 5394121,
+        "avg_volume": 4473604.45,
+        "volume_ratio": 1.205766191510293
+      },
+      "date": "2025-09-23"
+    },
+    "2025-09-24": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 74.6"
+      ],
+      "price": 267.53,
+      "technical_indicators": {
+        "current_price": 267.53,
+        "price_change": -4.710000000000036,
+        "price_change_percent": -1.730091096091697,
+        "rsi": 74.59511723471107,
+        "macd": {
+          "macd": 5.007838752735495,
+          "signal": 4.507054877461946,
+          "histogram": 0.500783875273549
+        },
+        "sma_20": 255.66399999999993,
+        "sma_50": 254.24282823529416,
+        "sma_200": 267.53,
+        "bollinger_bands": {
+          "upper": 274.22025005220604,
+          "middle": 255.66399999999993,
+          "lower": 237.10774994779382
+        },
+        "volume": 3159924,
+        "avg_volume": 4362271.55,
+        "volume_ratio": 0.7243758128720804
+      },
+      "date": "2025-09-24"
+    },
+    "2025-09-25": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 80.5",
+        "High volume confirmation (2.4x average)"
+      ],
+      "price": 281.44,
+      "technical_indicators": {
+        "current_price": 281.44,
+        "price_change": 13.910000000000025,
+        "price_change_percent": 5.199416887825675,
+        "rsi": 80.51177452252915,
+        "macd": {
+          "macd": 6.164784672096005,
+          "signal": 5.548306204886404,
+          "histogram": 0.6164784672096006
+        },
+        "sma_20": 257.49399999999997,
+        "sma_50": 254.2720579626973,
+        "sma_200": 281.44,
+        "bollinger_bands": {
+          "upper": 278.4794105511424,
+          "middle": 257.49399999999997,
+          "lower": 236.50858944885755
+        },
+        "volume": 11506192,
+        "avg_volume": 4752662.55,
+        "volume_ratio": 2.4209991513073024
+      },
+      "date": "2025-09-25"
+    },
+    "2025-09-26": {
+      "signal": "HOLD",
+      "confidence": 59.0,
+      "final_score": 0.9,
+      "technical_score": 0,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 78.7",
+        "High volume confirmation (1.8x average)"
+      ],
+      "price": 284.31,
+      "technical_indicators": {
+        "current_price": 284.31,
+        "price_change": 2.8700000000000045,
+        "price_change_percent": 1.0197555429221163,
+        "rsi": 78.6555645816409,
+        "macd": {
+          "macd": 7.229915695274769,
+          "signal": 6.506924125747292,
+          "histogram": 0.7229915695274771
+        },
+        "sma_20": 259.423,
+        "sma_50": 254.3570987087518,
+        "sma_200": 284.31,
+        "bollinger_bands": {
+          "upper": 282.6962577006314,
+          "middle": 259.423,
+          "lower": 236.14974229936857
+        },
+        "volume": 9063938,
+        "avg_volume": 5064818.6,
+        "volume_ratio": 1.7895878837595487
+      },
+      "date": "2025-09-26"
+    },
+    "2025-09-29": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 70.4"
+      ],
+      "price": 279.8,
+      "technical_indicators": {
+        "current_price": 279.8,
+        "price_change": -4.509999999999991,
+        "price_change_percent": -1.5862966480250398,
+        "rsi": 70.39227281687361,
+        "macd": {
+          "macd": 7.622255776736495,
+          "signal": 6.860030199062845,
+          "histogram": 0.7622255776736493
+        },
+        "sma_20": 261.2385,
+        "sma_50": 254.27507248206598,
+        "sma_200": 279.8,
+        "bollinger_bands": {
+          "upper": 284.9182949948896,
+          "middle": 261.2385,
+          "lower": 237.55870500511037
+        },
+        "volume": 6022125,
+        "avg_volume": 5217546.95,
+        "volume_ratio": 1.1542061926246778
+      },
+      "date": "2025-09-29"
+    },
+    "2025-09-30": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 74.9"
+      ],
+      "price": 282.16,
+      "technical_indicators": {
+        "current_price": 282.16,
+        "price_change": 2.3600000000000136,
+        "price_change_percent": 0.843459614010012,
+        "rsi": 74.85253637436098,
+        "macd": {
+          "macd": 8.031043524015786,
+          "signal": 7.227939171614207,
+          "histogram": 0.8031043524015784
+        },
+        "sma_20": 263.27149999999995,
+        "sma_50": 254.2632864849354,
+        "sma_200": 282.16,
+        "bollinger_bands": {
+          "upper": 286.8048909796272,
+          "middle": 263.27149999999995,
+          "lower": 239.73810902037272
+        },
+        "volume": 5926924,
+        "avg_volume": 5340418.1,
+        "volume_ratio": 1.1098239667789307
+      },
+      "date": "2025-09-30"
+    },
+    "2025-10-01": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 76.8"
+      ],
+      "price": 286.49,
+      "technical_indicators": {
+        "current_price": 286.49,
+        "price_change": 4.329999999999984,
+        "price_change_percent": 1.5345903033739665,
+        "rsi": 76.77079549582272,
+        "macd": {
+          "macd": 8.605210066482243,
+          "signal": 7.744689059834019,
+          "histogram": 0.8605210066482245
+        },
+        "sma_20": 265.39099999999996,
+        "sma_50": 254.3927217216643,
+        "sma_200": 286.49,
+        "bollinger_bands": {
+          "upper": 289.2690618141423,
+          "middle": 265.39099999999996,
+          "lower": 241.51293818585768
+        },
+        "volume": 4381338,
+        "avg_volume": 5401670.55,
+        "volume_ratio": 0.8111079636280298
+      },
+      "date": "2025-10-01"
+    },
+    "2025-10-02": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 82.2"
+      ],
+      "price": 286.72,
+      "technical_indicators": {
+        "current_price": 286.72,
+        "price_change": 0.2300000000000182,
+        "price_change_percent": 0.08028203427694446,
+        "rsi": 82.17324052590871,
+        "macd": {
+          "macd": 8.97533815455165,
+          "signal": 8.077804339096486,
+          "histogram": 0.897533815455164
+        },
+        "sma_20": 267.36800000000005,
+        "sma_50": 254.5257638450502,
+        "sma_200": 286.72,
+        "bollinger_bands": {
+          "upper": 291.4342598672915,
+          "middle": 267.36800000000005,
+          "lower": 243.30174013270866
+        },
+        "volume": 3814232,
+        "avg_volume": 5354127.8,
+        "volume_ratio": 0.7123909145388723
+      },
+      "date": "2025-10-02"
+    },
+    "2025-10-03": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 81.8"
+      ],
+      "price": 288.37,
+      "technical_indicators": {
+        "current_price": 288.37,
+        "price_change": 1.6499999999999773,
+        "price_change_percent": 0.5754743303571349,
+        "rsi": 81.76784654933752,
+        "macd": {
+          "macd": 9.29466542406982,
+          "signal": 8.365198881662838,
+          "histogram": 0.9294665424069812
+        },
+        "sma_20": 269.36,
+        "sma_50": 255.11884470588237,
+        "sma_200": 288.37,
+        "bollinger_bands": {
+          "upper": 293.4547164332764,
+          "middle": 269.36,
+          "lower": 245.26528356672358
+        },
+        "volume": 4375082,
+        "avg_volume": 5415508.0,
+        "volume_ratio": 0.8078802579554863
+      },
+      "date": "2025-10-03"
+    },
+    "2025-10-06": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 81.7"
+      ],
+      "price": 289.42,
+      "technical_indicators": {
+        "current_price": 289.42,
+        "price_change": 1.0500000000000114,
+        "price_change_percent": 0.3641155459999346,
+        "rsi": 81.6845450933651,
+        "macd": {
+          "macd": 9.522689177406619,
+          "signal": 8.570420259665957,
+          "histogram": 0.9522689177406622
+        },
+        "sma_20": 271.02650000000006,
+        "sma_50": 255.7486167575323,
+        "sma_200": 289.42,
+        "bollinger_bands": {
+          "upper": 295.81981786994237,
+          "middle": 271.02650000000006,
+          "lower": 246.23318213005774
+        },
+        "volume": 2881947,
+        "avg_volume": 5212591.85,
+        "volume_ratio": 0.5528817684047141
+      },
+      "date": "2025-10-06"
+    },
+    "2025-10-07": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 82.7"
+      ],
+      "price": 293.87,
+      "technical_indicators": {
+        "current_price": 293.87,
+        "price_change": 4.449999999999989,
+        "price_change_percent": 1.5375578743694245,
+        "rsi": 82.67894044711626,
+        "macd": {
+          "macd": 9.947805346802625,
+          "signal": 8.953024812122363,
+          "histogram": 0.9947805346802614
+        },
+        "sma_20": 272.7645,
+        "sma_50": 256.398069497848,
+        "sma_200": 293.87,
+        "bollinger_bands": {
+          "upper": 298.81427042125324,
+          "middle": 272.7645,
+          "lower": 246.71472957874676
+        },
+        "volume": 7190126,
+        "avg_volume": 5325542.9,
+        "volume_ratio": 1.3501207548248273
+      },
+      "date": "2025-10-07"
+    },
+    "2025-10-08": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 73.6"
+      ],
+      "price": 289.46,
+      "technical_indicators": {
+        "current_price": 289.46,
+        "price_change": -4.410000000000025,
+        "price_change_percent": -1.5006635587164479,
+        "rsi": 73.64655839133792,
+        "macd": {
+          "macd": 9.815713395796024,
+          "signal": 8.834142056216422,
+          "histogram": 0.9815713395796024
+        },
+        "sma_20": 274.3935,
+        "sma_50": 256.9752120516499,
+        "sma_200": 289.46,
+        "bollinger_bands": {
+          "upper": 300.3407628806971,
+          "middle": 274.3935,
+          "lower": 248.44623711930294
+        },
+        "volume": 5297030,
+        "avg_volume": 5331123.4,
+        "volume_ratio": 0.9936048375845136
+      },
+      "date": "2025-10-08"
+    },
+    "2025-10-09": {
+      "signal": "WEAK_BUY",
+      "confidence": 44.5,
+      "final_score": 1.3,
+      "technical_score": 1,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)",
+        "RSI overbought at 71.2"
+      ],
+      "price": 288.23,
+      "technical_indicators": {
+        "current_price": 288.23,
+        "price_change": -1.2299999999999613,
+        "price_change_percent": -0.42492917847024164,
+        "rsi": 71.17361784675074,
+        "macd": {
+          "macd": 9.502242911152223,
+          "signal": 8.552018620037002,
+          "histogram": 0.9502242911152212
+        },
+        "sma_20": 275.9545,
+        "sma_50": 257.5704584791965,
+        "sma_200": 288.23,
+        "bollinger_bands": {
+          "upper": 301.27970679086354,
+          "middle": 275.9545,
+          "lower": 250.62929320913645
+        },
+        "volume": 4912375,
+        "avg_volume": 5397939.75,
+        "volume_ratio": 0.9100462820097242
+      },
+      "date": "2025-10-09"
+    },
+    "2025-10-10": {
+      "signal": "WEAK_BUY",
+      "confidence": 68.5,
+      "final_score": 2.9,
+      "technical_score": 5,
+      "fundamental_score": 3,
+      "sentiment_score": 0,
+      "reasoning": [
+        "Technical indicators bullish (Score: 5.0)",
+        "Weak fundamentals (Score: 3.0)",
+        "Negative market sentiment (Score: 0.0)"
+      ],
+      "price": 277.82,
+      "technical_indicators": {
+        "current_price": 277.82,
+        "price_change": -10.410000000000025,
+        "price_change_percent": -3.6116989903896277,
+        "rsi": 55.658887524127024,
+        "macd": {
+          "macd": 8.31793135866883,
+          "signal": 7.486138222801947,
+          "histogram": 0.8317931358668824
+        },
+        "sma_20": 277.1735,
+        "sma_50": 258.0987256241033,
+        "sma_200": 277.82,
+        "bollinger_bands": {
+          "upper": 300.2978968786215,
+          "middle": 277.1735,
+          "lower": 254.04910312137847
+        },
+        "volume": 4508506,
+        "avg_volume": 5451700.05,
+        "volume_ratio": 0.8269908393070892
+      },
+      "date": "2025-10-10"
+    }
+  }
+}

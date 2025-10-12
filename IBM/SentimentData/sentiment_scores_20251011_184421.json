@@ -1,14 +1,54 @@
 {
   "IBM.US": [
     {
+      "date": "2025-10-11",
+      "count": 4,
+      "normalized": 0.966
+    },
+    {
+      "date": "2025-10-10",
+      "count": 16,
+      "normalized": 0.9322
+    },
+    {
+      "date": "2025-10-09",
+      "count": 14,
+      "normalized": 0.7916
+    },
+    {
+      "date": "2025-10-08",
+      "count": 33,
+      "normalized": 0.9166
+    },
+    {
+      "date": "2025-10-07",
+      "count": 66,
+      "normalized": 0.7007
+    },
+    {
+      "date": "2025-10-06",
+      "count": 19,
+      "normalized": 0.9943
+    },
+    {
+      "date": "2025-10-05",
+      "count": 1,
+      "normalized": 0.998
+    },
+    {
+      "date": "2025-10-04",
+      "count": 3,
+      "normalized": 0.9877
+    },
+    {
       "date": "2025-10-03",
       "count": 14,
       "normalized": 0.8403
     },
     {
       "date": "2025-10-02",
-      "count": 26,
-      "normalized": 0.7891
+      "count": 27,
+      "normalized": 0.7964
     },
     {
       "date": "2025-10-01",
@@ -409,46 +449,6 @@
       "date": "2025-07-13",
       "count": 2,
       "normalized": 0.867
-    },
-    {
-      "date": "2025-07-12",
-      "count": 1,
-      "normalized": 0.992
-    },
-    {
-      "date": "2025-07-11",
-      "count": 10,
-      "normalized": 0.9867
-    },
-    {
-      "date": "2025-07-10",
-      "count": 12,
-      "normalized": 0.902
-    },
-    {
-      "date": "2025-07-09",
-      "count": 10,
-      "normalized": 0.9951
-    },
-    {
-      "date": "2025-07-08",
-      "count": 15,
-      "normalized": 0.8947
-    },
-    {
-      "date": "2025-07-07",
-      "count": 7,
-      "normalized": 0.8194
-    },
-    {
-      "date": "2025-07-06",
-      "count": 2,
-      "normalized": 0.9805
-    },
-    {
-      "date": "2025-07-05",
-      "count": 3,
-      "normalized": 0.99
     }
   ]
 }

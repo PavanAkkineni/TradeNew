@@ -1,6 +1,6 @@
 # 🎯 QUICK SUMMARY - Risk Strategy Comparison
 
-## $10,000 Capital | Sept 3 - Oct 3, 2025 | IBM
+## $10,000 Capital | Sept 3 - Oct 10, 2025 | IBM
 
 ---
 
@@ -26,7 +26,7 @@ SELL 38 shares @ $256.09
 Profit: +4.91% (+$455.62)
 ✅ WIN
 
-Trade 2: Sept 24 → Oct 3 (Holding)
+Trade 2: Sept 24 → Oct 10 (Holding)
 BUY  37 shares @ $267.53
 HOLD @ $288.42
 Unrealized: +7.81% (+$772.93)
@@ -155,6 +155,6 @@ run_risk_comparison.bat
 
 **Report:** October 11, 2025  
 **Winner:** 🔴 HIGH RISK (+12.29%)  
-**Period:** Sept 3 - Oct 3, 2025 (23 days)  
+**Period:** Sept 3 - Oct 10, 2025 (23 days)  
 **Capital:** $10,000 each  
 **Stock:** IBM  

@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import time
 
 # Load environment variables from root directory
-root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 load_dotenv(os.path.join(root_dir, '.env'))
 
 API_KEY = os.getenv('ALPHA_VANTAGE_API_KEY')

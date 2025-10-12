@@ -17,9 +17,7 @@
                 <h1 class="logo">📈 Trading Analytics</h1>
                 <select id="symbolSelect" class="symbol-select">
                     <option value="IBM">IBM</option>
-                    <option value="AAPL">AAPL</option>
                     <option value="MSFT">MSFT</option>
-                    <option value="GOOGL">GOOGL</option>
                 </select>
             </div>
             <nav class="nav-tabs">
@@ -798,10 +796,29 @@
 
         <!-- Credibility Panel -->
         <div class="tab-panel" id="credibility-panel">
+            <!-- Time Period Selector -->
+            <div class="period-selector-container">
+                <div class="period-selector-header">
+                    <h3>📅 Select Analysis Period</h3>
+                    <p>Choose a 30-day period for backtesting analysis</p>
+                </div>
+                <div class="period-selector-tabs">
+                    <button class="period-tab active" data-period="2025-09-10_2025-10-10">Sept 10 - Oct 10</button>
+                    <button class="period-tab" data-period="2025-08-10_2025-09-10">Aug 10 - Sept 10</button>
+                    <button class="period-tab" data-period="2025-07-10_2025-08-10">July 10 - Aug 10</button>
+                    <button class="period-tab" data-period="2025-06-10_2025-07-10">June 10 - July 10</button>
+                    <button class="period-tab" data-period="2025-05-10_2025-06-10">May 10 - June 10</button>
+                    <button class="period-tab" data-period="2025-04-10_2025-05-10">Apr 10 - May 10</button>
+                    <button class="period-tab" data-period="2025-03-10_2025-04-10">Mar 10 - Apr 10</button>
+                    <button class="period-tab" data-period="2025-02-10_2025-03-10">Feb 10 - Mar 10</button>
+                    <button class="period-tab" data-period="2025-01-10_2025-02-10">Jan 10 - Feb 10</button>
+                </div>
+            </div>
+
             <!-- Backtest Results Header -->
             <div class="credibility-header">
                 <h2>📊 Strategy Credibility & Backtest Results</h2>
-                <p class="subtitle">Comprehensive backtesting performance over September 3 - October 3, 2025</p>
+                <p class="subtitle" id="selected-period-subtitle">Comprehensive backtesting performance over September 10 - October 10, 2025</p>
             </div>
 
             <!-- Summary Cards -->
@@ -940,7 +957,7 @@
                             </div>
                             <div class="transaction-content">
                                 <div class="transaction-header">
-                                    <h4>HOLDING PERIOD - September 4 to October 3</h4>
+                                    <h4>HOLDING PERIOD - September 4 to October 10</h4>
                                     <span class="transaction-badge hold-badge">Position Maintained</span>
                                 </div>
                                 <div class="holding-summary">
@@ -948,7 +965,7 @@
                                     <ul>
                                         <li><strong>Sept 4-5:</strong> HOLD signals (Score: 4.5) - Continued holding</li>
                                         <li><strong>Sept 8-9:</strong> WEAK_SELL signals (Score: -11.5) - Held because position was profitable (+4.9%)</li>
-                                        <li><strong>Sept 24 - Oct 3:</strong> WEAK_BUY signals (Score: 19.5) - Already holding position</li>
+                                        <li><strong>Sept 24 - Oct 10:</strong> WEAK_BUY signals (Score: 19.5) - Already holding position</li>
                                     </ul>
                                     <div class="profit-tracker">
                                         <h6>Profit Progression:</h6>
@@ -959,7 +976,7 @@
                                             <span>Sept 24:</span> <span class="profit">+$937 (+9.6%)</span>
                                         </div>
                                         <div class="profit-row">
-                                            <span>Oct 3:</span> <span class="profit">+$1,772.80 (+18.15%)</span>
+                                            <span>Oct 10:</span> <span class="profit">+$1,772.80 (+18.15%)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -973,7 +990,7 @@
                             </div>
                             <div class="transaction-content">
                                 <div class="transaction-header">
-                                    <h4>FINAL POSITION - October 3, 2025</h4>
+                                    <h4>FINAL POSITION - October 10, 2025</h4>
                                     <span class="transaction-badge success-badge">PROFITABLE</span>
                                 </div>
                                 <div class="transaction-details">
@@ -1052,14 +1069,14 @@
                 <div class="no-trades-message">
                     <div class="message-icon">⚠️</div>
                     <h4>No High Risk Trades Executed</h4>
-                    <p>During the backtest period (Sept 3 - Oct 3, 2025), no BUY or STRONG_BUY signals were generated.</p>
+                    <p>During the backtest period (Sept 3 - Oct 10, 2025), no BUY or STRONG_BUY signals were generated.</p>
                     <div class="signal-requirements">
                         <h5>High Risk Signal Requirements:</h5>
                         <ul>
                             <li><strong>BUY Signal:</strong> Requires score 20-34 points</li>
                             <li><strong>STRONG_BUY Signal:</strong> Requires score ≥ 35 points</li>
                         </ul>
-                        <p><strong>Highest Score Achieved:</strong> 19.5 points (Sept 24 - Oct 3)</p>
+                        <p><strong>Highest Score Achieved:</strong> 19.5 points (Sept 24 - Oct 10)</p>
                         <p>This was just below the BUY threshold (20 points), indicating market conditions didn't meet high-confidence criteria.</p>
                     </div>
                     <div class="hypothetical-scenario">

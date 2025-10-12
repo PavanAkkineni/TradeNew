@@ -3,11 +3,11 @@
   "annualEarnings": [
     {
       "fiscalDateEnding": "2025-09-30",
-      "reportedEPS": "3.92"
+      "reportedEPS": "4.4"
     },
     {
       "fiscalDateEnding": "2024-12-31",
-      "reportedEPS": "9.5"
+      "reportedEPS": "10.33"
     },
     {
       "fiscalDateEnding": "2023-12-31",
@@ -135,19 +135,19 @@
     {
       "fiscalDateEnding": "2025-03-31",
       "reportedDate": "2025-04-23",
-      "reportedEPS": "1.12",
-      "estimatedEPS": "1.08",
-      "surprise": "0.04",
-      "surprisePercentage": "3.7037",
+      "reportedEPS": "1.6",
+      "estimatedEPS": "1.43",
+      "surprise": "0.17",
+      "surprisePercentage": "11.8881",
       "reportTime": "post-market"
     },
     {
       "fiscalDateEnding": "2024-12-31",
       "reportedDate": "2025-01-29",
-      "reportedEPS": "3.09",
-      "estimatedEPS": "3.48",
-      "surprise": "-0.39",
-      "surprisePercentage": "-11.2069",
+      "reportedEPS": "3.92",
+      "estimatedEPS": "3.78",
+      "surprise": "0.14",
+      "surprisePercentage": "3.7037",
       "reportTime": "post-market"
     },
     {

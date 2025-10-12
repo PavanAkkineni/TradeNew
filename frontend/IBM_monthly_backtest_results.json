@@ -1,0 +1,2112 @@
+{
+  "metadata": {
+    "symbol": "IBM",
+    "initial_capital": 1000.0,
+    "analysis_date": "2025-10-12T04:56:14.518497",
+    "total_periods_analyzed": 5
+  },
+  "monthly_results": {
+    "Sept 10 - Oct 10": {
+      "period_name": "Sept 10 - Oct 10",
+      "start_date": "2025-09-10",
+      "end_date": "2025-10-10",
+      "trading_days": 23,
+      "low_risk": {
+        "strategy": "Low Risk",
+        "initial_capital": 1000.0,
+        "final_value": 1000.0,
+        "total_return": 0.0,
+        "return_percentage": 0.0,
+        "trades": [],
+        "daily_values": [
+          {
+            "date": "2025-09-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.88,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-09-11",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 257.01,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-12",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 253.44,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-09-15",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.24,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-16",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 257.52,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-17",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 259.08,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-18",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 265.0,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-19",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 266.4,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-09-22",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 271.37,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-09-23",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 272.24,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-24",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 267.53,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-09-25",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 281.44,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-09-26",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 284.31,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-09-29",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.8,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-09-30",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 282.16,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-01",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 286.49,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-02",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 286.72,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-03",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 288.37,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-06",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 289.42,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-07",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 293.87,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-08",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 289.46,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-09",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 288.23,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 277.82,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.9
+          }
+        ],
+        "final_cash": 1000.0,
+        "final_shares": 0,
+        "trades_executed": 0
+      },
+      "high_risk": {
+        "strategy": "High Risk",
+        "initial_capital": 1000.0,
+        "final_value": 1073.14,
+        "total_return": 73.1400000000001,
+        "return_percentage": 7.314000000000009,
+        "trades": [
+          {
+            "date": "2025-09-12",
+            "type": "BUY",
+            "shares": 3,
+            "price": 253.44,
+            "cost": 760.3199999999999,
+            "signal": "WEAK_BUY",
+            "confidence": 50.5,
+            "score": 1.7
+          }
+        ],
+        "daily_values": [
+          {
+            "date": "2025-09-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.88,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-09-11",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 257.01,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-12",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 253.44,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-09-15",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 256.24,
+            "portfolio_value": 1008.4000000000001,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-16",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 257.52,
+            "portfolio_value": 1012.24,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-17",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 259.08,
+            "portfolio_value": 1016.9200000000001,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-18",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 265.0,
+            "portfolio_value": 1034.68,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-19",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 266.4,
+            "portfolio_value": 1038.88,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-09-22",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 271.37,
+            "portfolio_value": 1053.79,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-09-23",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 272.24,
+            "portfolio_value": 1056.4,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-24",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 267.53,
+            "portfolio_value": 1042.27,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-09-25",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 281.44,
+            "portfolio_value": 1084.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-09-26",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 284.31,
+            "portfolio_value": 1092.6100000000001,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-09-29",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 279.8,
+            "portfolio_value": 1079.0800000000002,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-09-30",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 282.16,
+            "portfolio_value": 1086.16,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-01",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 286.49,
+            "portfolio_value": 1099.15,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-02",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 286.72,
+            "portfolio_value": 1099.8400000000001,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-03",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 288.37,
+            "portfolio_value": 1104.79,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-06",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 289.42,
+            "portfolio_value": 1107.94,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-07",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 293.87,
+            "portfolio_value": 1121.29,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-08",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 289.46,
+            "portfolio_value": 1108.06,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-09",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 288.23,
+            "portfolio_value": 1104.3700000000001,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-10-10",
+            "cash": 239.68000000000006,
+            "shares": 3,
+            "price": 277.82,
+            "portfolio_value": 1073.14,
+            "signal": "WEAK_BUY",
+            "score": 2.9
+          }
+        ],
+        "final_cash": 239.68000000000006,
+        "final_shares": 3,
+        "trades_executed": 1
+      },
+      "buy_and_hold": {
+        "strategy": "Buy & Hold",
+        "initial_investment": 770.64,
+        "final_value": 833.46,
+        "total_return": 62.82000000000005,
+        "return_percentage": 8.151666147617572,
+        "shares": 3,
+        "start_price": 256.88,
+        "end_price": 277.82
+      },
+      "analysis_date": "2025-10-12T04:56:14.515474"
+    },
+    "Aug 10 - Sept 10": {
+      "period_name": "Aug 10 - Sept 10",
+      "start_date": "2025-08-10",
+      "end_date": "2025-09-10",
+      "trading_days": 22,
+      "low_risk": {
+        "strategy": "Low Risk",
+        "initial_capital": 1000.0,
+        "final_value": 1000.0,
+        "total_return": 0.0,
+        "return_percentage": 0.0,
+        "trades": [],
+        "daily_values": [
+          {
+            "date": "2025-08-11",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 236.3,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-12",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 234.77,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-13",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 240.07,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-14",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 237.11,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-15",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 239.72,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-18",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 239.45,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-19",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 241.28,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-08-20",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 242.55,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-08-21",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 239.4,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-08-22",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 242.09,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-08-25",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 239.43,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-08-26",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 242.63,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.1
+          },
+          {
+            "date": "2025-08-27",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 244.84,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-28",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 245.73,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-29",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 243.49,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-02",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 241.5,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-09-03",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 244.1,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-09-04",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 247.18,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-05",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 248.53,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-09-08",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.09,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_SELL",
+            "score": -1.1
+          },
+          {
+            "date": "2025-09-09",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 259.11,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_SELL",
+            "score": -1.5
+          },
+          {
+            "date": "2025-09-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.88,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          }
+        ],
+        "final_cash": 1000.0,
+        "final_shares": 0,
+        "trades_executed": 0
+      },
+      "high_risk": {
+        "strategy": "High Risk",
+        "initial_capital": 1000.0,
+        "final_value": 1000.0,
+        "total_return": 0.0,
+        "return_percentage": 0.0,
+        "trades": [],
+        "daily_values": [
+          {
+            "date": "2025-08-11",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 236.3,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-12",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 234.77,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-13",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 240.07,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-14",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 237.11,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-15",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 239.72,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-18",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 239.45,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-19",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 241.28,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-08-20",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 242.55,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-08-21",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 239.4,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-08-22",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 242.09,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-08-25",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 239.43,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-08-26",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 242.63,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.1
+          },
+          {
+            "date": "2025-08-27",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 244.84,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-28",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 245.73,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-29",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 243.49,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-02",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 241.5,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-09-03",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 244.1,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-09-04",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 247.18,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-09-05",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 248.53,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-09-08",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.09,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_SELL",
+            "score": -1.1
+          },
+          {
+            "date": "2025-09-09",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 259.11,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_SELL",
+            "score": -1.5
+          },
+          {
+            "date": "2025-09-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.88,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          }
+        ],
+        "final_cash": 1000.0,
+        "final_shares": 0,
+        "trades_executed": 0
+      },
+      "buy_and_hold": {
+        "strategy": "Buy & Hold",
+        "initial_investment": 945.2,
+        "final_value": 1027.52,
+        "total_return": 82.31999999999994,
+        "return_percentage": 8.709267879813789,
+        "shares": 4,
+        "start_price": 236.3,
+        "end_price": 256.88
+      },
+      "analysis_date": "2025-10-12T04:56:14.516341"
+    },
+    "July 10 - Aug 10": {
+      "period_name": "July 10 - Aug 10",
+      "start_date": "2025-07-10",
+      "end_date": "2025-08-10",
+      "trading_days": 22,
+      "low_risk": {
+        "strategy": "Low Risk",
+        "initial_capital": 1000.0,
+        "final_value": 1000.0,
+        "total_return": 0.0,
+        "return_percentage": 0.0,
+        "trades": [],
+        "daily_values": [
+          {
+            "date": "2025-07-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 285.450568149211,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-11",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 281.637012912482,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-14",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 281.835635581062,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-15",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 280.753142037303,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-16",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.978513629842,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-17",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 280.057962697274,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-18",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 283.90131133429,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-21",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 282.749299856528,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-22",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 280.018238163558,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-23",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 280.067893830703,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-24",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 258.715956958393,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.9
+          },
+          {
+            "date": "2025-07-25",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 257.931397417504,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.9
+          },
+          {
+            "date": "2025-07-28",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 261.397362984218,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-29",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 260.6028723099,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-30",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 258.467678622669,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-31",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 251.406642754663,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.5
+          },
+          {
+            "date": "2025-08-01",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 248.327991391679,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-08-04",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 250.244700143472,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-05",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 248.943721664275,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-06",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 250.542634146341,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-07",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 248.437233859397,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-08",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 242.27,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          }
+        ],
+        "final_cash": 1000.0,
+        "final_shares": 0,
+        "trades_executed": 0
+      },
+      "high_risk": {
+        "strategy": "High Risk",
+        "initial_capital": 1000.0,
+        "final_value": 870.4582955523671,
+        "total_return": -129.54170444763292,
+        "return_percentage": -12.95417044476329,
+        "trades": [
+          {
+            "date": "2025-07-10",
+            "type": "BUY",
+            "shares": 3,
+            "price": 285.450568149211,
+            "cost": 856.351704447633,
+            "signal": "WEAK_BUY",
+            "confidence": 56.5,
+            "score": 2.1
+          }
+        ],
+        "daily_values": [
+          {
+            "date": "2025-07-10",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 285.450568149211,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-11",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 281.637012912482,
+            "portfolio_value": 988.559334289813,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-14",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 281.835635581062,
+            "portfolio_value": 989.155202295553,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-15",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 280.753142037303,
+            "portfolio_value": 985.9077216642761,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-16",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 279.978513629842,
+            "portfolio_value": 983.583836441893,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-17",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 280.057962697274,
+            "portfolio_value": 983.822183644189,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-18",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 283.90131133429,
+            "portfolio_value": 995.352229555237,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-21",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 282.749299856528,
+            "portfolio_value": 991.896195121951,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-22",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 280.018238163558,
+            "portfolio_value": 983.7030100430411,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-23",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 280.067893830703,
+            "portfolio_value": 983.8519770444759,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-24",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 258.715956958393,
+            "portfolio_value": 919.796166427546,
+            "signal": "WEAK_BUY",
+            "score": 2.9
+          },
+          {
+            "date": "2025-07-25",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 257.931397417504,
+            "portfolio_value": 917.442487804879,
+            "signal": "WEAK_BUY",
+            "score": 2.9
+          },
+          {
+            "date": "2025-07-28",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 261.397362984218,
+            "portfolio_value": 927.8403845050209,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-29",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 260.6028723099,
+            "portfolio_value": 925.4569124820671,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-30",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 258.467678622669,
+            "portfolio_value": 919.051331420374,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-31",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 251.406642754663,
+            "portfolio_value": 897.868223816356,
+            "signal": "WEAK_BUY",
+            "score": 2.5
+          },
+          {
+            "date": "2025-08-01",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 248.327991391679,
+            "portfolio_value": 888.632269727404,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-08-04",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 250.244700143472,
+            "portfolio_value": 894.382395982783,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-05",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 248.943721664275,
+            "portfolio_value": 890.479460545192,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-06",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 250.542634146341,
+            "portfolio_value": 895.27619799139,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-07",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 248.437233859397,
+            "portfolio_value": 888.959997130558,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-08-08",
+            "cash": 143.64829555236702,
+            "shares": 3,
+            "price": 242.27,
+            "portfolio_value": 870.4582955523671,
+            "signal": "HOLD",
+            "score": 0.9
+          }
+        ],
+        "final_cash": 143.64829555236702,
+        "final_shares": 3,
+        "trades_executed": 1
+      },
+      "buy_and_hold": {
+        "strategy": "Buy & Hold",
+        "initial_investment": 856.351704447633,
+        "final_value": 726.8100000000001,
+        "total_return": -129.54170444763292,
+        "return_percentage": -15.127161395818131,
+        "shares": 3,
+        "start_price": 285.450568149211,
+        "end_price": 242.27
+      },
+      "analysis_date": "2025-10-12T04:56:14.516341"
+    },
+    "June 10 - July 10": {
+      "period_name": "June 10 - July 10",
+      "start_date": "2025-06-10",
+      "end_date": "2025-07-10",
+      "trading_days": 21,
+      "low_risk": {
+        "strategy": "Low Risk",
+        "initial_capital": 1000.0,
+        "final_value": 1000.0,
+        "total_return": 0.0,
+        "return_percentage": 0.0,
+        "trades": [],
+        "daily_values": [
+          {
+            "date": "2025-06-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 274.337629842181,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-11",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.581268292683,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-12",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.094642754663,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-13",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 275.310880918221,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-16",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.889133428981,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-17",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 281.100731707317,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-18",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 281.259629842181,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-20",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.035055954089,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-06-23",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 287.188516499283,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-24",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 291.766769010043,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-25",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 289.055569583931,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-26",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 289.919578192253,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-06-27",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 287.70493543759,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-06-30",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 292.749951219512,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-07-01",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 289.194605451937,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-02",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 285.669053084648,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-03",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 289.959302725968,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-07-07",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 290.455859397418,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-08",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 288.419977044476,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-09",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 288.141905308465,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 285.450568149211,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          }
+        ],
+        "final_cash": 1000.0,
+        "final_shares": 0,
+        "trades_executed": 0
+      },
+      "high_risk": {
+        "strategy": "High Risk",
+        "initial_capital": 1000.0,
+        "final_value": 988.767888091822,
+        "total_return": -11.232111908178013,
+        "return_percentage": -1.1232111908178013,
+        "trades": [
+          {
+            "date": "2025-07-01",
+            "type": "BUY",
+            "shares": 3,
+            "price": 289.194605451937,
+            "cost": 867.583816355811,
+            "signal": "WEAK_BUY",
+            "confidence": 50.5,
+            "score": 1.7
+          }
+        ],
+        "daily_values": [
+          {
+            "date": "2025-06-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 274.337629842181,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-11",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.581268292683,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-12",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.094642754663,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-13",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 275.310880918221,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-16",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.889133428981,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-17",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 281.100731707317,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-18",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 281.259629842181,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-20",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 279.035055954089,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.3
+          },
+          {
+            "date": "2025-06-23",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 287.188516499283,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-24",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 291.766769010043,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-25",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 289.055569583931,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": -0.7
+          },
+          {
+            "date": "2025-06-26",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 289.919578192253,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-06-27",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 287.70493543759,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-06-30",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 292.749951219512,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.5
+          },
+          {
+            "date": "2025-07-01",
+            "cash": 132.416183644189,
+            "shares": 3,
+            "price": 289.194605451937,
+            "portfolio_value": 1000.0,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-02",
+            "cash": 132.416183644189,
+            "shares": 3,
+            "price": 285.669053084648,
+            "portfolio_value": 989.423342898133,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-03",
+            "cash": 132.416183644189,
+            "shares": 3,
+            "price": 289.959302725968,
+            "portfolio_value": 1002.2940918220929,
+            "signal": "WEAK_BUY",
+            "score": 1.3
+          },
+          {
+            "date": "2025-07-07",
+            "cash": 132.416183644189,
+            "shares": 3,
+            "price": 290.455859397418,
+            "portfolio_value": 1003.7837618364431,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-08",
+            "cash": 132.416183644189,
+            "shares": 3,
+            "price": 288.419977044476,
+            "portfolio_value": 997.676114777617,
+            "signal": "WEAK_BUY",
+            "score": 1.7
+          },
+          {
+            "date": "2025-07-09",
+            "cash": 132.416183644189,
+            "shares": 3,
+            "price": 288.141905308465,
+            "portfolio_value": 996.841899569584,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          },
+          {
+            "date": "2025-07-10",
+            "cash": 132.416183644189,
+            "shares": 3,
+            "price": 285.450568149211,
+            "portfolio_value": 988.767888091822,
+            "signal": "WEAK_BUY",
+            "score": 2.1
+          }
+        ],
+        "final_cash": 132.416183644189,
+        "final_shares": 3,
+        "trades_executed": 1
+      },
+      "buy_and_hold": {
+        "strategy": "Buy & Hold",
+        "initial_investment": 823.012889526543,
+        "final_value": 856.351704447633,
+        "total_return": 33.338814921090034,
+        "return_percentage": 4.05082536924409,
+        "shares": 3,
+        "start_price": 274.337629842181,
+        "end_price": 285.450568149211
+      },
+      "analysis_date": "2025-10-12T04:56:14.517347"
+    },
+    "May 10 - June 10": {
+      "period_name": "May 10 - June 10",
+      "start_date": "2025-05-10",
+      "end_date": "2025-06-10",
+      "trading_days": 15,
+      "low_risk": {
+        "strategy": "Low Risk",
+        "initial_capital": 1000.0,
+        "final_value": 1000.0,
+        "total_return": 0.0,
+        "return_percentage": 0.0,
+        "trades": [],
+        "daily_values": [
+          {
+            "date": "2025-05-20",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 265.111606886657,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-21",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 259.073477761836,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-22",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.590694404591,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-23",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.848903873745,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-27",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 261.417225251076,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-28",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 258.447816355811,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-29",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.908490674319,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-30",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 257.275942611191,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-02",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 262.082611190818,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-03",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 263.373658536585,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-04",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 263.691454806313,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-05",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 265.022226685796,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-06",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 267.018384505022,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-09",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 270.206278335725,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 274.337629842181,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          }
+        ],
+        "final_cash": 1000.0,
+        "final_shares": 0,
+        "trades_executed": 0
+      },
+      "high_risk": {
+        "strategy": "High Risk",
+        "initial_capital": 1000.0,
+        "final_value": 1000.0,
+        "total_return": 0.0,
+        "return_percentage": 0.0,
+        "trades": [],
+        "daily_values": [
+          {
+            "date": "2025-05-20",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 265.111606886657,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-21",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 259.073477761836,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-22",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.590694404591,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-23",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.848903873745,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-27",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 261.417225251076,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-28",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 258.447816355811,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-29",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 256.908490674319,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-05-30",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 257.275942611191,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-02",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 262.082611190818,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-03",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 263.373658536585,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-04",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 263.691454806313,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-05",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 265.022226685796,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-06",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 267.018384505022,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-09",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 270.206278335725,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          },
+          {
+            "date": "2025-06-10",
+            "cash": 1000.0,
+            "shares": 0,
+            "price": 274.337629842181,
+            "portfolio_value": 1000.0,
+            "signal": "HOLD",
+            "score": 0.9
+          }
+        ],
+        "final_cash": 1000.0,
+        "final_shares": 0,
+        "trades_executed": 0
+      },
+      "buy_and_hold": {
+        "strategy": "Buy & Hold",
+        "initial_investment": 795.334820659971,
+        "final_value": 823.012889526543,
+        "total_return": 27.678068866571948,
+        "return_percentage": 3.4800524442780727,
+        "shares": 3,
+        "start_price": 265.111606886657,
+        "end_price": 274.337629842181
+      },
+      "analysis_date": "2025-10-12T04:56:14.517347"
+    }
+  }
+}

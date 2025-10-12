@@ -1,7 +1,11 @@
 """
 Trading Analytics Platform - Main FastAPI Application
 """
-from fastapi import FastAPI, HTTPException
+# Load environment variables first, before any other imports
+from dotenv import load_dotenv
+load_dotenv()
+
+from fastapi import FastAPI, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
@@ -54,6 +58,11 @@ signal_generator = SignalGenerator()
 fundamental_analyzer = FundamentalAnalyzer()
 sentiment_analyzer = SentimentAnalyzer()
 gemini_analyzer = GeminiAnalyzer()
+market_data_aggregator = MarketDataAggregator()  # Component 2: Market Data Aggregation Engine
+portfolio_recommender = PortfolioRecommender()   # Component 3: Portfolio Recommendation Engine
+
+# Security
+security = HTTPBearer()
 
 # Request/Response Models
 class StockRequest(BaseModel):

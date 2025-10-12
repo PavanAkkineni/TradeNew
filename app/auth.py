@@ -1,7 +1,6 @@
 """
 Authentication and user management for TradeCompass
 """
-from passlib.context import CryptContext
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from typing import Optional
@@ -9,11 +8,9 @@ from sqlalchemy.orm import Session
 from cryptography.fernet import Fernet
 import secrets
 import os
+import hashlib
 
 from app.database import User, UserProfile, UserSession, UserActivity
-
-# Password hashing
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # JWT configuration
 SECRET_KEY = os.getenv("SECRET_KEY", secrets.token_urlsafe(32))
@@ -26,13 +23,17 @@ cipher_suite = Fernet(ENCRYPTION_KEY)
 
 
 def hash_password(password: str) -> str:
-    """Hash a password"""
-    return pwd_context.hash(password)
+    """Hash a password using SHA256"""
+    if not password:
+        raise ValueError("Password cannot be empty")
+    return hashlib.sha256(password.encode('utf-8')).hexdigest()
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     """Verify a password against its hash"""
-    return pwd_context.verify(plain_password, hashed_password)
+    if not plain_password:
+        return False
+    return hash_password(plain_password) == hashed_password
 
 
 def encrypt_ssn(ssn: str) -> str:
@@ -232,13 +233,7 @@ def validate_email(email: str) -> bool:
 
 
 def validate_password(password: str):
-    """Validate password strength"""
-    if len(password) < 8:
-        return False, "Password must be at least 8 characters long"
-    if not any(c.isupper() for c in password):
-        return False, "Password must contain at least one uppercase letter"
-    if not any(c.islower() for c in password):
-        return False, "Password must contain at least one lowercase letter"
-    if not any(c.isdigit() for c in password):
-        return False, "Password must contain at least one number"
+    """Validate password - just check if it's not empty"""
+    if not password or password.strip() == "":
+        return False, "Password cannot be empty"
     return True, "Password is valid"

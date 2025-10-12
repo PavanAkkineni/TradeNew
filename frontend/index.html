@@ -21,8 +21,7 @@
                 </select>
             </div>
             <nav class="nav-tabs">
-                <button class="nav-tab active" data-tab="portfolio">Portfolio</button>
-                <button class="nav-tab" data-tab="technical">Technical</button>
+                <button class="nav-tab active" data-tab="technical">Technical</button>
                 <button class="nav-tab" data-tab="fundamental">Fundamental</button>
                 <button class="nav-tab" data-tab="sentiment">Sentiment</button>
                 <button class="nav-tab" data-tab="signals">Trade Signals</button>
@@ -94,7 +93,7 @@
 
         <!-- Tab Content -->
         <!-- Portfolio Panel -->
-        <div class="tab-panel active" id="portfolio-panel">
+        <div class="tab-panel" id="portfolio-panel">
             <!-- Portfolio Profile Form -->
             <div class="portfolio-container">
                 <div class="portfolio-header">
@@ -260,7 +259,7 @@
             </div>
         </div>
 
-        <div class="tab-panel" id="technical-panel">
+        <div class="tab-panel active" id="technical-panel">
             <!-- Price Chart -->
             <div class="chart-card">
                 <div class="card-header">
@@ -1389,11 +1388,24 @@
             if (container && isLoggedIn()) {
                 const user = getCurrentUser();
                 container.innerHTML = `
-                    <div class="user-menu-inline">
-                        <span class="user-email-text">👤 ${user.email}</span>
-                        <button onclick="logout()" class="btn-logout-inline">
-                            <span>🚪</span> Logout
+                    <div class="user-menu-dropdown">
+                        <button class="user-menu-btn" onclick="toggleUserDropdown()">
+                            <span class="user-icon">👤</span>
+                            <span class="dropdown-arrow">▼</span>
                         </button>
+                        <div class="user-dropdown" id="userDropdownMenu" style="display: none;">
+                            <div class="dropdown-header">
+                                <span class="user-email">${user.email}</span>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" onclick="showPortfolioTab()">
+                                <span>📊</span> Portfolio
+                            </button>
+                            <div class="dropdown-divider"></div>
+                            <button onclick="logout()" class="dropdown-item logout-btn">
+                                <span>🚪</span> Logout
+                            </button>
+                        </div>
                     </div>
                 `;
             } else if (container) {
@@ -1403,6 +1415,46 @@
                         <a href="/signup.html" class="btn-signup-inline">Get Started</a>
                     </div>
                 `;
+            }
+        });
+
+        // Toggle user dropdown menu
+        function toggleUserDropdown() {
+            const dropdown = document.getElementById('userDropdownMenu');
+            if (dropdown) {
+                dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+            }
+        }
+
+        // Show portfolio tab
+        function showPortfolioTab() {
+            // Hide dropdown first
+            const dropdown = document.getElementById('userDropdownMenu');
+            if (dropdown) {
+                dropdown.style.display = 'none';
+            }
+            
+            // Switch to portfolio tab
+            const portfolioTab = document.querySelector('[data-tab="portfolio"]');
+            const portfolioPanel = document.getElementById('portfolio-panel');
+            
+            if (portfolioPanel) {
+                // Remove active class from all tabs and panels
+                document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+                
+                // Show portfolio panel
+                portfolioPanel.classList.add('active');
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const userMenu = document.querySelector('.user-menu-dropdown');
+            const dropdown = document.getElementById('userDropdownMenu');
+            
+            if (userMenu && dropdown && !userMenu.contains(event.target)) {
+                dropdown.style.display = 'none';
             }
         });
     </script>

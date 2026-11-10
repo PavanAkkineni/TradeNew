@@ -160,17 +160,23 @@ class FundamentalAnalyzer:
         if not balance_data or 'annualReports' not in balance_data:
             return 0
         
+        # Uses actual borrowings, not total liabilities: total liabilities also
+        # include pensions, leases, payables and deferred revenue, which made
+        # mature companies (e.g. IBM) look far more indebted than they are.
+        # Returns None when equity is zero/negative (common after big buybacks),
+        # where the ratio is meaningless.
         try:
             latest = balance_data['annualReports'][0]
-            total_debt = float(latest.get('totalLiabilities', 0))
-            total_equity = float(latest.get('totalShareholderEquity', 0))
-            
-            if total_equity == 0:
-                return 0
-            
-            return round(total_debt / total_equity, 2)
-        except:
-            return 0
+            total_equity = self._safe_float(latest.get('totalShareholderEquity'), 0)
+            debt = self._safe_float(latest.get('shortLongTermDebtTotal'), None)
+            if debt is None:
+                debt = (self._safe_float(latest.get('shortTermDebt'))
+                        + self._safe_float(latest.get('longTermDebt')))
+            if total_equity <= 0:
+                return None
+            return round(debt / total_equity, 2)
+        except Exception:
+            return None
     
     def _calculate_current_ratio(self, balance_data: Dict) -> float:
         """Calculate current ratio (current assets / current liabilities)"""
@@ -287,8 +293,10 @@ class FundamentalAnalyzer:
         score = 50  # Start neutral
         
         # Debt to equity
-        de = metrics.get('debt_to_equity', 0)
-        if de < self.industry_benchmarks['debt_to_equity'] * 0.5:
+        de = metrics.get('debt_to_equity')
+        if de is None:
+            pass  # negative/zero equity: ratio not meaningful, stay neutral
+        elif de < self.industry_benchmarks['debt_to_equity'] * 0.5:
             score += 25
         elif de > self.industry_benchmarks['debt_to_equity'] * 2:
             score -= 25

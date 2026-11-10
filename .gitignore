@@ -27,3 +27,6 @@ Weekly/*.json
 .idea/
 *.swp
 *.swo
+
+# Local research database (pipeline downloads + built tables)
+data_store/

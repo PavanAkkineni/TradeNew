@@ -221,8 +221,10 @@ class SignalGenerator:
             reasons.append(f"⚠️ Low profit margin: {profit_margin:.1f}%")
         
         # Debt to Equity
-        debt_to_equity = fundamental.get('debt_to_equity', 0)
-        if debt_to_equity < 0.5:
+        debt_to_equity = fundamental.get('debt_to_equity')
+        if debt_to_equity is None:
+            pass  # negative equity: ratio not meaningful
+        elif debt_to_equity < 0.5:
             score += 15
             reasons.append(f"✅ Low debt/equity: {debt_to_equity:.2f}")
         elif debt_to_equity > 2:

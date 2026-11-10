@@ -7,6 +7,8 @@
   python -m pipeline fetch AAPL --groups prices,forward
   python -m pipeline pulse --fetch NVDA            # market mood + why NVDA dropped
   python -m pipeline score MSFT NVDA IBM           # scorecards with the pulse decision
+  python -m pipeline scan --top 50                 # rank the whole market (~2 h first time)
+  python -m pipeline backtest --fetch 1000         # test the dip rules on 25 yrs of prices
   python -m pipeline status [SYMBOL]               # what is stored locally
 """
 import argparse
@@ -144,6 +146,34 @@ def cmd_pulse(args) -> None:
     conn.close()
 
 
+def cmd_scan(args) -> None:
+    from .scan import run_scan
+    run_scan(fetch=not args.no_fetch, workers=args.workers, top=args.top, deep=args.deep, force=args.force)
+    if args.deep:
+        print("\nNext: python -m pipeline score $(Get-Content data_store/reports/<today>/scan_top.txt)")
+
+
+def cmd_backtest(args) -> None:
+    from .backtest import run_backtest
+    from .build import build_prices, connect
+    symbols = [s.upper() for s in args.symbols] or None
+    if args.fetch:
+        conn = connect()
+        rows = conn.execute("SELECT symbol FROM company WHERE CAST(MarketCapitalization AS REAL) > 0 "
+                            "AND AssetType='Common Stock' ORDER BY CAST(MarketCapitalization AS REAL) DESC LIMIT ?",
+                            (args.fetch,)).fetchall()
+        conn.close()
+        if not rows:
+            raise SystemExit("No overviews stored. Run `python -m pipeline scan` first.")
+        picks = [r[0] for r in rows]
+        print(f"Fetching 25 years of daily prices for the {len(picks)} largest stocks (1 call each)")
+        daily = [e for e in endpoints.symbol_endpoints(["prices"]) if e.name == "daily_adjusted"]
+        _summary(Fetcher(args.workers, args.force).run(build_tasks(daily, picks)))
+        for s in picks:
+            build_prices(s)
+    run_backtest(symbols)
+
+
 def cmd_run(args) -> None:
     """fetch -> build -> score in one go."""
     cmd_fetch(args)
@@ -218,13 +248,26 @@ def main(argv=None) -> None:
     sc.add_argument("symbols", nargs="+")
     sc.add_argument("--table-only", action="store_true", help="only the comparison table")
 
+    sn = sub.add_parser("scan", help="rank the whole US market from one OVERVIEW call per stock")
+    sn.add_argument("--no-fetch", action="store_true", help="rank from stored overviews only")
+    sn.add_argument("--top", type=int, default=50, help="how many to list (default 50)")
+    sn.add_argument("--deep", type=int, default=0, help="also fetch everything for the top N")
+
+    bt = sub.add_parser("backtest", help="test the dip-buying rules on 20+ years of prices")
+    bt.add_argument("symbols", nargs="*", help="default: every stock with stored prices")
+    bt.add_argument("--fetch", type=int, metavar="N", help="first fetch prices for the N largest stocks")
+    for sp in (sn, bt):
+        sp.add_argument("--force", action="store_true")
+        sp.add_argument("--workers", type=int, default=config.DEFAULT_WORKERS)
+
     s = sub.add_parser("status", help="show what is stored")
     s.add_argument("symbol", nargs="?")
 
     args = p.parse_args(argv)
     _setup_logging(args.verbose)
     {"check": cmd_check, "market": cmd_market, "fetch": cmd_fetch, "status": cmd_status,
-     "build": cmd_build, "score": cmd_score, "run": cmd_run, "pulse": cmd_pulse}[args.cmd](args)
+     "build": cmd_build, "score": cmd_score, "run": cmd_run, "pulse": cmd_pulse,
+     "scan": cmd_scan, "backtest": cmd_backtest}[args.cmd](args)
 
 
 if __name__ == "__main__":

@@ -68,3 +68,16 @@ python -m pipeline pulse NVDA MSFT        # report only, from local data
 - **Themes**: which subjects (elections, Fed, tariffs, AI spending...) are discussed more than usual this week, and in what tone.
 - **Dip check**: splits a stock's drop into market, sector (best-matching sector ETF) and company parts. A strong company pulled down by the market or sector is a **BUY THE DIP** (staged, after it stops falling); a company-specific drop is **AVOID / REVIEW**. Also shows what happened 3/6/12 months after similar past drops.
 - `score` prints this as the **DECISION** line at the top of each card, which takes priority over the score.
+
+## Whole-market scan and backtest
+
+```
+python -m pipeline scan --top 50            # 1 OVERVIEW call per US common stock (~7,800, ~2 h; cached 7 days)
+python -m pipeline scan --no-fetch --top 50 # re-rank from stored overviews, no API calls
+python -m pipeline scan --top 50 --deep 50  # plus full data for the top 50 (~40 calls each)
+python -m pipeline backtest --fetch 1000    # 25 yrs of prices for the 1,000 largest (1 call each), then test
+```
+
+The scan's prescore is a filter, not a verdict: quality 30%, growth 25%, value 15%, analysts 15%, trend 15%
+(percentiles across the market, ≥ $300M market cap). The backtest tests the dip rules on price history;
+it has survivorship bias and cannot test the fundamentals filter (no point-in-time estimates).

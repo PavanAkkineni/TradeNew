@@ -412,7 +412,10 @@ def decide(verdict: str, regime: str, dip: Dict, has_sell_flag: bool) -> str:
     if action.startswith("AVOID"):
         return "AVOID / REVIEW: company-specific drop"
     if action.startswith("DIP OPPORTUNITY"):
-        return f"BUY THE DIP: {dip['timing']}"
+        t = dip["timing"]
+        if t.startswith("Still falling"):
+            return "DIP SETUP: wait, still falling (buy 1/3 once it stabilizes)"
+        return "BUY THE DIP: " + t.split(": ", 1)[1]
     if action.startswith("REVIEW"):
         return "REVIEW before buying: " + action.split(": ", 1)[1]
     if has_sell_flag:

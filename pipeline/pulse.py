@@ -221,8 +221,33 @@ def _log_ret(s):
     return np.log(s).diff()
 
 
+INDUSTRY_ETF = [("semiconductor", "SMH"), ("software", "IGV"), ("bank", "XLF"), ("insurance", "XLF"),
+                ("oil", "XLE"), ("drug", "XLV"), ("biotech", "XLV"), ("medical", "XLV"), ("reit", "XLRE")]
+SECTOR_ETF = {"TECHNOLOGY": "XLK", "FINANCIAL SERVICES": "XLF", "ENERGY": "XLE", "HEALTHCARE": "XLV",
+              "CONSUMER CYCLICAL": "XLY", "CONSUMER DEFENSIVE": "XLP", "INDUSTRIALS": "XLI",
+              "UTILITIES": "XLU", "REAL ESTATE": "XLRE", "BASIC MATERIALS": "XLB",
+              "COMMUNICATION SERVICES": "XLC"}
+
+
+def etf_for_company(conn, sym: str) -> Optional[str]:
+    """Match by the company's own industry first (most specific fund). Correlation
+    alone misleads for giants: NVDA is ~15% of XLK, so XLK 'moves with' NVDA."""
+    try:
+        row = conn.execute("SELECT Sector, Industry FROM company WHERE symbol=?", (sym,)).fetchone()
+    except Exception:
+        return None
+    if not row:
+        return None
+    sector, industry = (row[0] or "").upper(), (row[1] or "").lower()
+    for word, etf in INDUSTRY_ETF:
+        if word in industry and load_close(etf) is not None:
+            return etf
+    etf = SECTOR_ETF.get(sector)
+    return etf if etf and load_close(etf) is not None else None
+
+
 def pick_sector_etf(sym_close: pd.Series, spy: pd.Series) -> Optional[str]:
-    """The sector ETF the stock actually moves with, after removing the market."""
+    """Fallback: the sector ETF the stock moves with most, after removing the market."""
     best, best_c = None, 0.2
     rs, rm = _log_ret(sym_close).iloc[-252:], _log_ret(spy)
     for etf in SECTOR_ETFS:
@@ -287,7 +312,7 @@ def dip_analysis(sym: str, conn, fund_score=None, est_score=None, has_sell_flag=
     peak = recent.max()
     drop = float(close.iloc[-1] / peak - 1)
     out = {"peak_date": peak_date.date().isoformat(), "drop_from_60d_high": drop}
-    sector = pick_sector_etf(close.loc[:peak_date], spy)
+    sector = etf_for_company(conn, sym) or pick_sector_etf(close.loc[:peak_date], spy)
     out["sector_etf"] = sector
     out["sector_name"] = PULSE_ETFS.get(sector) if sector else None
 
@@ -369,6 +394,8 @@ def dip_analysis(sym: str, conn, fund_score=None, est_score=None, has_sell_flag=
         action = "AVOID / REVIEW: the drop is about the company itself"
     elif drop <= -0.10 and cause in ("market/sector-driven", "mixed") and strong:
         action = f"DIP OPPORTUNITY: strong business marked down by the {('market' if abs(mkt) >= abs(sct) else 'sector')}"
+    elif drop <= -0.10 and fund_score is None:
+        action = "Dip worth checking: run `score` to see if the business is still strong"
     elif drop <= -0.10:
         action = "Dip, but fundamentals are not strong enough to buy it"
     else:
